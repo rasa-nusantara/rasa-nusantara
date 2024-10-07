@@ -27,7 +27,7 @@ Untuk aplikasi web ini, modul yang digunakan adalah Django.
     Akses: Admin memiliki semua akses yang dimiliki oleh member, ditambah dengan kemampuan untuk:
     Menambahkan dan mengelola daftar restoran serta menu makanan.
     Menghapus atau mengedit konten yang tidak sesuai.
-  - **Guest**
+- **Guest**
     Akses: Guest atau pengguna yang tidak terdaftar memiliki akses yang mirip dengan member, dengan beberapa keterbatasan:
     Dapat melihat semua daftar restoran dan makanan.
     Tidak bisa memberikan rating atau ulasan.
