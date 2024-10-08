@@ -6,6 +6,9 @@
     4. 2306203873 - Fikar Hilmi Adhrevi
     5. 2306275342 - Muhammad Rayyan Wiradana
 
+### URL Deployment
+🔗 [Rasa Nusantara](http://arisha-shaista-rasanusantara.pbp.cs.ui.ac.id)
+
 ### Deskripsi Aplikasi
 **Rasa Nusantara** adalah aplikasi web yang memudahkan Anda menikmati beragam makanan tradisional tanpa perlu keluar rumah. Melalui platform ini, Anda dapat menjelajahi aneka kuliner lokal dari berbagai daerah.Dengan tampilan yang intuitif dan user-friendly, Rasa Nusantara memungkinkan pengguna untuk:
 - Memesan makanan tradisional dari berbagai penjual lokal terpercaya.
