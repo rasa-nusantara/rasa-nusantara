@@ -29,6 +29,7 @@ Tujuan utama dari **Rasa Nusantara** adalah untuk meningkatkan visibilitas dan p
 ## Modul Aplikasi
 - Pengguna menambahkan restoran ke daftar favorit.
 - Pengguna menambahkan masukan atau saran terhadap restoran dan dapat menilai restoran tersebut.
+- Pengguna dapat melakukan, memperbarui, dan menghapus reservasi sementara Admin dapat melihat reservasi dari berbagai pengguna.
 - Admin dapat mengelola daftar restoran yang terdaftar di aplikasi, termasuk menambahkan, melihat, memperbarui, dan menghapus informasi restoran.
 - Admin dapat mengelola menu makanan yang ditawarkan, termasuk menambahkan, melihat, memperbarui, dan menghapus item menu.
 - Daftar rekomendasi restoran berdasarkan rating tertinggi.
