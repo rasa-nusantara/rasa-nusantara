@@ -1,0 +1,81 @@
+{% load static %}
+
+<nav class="shadow-lg fixed top-0 left-0 z-40 w-screen" style="background-color: #543C30;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Bagian Kiri - Logo -->
+      <div class="flex items-center">
+        <img src="{% static 'image/logo.png' %}" alt="Rasa Nusantara Logo" class="h-12 w-65">
+      </div>
+    
+      <!-- Bagian Tengah - Menu Navigasi Desktop -->
+      <div class="hidden md:flex items-center space-x-10">
+        <a href="#" class="text-white font-bold :text-white text-sm font-medium">TENTANG KAMI</a>
+        <a href="#" class="text-white font-bold :text-white text-sm font-medium">RESTORAN</a>
+        <a href="#" class="text-white font-bold :text-white text-sm font-medium">MAKANAN</a>
+        <a href="#" class="text-white font-bold :text-white text-sm font-medium">RESERVASI</a>
+      </div>
+
+      <!-- Bagian Login/Logout -->
+      <div class="hidden md:flex items-center">
+        {% if user.is_authenticated %}
+          <!-- Menampilkan ucapan selamat datang dan tombol logout jika sudah login -->
+          <span class="text-gray-300 mr-4">Selamat datang, {{ user.username }}</span>
+          <a href="{% url 'main:logout' %}" class="text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+            Keluar
+          </a>
+        {% else %}
+          <!-- Menampilkan tombol Login dan Register untuk pengguna yang belum login -->
+          <a href="{% url 'main:login' %}" class="text-center font-medium text-sm hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 mr-2">
+            MASUK
+          </a>
+        {% endif %}
+      </div>
+      
+      <!-- Bagian Kanan - Tombol untuk menu mobile -->
+      <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+          <!-- Ikon Menu Mobile (3 garis) -->
+          <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Mobile yang tersembunyi dan muncul ketika tombol diklik -->
+  <div class="mobile-menu hidden md:hidden px-4 w-full md:max-w-full">
+    <div class="pt-2 pb-3 space-y-1 mx-auto">
+      <a href="#" class="block text-gray-300 hover:text-white text-sm font-medium">Tentang Kami</a>
+      <a href="#" class="block text-gray-300 hover:text-white text-sm font-medium">Restoran</a>
+      <a href="#" class="block text-gray-300 hover:text-white text-sm font-medium">Makanan</a>
+      {% if user.is_authenticated %}
+        <!-- Menu untuk pengguna yang sudah login -->
+        <span class="block text-gray-300 px-3 py-2">Selamat datang, {{ user.username }}</span>
+        <a href="{% url 'main:logout' %}" class="block text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Keluar
+        </a>
+      {% else %}
+        <!-- Menu untuk pengguna yang belum login -->
+        <a href="{% url 'main:login' %}" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 mb-2">
+          Masuk
+        </a>
+        <a href="{% url 'main:register' %}" class="block text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Daftar
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Script untuk tombol mobile menu -->
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    // Toggle menu saat tombol diklik
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</nav>

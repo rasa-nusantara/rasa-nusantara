@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Rasa Nusantara</title>
+{% endblock meta %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="overflow-x-hidden px-4 md:px-8 pb-8 pt-24 min-h-screen flex flex-col" style="background-color: #453229;">
+  <div class="p-2 mb-6 relative">
+    <div class="overflow-x-hidden px-4 md:px-8 pb-8 pt-24 min-h-screen flex flex-col justify-center items-center" style="background-color: #453229;">
+        <!-- Tambahkan gambar di sini -->
+        <a src="{% static 'images/logo.png' %}" alt="Gambar Tengah" class="w-1/2 h-auto"></a>
+      </div>
+    <div class="h-full w-full py-6  absolute top-0 left-0 z-20 md:hidden flex ">
+      <div class="h-full min-w-4 bg-indigo-700 mx-auto">
+      </div>
+    </div>
+</div>
+
+</div>
+{% endblock content %}

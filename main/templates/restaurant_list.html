@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Restoran</title>
+</head>
+<body>
+    <h1>Daftar Restoran</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <a href="{% url 'restaurant_detail' restaurant.id %}">{{ restaurant.name }}</a>
+                <p>{{ restaurant.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

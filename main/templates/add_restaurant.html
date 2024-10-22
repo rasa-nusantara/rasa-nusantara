@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+
+    <h1>Tambah Restoran Baru</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <h2>Informasi Restoran</h2>
+        {{ restaurant_form.as_p }}
+
+        <h2>Menu Restoran</h2>
+        {{ menu_formset.management_form }}  
+        
+        {% for form in menu_formset %}
+            <div class="menu-form">
+                {{ form.as_p }}
+            </div>
+        {% endfor %}
+
+        <button type="submit">Simpan Restoran</button>
+    </form>
+
+</body>
+{% endblock content %}
