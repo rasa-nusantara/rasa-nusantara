@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Reservasi</h1>
+<p>Welcome to our reservation system.</p>
+<a href="{% url 'reservasi:create_reservation' %}" class="btn btn-primary">Make a Reservation</a>
+{% endblock %}
