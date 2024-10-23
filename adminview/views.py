@@ -7,13 +7,11 @@ from django.contrib.auth.decorators import user_passes_test
 def is_admin(user):
     return user.is_staff
 
-# Halaman dashboard admin untuk melihat dan menambah restoran
 @user_passes_test(is_admin)
 def admin_dashboard(request):
     restaurants = Restaurant.objects.all()
     return render(request, 'admin_app/admin_dashboard.html', {'restaurants': restaurants})
 
-# Menambahkan restoran baru
 @user_passes_test(is_admin)
 def add_restaurant(request):
     if request.method == 'POST':
@@ -25,7 +23,6 @@ def add_restaurant(request):
         form = RestaurantForm()
     return render(request, 'admin_app/add_restaurant.html', {'form': form})
 
-# Menambahkan menu baru untuk restoran
 @user_passes_test(is_admin)
 def add_menu(request):
     if request.method == 'POST':
@@ -37,7 +34,6 @@ def add_menu(request):
         form = MenuForm()
     return render(request, 'admin_app/add_menu.html', {'form': form})
 
-# View untuk user melihat daftar restoran dan menu
 def restaurant_list(request):
     restaurants = Restaurant.objects.all()
     return render(request, 'admin_app/restaurant_list.html', {'restaurants': restaurants})

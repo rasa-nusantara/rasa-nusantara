@@ -1,0 +1,18 @@
+<h1>{{ restaurant.name }}</h1>
+<p>{{ restaurant.description }}</p>
+
+{% if user.is_authenticated %}
+    {% if restaurant in user.favorites.all %}
+        <form action="{% url 'favorites:toggle_favorite' restaurant.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Hapus dari Favorit</button>
+        </form>
+    {% else %}
+        <form action="{% url 'favorites:toggle_favorite' restaurant.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Tambah ke Favorit</button>
+        </form>
+    {% endif %}
+{% else %}
+    <p><a href="{% url 'login' %}">Login</a> untuk menambahkan ke favorit.</p>
+{% endif %}

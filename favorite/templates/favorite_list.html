@@ -1,0 +1,10 @@
+<h1>Daftar Restoran Favorit</h1>
+<ul>
+    {% for favorite in favorites %}
+        <li>
+            <a href="{% url 'restaurant_detail' favorite.restaurant.id %}">{{ favorite.restaurant.name }}</a>
+        </li>
+    {% empty %}
+        <li>Tidak ada restoran favorit.</li>
+    {% endfor %}
+</ul>
