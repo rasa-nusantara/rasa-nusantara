@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Restoran</title>
+</head>
+<body>
+
+    <h1>List of Restaurants</h1>
+    <div class="restaurant-list">
+        {% for restaurant in restaurants %}
+            <div class="restaurant-card">
+                <h2>{{ restaurant.name }}</h2>
+                <p><strong>Location:</strong> {{ restaurant.location }}</p>
+                <p><strong>Average Price:</strong> Rp {{ restaurant.average_price }}</p>
+                <p><strong>Rating:</strong> {{ restaurant.rating }}</p>
+                <a href="{% url 'restaurant_review' restaurant.name %}">
+                    <button class="review-button">Review This Restaurant</button>
+                </a>
+            </div>
+        {% endfor %}
+        <button onclick="window.history.back()">Back</button>
+    </div>
+
+</body>
+</html>

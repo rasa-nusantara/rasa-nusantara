@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review untuk {{ restaurant.name }}</title>
+</head>
+<body>
+
+    <h1>Review untuk {{ restaurant.name }}</h1>
+    <p><strong>Lokasi:</strong> {{ restaurant.location }}</p>
+    <p><strong>Harga Rata-Rata:</strong> Rp {{ restaurant.average_price }}</p>
+    <p><strong>Rating:</strong> {{ restaurant.rating }}</p>
+
+    <h2>Daftar Review:</h2>
+    <ul>
+        {% for review in reviews %}
+            <li>
+                <strong>{{ review.reviewer }}</strong>: {{ review.comment }}
+                {% if review.reviewer == user.username and review.id %}
+                <a href="{% url 'edit_review' review.id %}">Edit</a> |
+                <a href="{% url 'delete_review' review.id %}">Delete</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>Belum ada review untuk restoran ini.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'add_review' restaurant.name %}">Tambahkan Review</a>
+    <button onclick="window.history.back()">Back</button>
+
+
+</body>
+</html>
