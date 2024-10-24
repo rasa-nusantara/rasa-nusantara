@@ -1,10 +1,11 @@
 from django.urls import path
 from . import views
+from django.contrib import admin
+from django.urls import path, include
 
-app_name = 'favorites'
+app_name = 'favorite'
 
 urlpatterns = [
-    path('toggle/<int:restaurant_id>/', views.toggle_favorite, name='toggle_favorite'),
-    path('list/', views.favorite_list, name='favorite_list'),
+
 
 ]
