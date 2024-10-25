@@ -11,7 +11,7 @@
       <!-- Bagian Tengah - Menu Navigasi Desktop -->
       <div class="hidden md:flex items-center space-x-10">
         <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">TENTANG KAMI</a>
-        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESTORAN</a>
+        <a href="{%url 'main:restaurant' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESTORAN</a>
         <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">MAKANAN</a>
         <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESERVASI</a>
         {% if user.is_authenticated %}

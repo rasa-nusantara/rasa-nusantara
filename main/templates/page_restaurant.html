@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Rasa Nusantara</title>
+{% endblock meta %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<!-- Konten Utama dengan Padding-Top untuk Menghindari Terhalang Navbar -->
+<div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full pt-20">
+
+  <!-- Gambar di Bagian Atas -->
+  <section class="mb-12">
+    <img src="{% static 'image/mainview.webp' %}" alt="Main view" class="w-full h-[600px] object-cover rounded-lg">
+  </section>
+
+  <!-- Section Restoran Populer -->
+  <section class="mb-12 relative">
+    <div class="flex items-center justify-center">
+      <h1 class="text-2xl text-white mb-6 text-center">Daftar Restoran</h1>
+    </div>
+
+    <!-- Container Produk dengan Scroll yang Bisa Sampai Bawah -->
+    <div id="restaurantList" class="flex flex-wrap justify-center gap-6 overflow-y-auto h-auto">
+        {% for restaurant in restaurants %}
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden w-[22%] flex-shrink-0 flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl">
+                {% if restaurant.image %}
+                    <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
+                {% else %}
+                    <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
+                {% endif %}
+                <div class="p-4 flex flex-col">
+                    <h3 class="text-lg font-bold mb-1 text-gray-800">{{ restaurant.name }}</h3>
+                    <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
+                    <p class="text-sm text-gray-600">Rating: {{ restaurant.rating }}/5</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% endblock content %}

@@ -17,6 +17,14 @@ def homepage(request):
         'restaurants': restaurants
     }
     return render(request, 'main.html', context)
+
+def restaurant(request):
+    restaurants = Restaurant.objects.all()
+    context = {
+        'restaurants': restaurants
+    }
+    return render(request, 'page_restaurant.html', context)
+
 def register(request):
     form = UserCreationForm()
 

@@ -9,8 +9,13 @@
 {% include 'navbar.html' %}
 
 <div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full">
+  <!-- Gambar Besar di Atas Daftar Restoran -->
   <section class="mb-12">
-    <h1 class="text-3xl text-white text-center mb-6">List of Restaurants</h1>
+    <img src="{% static 'image/mainview.webp' %}" alt="Main View" class="w-full h-[600px] object-cover rounded-lg"> <!-- Gambar besar -->
+  </section>
+
+  <section class="mb-12">
+    <h1 class="text-3xl text-white text-center mb-6">Daftar Restoran</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-5">
         {% for restaurant in restaurants %}
             <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl">

@@ -1,32 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block meta %}
 <title>Login</title>
 {% endblock meta %}
 
 {% block content %}
-<div class="login">
-  <h1>Login</h1>
+<div style="display: flex; height: 100vh;">
+    <!-- Left side with form -->
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; background-color: white; padding: 20px;">
+        <div style="width: 100%; max-width: 400px; border: 2px solid #ccc; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+            <h1 style="font-size: 2rem; font-weight: bold; text-align: center; margin-bottom: 24px;">Selamat Datang di Rasa Nusantara</h1>
 
-  <form method="POST" action="">
-    {% csrf_token %}
-    <table>
-      {{ form.as_table }}
-      <tr>
-        <td></td>
-        <td><input class="btn login_btn" type="submit" value="Login" /></td>
-      </tr>
-    </table>
-  </form>
+            <!-- Login Form -->
+            <form method="POST" style="display: flex; flex-direction: column; gap: 16px;">
+                {% csrf_token %}
 
-  {% if messages %}
-  <ul>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %} Don't have an account yet?
-  <a href="{% url 'main:register' %}">Register Now</a>
+                <!-- Username Field -->
+                <label for="username" style="font-weight: bold;">Username:</label>
+                <input type="text" name="username" placeholder="Masukkan username Anda" required style="border: 2px solid #ccc; padding: 10px; border-radius: 5px; width: 100%; box-sizing: border-box;">
+
+                <!-- Password Field -->
+                <label for="password" style="font-weight: bold;">Password:</label>
+                <input type="password" name="password" placeholder="Masukkan password Anda" required style="border: 2px solid #ccc; padding: 10px; border-radius: 5px; width: 100%; box-sizing: border-box;">
+
+                <!-- Submit Button -->
+                <button type="submit" style="background-color: #453229; color: white; font-weight: bold; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Masuk</button>
+            </form>
+
+            <!-- Error Messages -->
+            {% if messages %}
+            <ul style="margin-top: 16px; color: red;">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <p style="text-align: center; margin-top: 20px;">Belum punya akun? <a style="font-weight : bold; color: #453229;" href="{% url 'main:register' %}">Daftar Sekarang</a></p>
+        </div>
+    </div>
+
+    <!-- Right side with background image -->
+    <div style="flex: 1; background-image: url('{% static "image/mainview.webp" %}'); background-size: cover; background-position: center;"></div>
 </div>
 
 {% endblock content %}
