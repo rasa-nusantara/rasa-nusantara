@@ -55,9 +55,9 @@
                           <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="rounded-2xl bg-slate-200 h-[180px] object-cover">
                       {% endif %}
                       <div class="flex flex-col ml-3">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between mt-2">
                             <h3 class="text-lg font-bold text-gray-800">{{ restaurant.name }}</h3>
-                            <div class="p-4 flex items-start ">
+                            <div class="flex items-start mr-2">
                                 {% if request.user.is_authenticated %}
                                     <!-- Toggle Favorite Form with AJAX -->
                                     <form id="favorite-form-{{ restaurant.id }}" data-restaurant-id="{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
@@ -65,7 +65,7 @@
                                         {% if restaurant.id in user_favorites %}
                                             <!-- Already Favorited: Display as Red -->
                                             <button type="button" 
-                                            class="favorite-button w-6 h-6 mr-3 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" 
+                                            class="favorite-button w-6 h-6 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" 
                                             onclick="toggleFavorite('{{ restaurant.id }}')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
@@ -74,7 +74,7 @@
                                         {% else %}
                                             <!-- Not Favorited: Display as White -->
                                             <button  type="button" 
-                                            class="favorite-button w-6 h-6 mr-3 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300" 
+                                            class="favorite-button w-6 h-6 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300" 
                                             onclick="toggleFavorite('{{ restaurant.id }}')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
@@ -84,7 +84,7 @@
                                     </form>
                                 {% else %}
                                     <button 
-                                        class="w-6 h-6 mr-3 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
+                                        class="w-6 h-6 mr-1 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
                                         onclick="alert('Silakan login terlebih dahulu untuk menambahkan ke favorit.');"
                                         aria-label="Love"
                                     >
@@ -96,7 +96,10 @@
                             </div>
                         </div>
                         <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
-                        <p class="text-sm text-gray-600 mb-3">Rating: {{ restaurant.rating }}/5</p>
+                        <div class="flex flex-row">
+                            <img src="{% static 'image/star.png'%}" alt="Rating" class="w[15px] h-[15px] object-cover rounded-lg">
+                            <p class="text-sm text-gray-600 mb-3">{{ restaurant.rating }}/5</p>
+                        </div>
                     </div>
                   </div>
               {% endfor %}
