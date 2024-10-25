@@ -9,131 +9,22 @@
 {% include 'navbar.html' %}
 <div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full">
 
-    <section class="mt-20 mb-10">
-        <div class="flex items-center justify-between">
-            <h2 class="text-xl text-white mb-6 text-left pl-5" style="font-family: 'Inter', sans-serif;">Kategori Makanan Tradisional</h2>
-            <input type="submit" class="text-white bg-[#EB7C3F] hover:bg-[#d96f39] px-4 py-2 rounded-full cursor-pointer ml-auto mr-5 mb-6" value="Lihat Kategori Lain">
-        </div>
-        <div class="flex flex-wrap justify-center gap-20">
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-                </div>
-                <p class="text-white text-lg mt-3">Kategori 1</p>
-            </div>
-        </div>
+    <section class="mb-2">
+        <img src="{% static 'image/mainview.webp' %}" alt="Main view" class="w-full h-[600px] object-cover rounded-lg">
     </section>
 
-    <section class="mb-12 relative">
+    <section class="mb-12 mt-5 relative">
         <div class="flex items-center justify-between">
             <h2 class="text-xl text-white mb-6 text-left pl-5">Restoran Populer</h2>
             <input type="submit" class="text-white bg-[#EB7C3F] hover:bg-[#d96f39] px-4 py-2 rounded-full cursor-pointer ml-auto mr-5 mb-6" value="Lihat Restoran Lain">
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-6">
-            {% for restaurant in restaurants|slice:":4" %}
-                <a href="{% url 'main:product_detail' restaurant.id %}" class="block relative">
-                    <div class="bg-white shadow-lg rounded-2xl overflow-hidden w-full h-auto transition duration-500 hover:scale-105 hover:shadow-2xl">
-                        {% if restaurant.image %}
-                            <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
-                        {% else %}
-                            <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover bg-slate-200">
-                        {% endif %}
-                        
-                        <div class="p-4 flex flex-col justify-between h-full">
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-bold text-gray-800 truncate">{{ restaurant.name|truncatechars:28 }}</h3>
-                                {% if request.user.is_authenticated %}
-                                    <form id="favorite-form-{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
-                                        {% csrf_token %}
-                                      <!-- Tombol Favorit dengan kondisi berdasarkan user_favorites -->
-                                        <button type="button" class="favorite-button w-6 h-6 {% if restaurant.id in user_favorites %}bg-red-500 text-white{% else %}bg-white text-gray-600{% endif %} border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" onclick="event.preventDefault(); toggleFavorite('{{ restaurant.id }}');">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                                            </svg>
-                                        </button>
-                                    </form>
-                                {% else %}
-                                    <button class="w-6 h-6 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" onclick="alert('Silakan login terlebih dahulu untuk menambahkan ke favorit.');">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                                        </svg>
-                                    </button>
-                                {% endif %}
-                            </div>
-                            <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
-                            <div class="flex items-center">
-                                <img src="{% static 'image/star.png' %}" alt="Rating" class="w-[15px] h-[15px]">
-                                <p class="text-sm text-gray-600 ml-2">{{ restaurant.rating }}/5</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-6 justify-center align-items">
+            {% for restaurant in restaurants %}
+                {% include 'card_product.html' %}
             {% endfor %}
         </div>
     </section>
-</div>
+    </div>
 
-<script>
-function toggleFavorite(restaurantId) {
-    const form = document.getElementById('favorite-form-' + restaurantId);
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-        }
-    }).then(response => response.json())  // Dapatkan response JSON
-      .then(data => {
-        const button = form.querySelector('.favorite-button');
-        if (data.is_favorite) {
-            button.classList.add('bg-red-500', 'text-white');
-            button.classList.remove('bg-white', 'text-gray-600');
-        } else {
-            button.classList.remove('bg-red-500', 'text-white');
-            button.classList.add('bg-white', 'text-gray-600');
-        }
-    }).catch(error => {
-        console.error('Error:', error);
-    });
-}
-</script>
 {% endblock content %}

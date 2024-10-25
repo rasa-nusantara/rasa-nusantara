@@ -11,8 +11,12 @@
     <div class="bg-gradient-to-br from-[#F5F5DC] to-[#FFF8DC] p-8 rounded-3xl shadow-xl w-full max-w-4xl">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="relative flex flex-col items-center">
-                <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="w-full h-64 object-cover rounded-xl mb-6">
-                
+                {% if restaurant.image %}
+                    <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="w-full h-64 object-cover rounded-xl mb-6">
+                {% else %}
+                    <img src="https://www.creativefabrica.com/wp-content/uploads/2020/03/09/Simple-Fork-Plate-Icon-Restaurant-Logo-Graphics-3446203-1-1-580x348.jpg" alt="{{ restaurant.name }}" class="w-full h-64 object-cover rounded-xl mb-6">
+                {% endif %}
+
                 <div class="absolute top-2 right-2">
                     {% if request.user.is_authenticated %}
                         <form id="favorite-form-{{ restaurant.id }}" data-restaurant-id="{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
@@ -37,7 +41,9 @@
                 </div>
                 
                 <button class="w-full bg-[#FF7F50] hover:bg-[#E67348] text-white py-2 rounded-lg mb-3">Tambah Review</button>
-                <button onclick="history.back()" class="w-full bg-[#5C4033] hover:bg-[#4F3629] text-white py-2 rounded-lg">Reservasi</button>
+                <button onclick="" class="w-full bg-[#5C4033] hover:bg-[#4F3629] text-white py-2 rounded-lg">Reservasi</button>
+                <!-- Tombol Kembali ke Homepage -->
+                <a href="{% url 'main:homepage' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg mt-3 text-center">Kembali ke Halaman Utama</a>
             </div>
 
             <div class="flex flex-col justify-center">

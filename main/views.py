@@ -17,7 +17,7 @@ from favorite.models import Favorite
 from main.models import Restaurant
 
 def homepage(request):
-    restaurants = Restaurant.objects.order_by('-rating')[:4]
+    restaurants = Restaurant.objects.order_by('-rating')[:8]
     user_favorites = []
     if request.user.is_authenticated:
         user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
