@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from favorite.views import favorite_list
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-]
+    path('favorite/', include('favorite.urls')),
+    ]

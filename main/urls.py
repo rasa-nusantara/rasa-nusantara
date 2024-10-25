@@ -5,7 +5,8 @@ app_name = 'main'
 
 urlpatterns = [
     path('', homepage, name='homepage'),
-    # path('login', login_user, name='login'),
-    # path('register', register, name='register'),
-    # path('logout', logout_user, name='logout'), ]
+    path('favorites/toggle/<uuid:restaurant_id>/', toggle_favorite, name='toggle_favorite'),  # Perbaikan URL pattern untuk UUID
+    path('login', login_user, name='login'),
+    path('register', register, name='register'),
+    path('logout', logout_user, name='logout'),
 ]

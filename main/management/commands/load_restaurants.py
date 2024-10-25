@@ -3,6 +3,7 @@ import os
 from django.core.management.base import BaseCommand
 from main.models import Restaurant, MenuItem
 from django.db import transaction
+from decimal import Decimal
 
 class Command(BaseCommand):
     help = 'Load restaurant and menu data from a JSON file into the database.'
@@ -40,15 +41,19 @@ class Command(BaseCommand):
                 try:
                     name = entry.get("Nama Restoran", "").strip()
                     location = entry.get("Lokasi Restoran", "").strip()
-                    average_price = entry.get("Harga Rata-Rata Makanan di Toko (Rp)", 0)
-                    rating = entry.get("Rating Toko", 0.0)
-                    variasi_makanan = entry.get("Variasi Makanan", "")
+                    
+                    # Ensure average_price is converted to Decimal format
+                    average_price = Decimal(entry.get("Harga Rata-Rata Makanan di Toko (Rp)", 0))
+
+                    # Ensure rating is converted to float format
+                    rating = float(entry.get("Rating Toko", 0.0))
+
+                    variasi_makanan = entry.get("Variasi Makanan", "").strip()
 
                     if not name or not location:
                         self.stderr.write(self.style.WARNING(f"Skipping entry with missing name or location: {entry}"))
                         continue
 
-                    # Create or get Restaurant
                     restaurant, created = Restaurant.objects.get_or_create(
                         name=name,
                         location=location,
@@ -59,7 +64,6 @@ class Command(BaseCommand):
                     )
 
                     if not created:
-                        # Update fields if necessary
                         updated = False
                         if restaurant.average_price != average_price:
                             restaurant.average_price = average_price
@@ -71,17 +75,18 @@ class Command(BaseCommand):
                             restaurant.save()
                             self.stdout.write(self.style.SUCCESS(f"Updated Restaurant: {name}"))
 
-                    # Process Menu Items
-                    menu_items = [item.strip() for item in variasi_makanan.split(',') if item.strip()]
-                    for menu_name in menu_items:
-                        menu_item, menu_created = MenuItem.objects.get_or_create(
-                            restaurant=restaurant,
-                            name=menu_name
-                        )
-                        if menu_created:
-                            self.stdout.write(self.style.SUCCESS(f"  - Added MenuItem: {menu_name}"))
-                        else:
-                            self.stdout.write(self.style.WARNING(f"  - MenuItem already exists: {menu_name}"))
+                    # Process Menu Items, making sure 'Variasi Makanan' is a string
+                    if isinstance(variasi_makanan, str):
+                        menu_items = [item.strip() for item in variasi_makanan.split(',') if item.strip()]
+                        for menu_name in menu_items:
+                            menu_item, menu_created = MenuItem.objects.get_or_create(
+                                restaurant=restaurant,
+                                name=menu_name
+                            )
+                            if menu_created:
+                                self.stdout.write(self.style.SUCCESS(f"  - Added MenuItem: {menu_name}"))
+                            else:
+                                self.stdout.write(self.style.WARNING(f"  - MenuItem already exists: {menu_name}"))
 
                     self.stdout.write(self.style.SUCCESS(f"Successfully processed Restaurant: {name}"))
 

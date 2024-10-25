@@ -1,10 +1,37 @@
-<h1>Daftar Restoran Favorit</h1>
-<ul>
-    {% for favorite in favorites %}
-        <li>
-            <a href="{% url 'restaurant_detail' favorite.restaurant.id %}">{{ favorite.restaurant.name }}</a>
-        </li>
-    {% empty %}
-        <li>Tidak ada restoran favorit.</li>
-    {% endfor %}
-</ul>
+{% extends 'base.html' %}
+{% block meta %}
+<title>Favorite Restaurants</title>
+{% endblock meta %}
+{% load static %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container mx-auto py-10">
+    <h1 class="text-2xl font-bold mb-6">Your Favorite Restaurants</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {% for favorite in favorites %}
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                {% if favorite.restaurant.image %}
+                    <img src="{{ favorite.restaurant.image.url }}" alt="{{ favorite.restaurant.name }}" class="w-full h-48 object-cover">
+                {% else %}
+                    <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ favorite.restaurant.name }}" class="w-full h-48 object-cover">
+                {% endif %}
+                <div class="p-4">
+                    <h2 class="text-lg font-bold">{{ favorite.restaurant.name }}</h2>
+                    <p class="text-sm">{{ favorite.restaurant.location }}</p>
+                    <p class="text-sm">Rating: {{ favorite.restaurant.rating }}/5</p>
+
+                    <!-- Form to remove the restaurant from favorites -->
+                    <form action="{% url 'favorite:remove_favorite' favorite.restaurant.id %}" method="post" class="mt-4">
+                        {% csrf_token %}
+                        <button type="submit" class="text-white bg-red-500 hover:bg-red-700 px-4 py-2 rounded">
+                            Remove from Favorites
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% empty %}
+            <p>You have no favorite restaurants yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,7 +1,7 @@
 {% load static %}
 
 <nav class="shadow-lg fixed top-0 left-0 z-40 w-screen bg-[#543C30]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Bagian Kiri - Logo -->
       <div class="flex items-center">
@@ -10,10 +10,10 @@
     
       <!-- Bagian Tengah - Menu Navigasi Desktop -->
       <div class="hidden md:flex items-center space-x-10">
-        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESTORAN</a>
+        <a href="{% url 'main:homepage' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESTORAN</a>
         <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">MAKANAN</a>
         <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESERVASI</a>
-        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">FAVORITE</a>
+        <a href="{% url 'favorite:favorite_list' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300">FAVORITE</a>
       </div>
 
       <!-- Bagian Login/Logout -->
@@ -21,16 +21,13 @@
         {% if user.is_authenticated %}
           <!-- Menampilkan ucapan selamat datang dan tombol logout jika sudah login -->
           <span class="text-gray-300 mr-4">Selamat datang, {{ user.username }}</span>
-          <a href="{% url 'main:homepage' %}" class="text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          <a href="{% url 'main:logout' %}" class="text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
             Keluar
           </a>
         {% else %}
           <!-- Menampilkan tombol Login dan Register untuk pengguna yang belum login -->
-          <a href="{% url 'main:homepage' %}" class="text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 mr-2">
+          <a href="javascript:void(0)" class="login-link text-center bg-orange-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 mr-2">
             MASUK
-          </a>
-          <a href="{% url 'main:homepage' %}" class="text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">
-            DAFTAR
           </a>
         {% endif %}
       </div>
@@ -61,10 +58,10 @@
         </a>
       {% else %}
         <!-- Menu untuk pengguna yang belum login -->
-        <a href="{% url 'main:homepage' %}" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 mb-2">
+        <a href="{% url 'main:login' %}" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 mb-2">
           Masuk
         </a>
-        <a href="{% url 'main:homepage' %}" class="block text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+        <a href="{% url 'main:register' %}" class="block text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300">
           Daftar
         </a>
       {% endif %}
@@ -82,5 +79,21 @@
         menu.classList.toggle("hidden");
       });
     });
+
+        // Dapatkan elemen modal dan tombol untuk membuka modal
+      var modal = document.getElementById("loginModal");
+      var openModalBtn = document.getElementById("openModalBtn");
+
+      // Ketika tombol sign in diklik, tampilkan modal
+      openModalBtn.onclick = function() {
+          modal.classList.remove("hidden");
+      }
+
+      // Ketika klik di luar modal, tutup modal
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.classList.add("hidden");
+          }
+      }
   </script>
 </nav>

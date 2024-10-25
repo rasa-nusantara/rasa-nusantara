@@ -6,7 +6,6 @@
 {% endblock meta %}
 
 {% block content %}
-
 {% include 'navbar.html' %}
 <div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full">
     
@@ -20,29 +19,9 @@
         <input type="submit" class="text-white bg-[#EB7C3F] hover:bg-[#d96f39] px-4 py-2 rounded-full cursor-pointer ml-auto mr-5 mb-6" value="Lihat Kategori Lain">
       </div>
     <div class="flex flex-wrap justify-center gap-20">
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu1.webp' %}" alt="Kategori 1" class="w-16 h-16 object-contain">
-        </div>
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu2.webp' %}" alt="Kategori 2" class="w-16 h-16 object-contain">
-        </div>
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu3.webp' %}" alt="Kategori 3" class="w-16 h-16 object-contain">
-        </div>
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu3.webp' %}" alt="Kategori 4" class="w-16 h-16 object-contain">
-        </div>
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu3.webp' %}" alt="Kategori 5" class="w-16 h-16 object-contain">
-        </div>
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu3.webp' %}" alt="Kategori 6" class="w-16 h-16 object-contain">
-        </div>
-        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <img src="{% static 'image/menu3.webp' %}" alt="Kategori 7" class="w-16 h-16 object-contain">
-        </div>
+        <!-- Kategori content goes here -->
     </div>
-</section>
+  </section>
 
   <section class="mb-12 relative">
     <div class="flex items-center justify-between">
@@ -69,56 +48,56 @@
           <!-- Slide 1: 4 Restoran Pertama -->
           <div class="flex space-x-6" style="min-width: 100%; gap: 24px; padding: 0 24px;">
               {% for restaurant in restaurants|slice:":4" %}
-                  <div class="bg-white shadow-lg rounded-lg overflow-hidden w-[22%] flex-shrink-0 flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl mt-5 mb-5 ml-5">
+                  <div class="bg-white shadow-lg rounded-2xl overflow-hidden w-[25%] h-30 flex-shrink-0 flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl mt-5 mb-5 ml-5">
                       {% if restaurant.image %}
-                          <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
+                          <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="rounded-2xl h-[180px] object-cover mr-5">
                       {% else %}
-                          <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
+                          <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="rounded-2xl bg-slate-200 h-[180px] object-cover">
                       {% endif %}
-                      <div class="p-4 flex items-start">
-                          <button 
-                              class="w-6 h-6 mr-3 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
-                              onclick="toggleLove(this)"
-                              aria-label="Love"
-                          >
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                              </svg>
-                          </button>
-                          <div class="flex flex-col">
-                              <h3 class="text-lg font-bold mb-1 text-gray-800">{{ restaurant.name }}</h3>
-                              <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
-                              <p class="text-sm text-gray-600">Rating: {{ restaurant.rating }}/5</p>
-                          </div>
-                      </div>
-                  </div>
-              {% endfor %}
-          </div>
-          <!-- Slide 2: 4 Restoran Berikutnya -->
-          <div class="flex space-x-6" style="min-width: 100%; gap: 24px; padding: 0 24px;">
-              {% for restaurant in restaurants|slice:"4:8" %}
-                  <div class="bg-white shadow-lg rounded-lg overflow-hidden w-[22%] flex-shrink-0 flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl">
-                      {% if restaurant.image %}
-                          <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
-                      {% else %}
-                          <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
-                      {% endif %}
-                      <div class="p-4 flex items-start">
-                          <button 
-                              class="w-6 h-6 mr-3 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
-                              onclick="toggleLove(this)"
-                              aria-label="Love"
-                          >
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                              </svg>
-                          </button>
-                          <div class="flex flex-col">
-                              <h3 class="text-lg font-bold mb-1 text-gray-800">{{ restaurant.name }}</h3>
-                              <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
-                              <p class="text-sm text-gray-600">Rating: {{ restaurant.rating }}/5</p>
-                          </div>
-                      </div>
+                      <div class="flex flex-col ml-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-gray-800">{{ restaurant.name }}</h3>
+                            <div class="p-4 flex items-start ">
+                                {% if request.user.is_authenticated %}
+                                    <!-- Toggle Favorite Form with AJAX -->
+                                    <form id="favorite-form-{{ restaurant.id }}" data-restaurant-id="{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
+                                        {% csrf_token %}
+                                        {% if restaurant.id in user_favorites %}
+                                            <!-- Already Favorited: Display as Red -->
+                                            <button type="button" 
+                                            class="favorite-button w-6 h-6 mr-3 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" 
+                                            onclick="toggleFavorite('{{ restaurant.id }}')">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                                </svg>
+                                            </button>
+                                        {% else %}
+                                            <!-- Not Favorited: Display as White -->
+                                            <button  type="button" 
+                                            class="favorite-button w-6 h-6 mr-3 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300" 
+                                            onclick="toggleFavorite('{{ restaurant.id }}')">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                                </svg>
+                                            </button>
+                                        {% endif %}
+                                    </form>
+                                {% else %}
+                                    <button 
+                                        class="w-6 h-6 mr-3 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
+                                        onclick="alert('Silakan login terlebih dahulu untuk menambahkan ke favorit.');"
+                                        aria-label="Love"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                        </svg>
+                                    </button>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
+                        <p class="text-sm text-gray-600 mb-3">Rating: {{ restaurant.rating }}/5</p>
+                    </div>
                   </div>
               {% endfor %}
           </div>
@@ -126,33 +105,144 @@
   </section>
 </div>
 
-<script>
-  function toggleLove(button) {
-      const isActive = button.classList.contains('bg-red-500');
-      if (isActive) {
-          button.classList.remove('bg-red-500', 'text-white');
-          button.classList.add('bg-white', 'text-gray-600');
-      } else {
-          button.classList.remove('bg-white', 'text-gray-600');
-          button.classList.add('bg-red-500', 'text-white');
-      }
-  }
+<div id="loginModal" class="modal hidden fixed z-50 inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="modal-content bg-white h-[60%] p-6 rounded-2xl shadow-lg w-1/3 mx-auto flex flex-col justify-center">
+        <span class="close text-red-500 text-2xl font-bold cursor-pointer">&times;</span>
+        <div class="flex flex-row justify-center align-items">
+            <img src="{% static 'image/logocoklat.png' %}" alt="Rasa Nusantara" class="w-[180px] h-[90] rounded-lg mb-3">
+        </div>
 
-  let currentSlide = 0;
+        <!-- Form Login -->
+        <form method="POST" action="{% url 'main:login' %}">
+            {% csrf_token %}
+            <div class="mb-4 mt-4">
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" name="username" required
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+
+              <!-- Tampilkan pesan error jika ada -->
+            {% if messages %}
+            <div class="mb-4" id="error-message-container">
+                {% for message in messages %}
+                    <p class="text-red-500 text-sm">{{ message }}</p>  <!-- Tampilkan pesan error -->
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <button type="submit" class="mt-4 w-full py-2 bg-orange-400 text-white rounded-full">Masuk</button>
+        </form>
+
+        <a href="{% url 'main:register' %}" class="text-sm text-blue-500 mt-4">Belum punya akun? Daftar</a>
+    </div>
+</div>
+</div>
+
+<script>
+    // Fungsi untuk membuka modal login jika login gagal
+    window.onload = function() {
+        var loginFailed = "{{ login_failed|yesno:'true,false' }}" === 'true';  // Flag dari Django
+        if (loginFailed) {
+            document.getElementById('loginModal').classList.remove('hidden');  // Buka modal jika login gagal
+        }
+    };
+    
+    // Fungsi untuk membuka modal login ketika pengguna meng-klik tombol login
+    document.querySelector('.login-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        clearErrorMessages();  // Kosongkan pesan error jika ada
+        clearInputFields();    // Kosongkan input fields
+        document.getElementById('loginModal').classList.remove('hidden');  // Buka modal
+    });
+    
+    // Fungsi untuk menutup modal login ketika tombol "close" ditekan
+    document.querySelector('.close').addEventListener('click', function() {
+        document.getElementById('loginModal').classList.add('hidden');  // Tutup modal
+        clearErrorMessages();  // Hapus pesan error saat modal ditutup
+        resetLoginFailedFlag();  // Reset flag login_failed agar modal tidak muncul lagi
+    });
+    
+    // Menutup modal jika meng-klik area di luar modal
+    window.addEventListener('click', function(e) {
+        var modal = document.getElementById('loginModal');
+        if (e.target == modal) {
+            modal.classList.add('hidden');
+            clearErrorMessages();  // Hapus pesan error saat modal ditutup
+            resetLoginFailedFlag();  // Reset flag login_failed agar modal tidak muncul lagi
+        }
+    });
+    
+    // Fungsi untuk menghapus pesan error dari modal
+    function clearErrorMessages() {
+        var errorMessageContainer = document.getElementById('error-message-container');
+        if (errorMessageContainer) {
+            errorMessageContainer.innerHTML = '';  // Kosongkan elemen pesan error
+        }
+    }
+    
+    // Fungsi untuk mengosongkan input field (username dan password)
+    function clearInputFields() {
+        document.getElementById('username').value = '';  // Kosongkan field username
+        document.getElementById('password').value = '';  // Kosongkan field password
+    }
+    
+    // Fungsi untuk mereset flag login_failed di URL agar modal tidak muncul lagi
+    function resetLoginFailedFlag() {
+        history.replaceState(null, null, window.location.href.split("?")[0]);  // Hapus parameter di URL jika ada
+    }
+    </script>
+                
+<script>
+function toggleFavorite(restaurantId) {
+    const form = document.getElementById('favorite-form-' + restaurantId);
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+    }).then(response => {
+        if (response.ok) {
+            const button = form.querySelector('.favorite-button');
+            const isActive = button.classList.contains('bg-red-500');
+            if (isActive) {
+                button.classList.remove('bg-red-500', 'text-white');
+                button.classList.add('bg-white', 'text-gray-600');
+            } else {
+                button.classList.remove('bg-white', 'text-gray-600');
+                button.classList.add('bg-red-500', 'text-white');
+            }
+        } else {
+            console.error('Failed to toggle favorite.');
+        }
+    }).catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+let currentSlide = 0;
 const slideContainer = document.getElementById('restaurantSlides');
 const slides = slideContainer.children;
-const totalSlides = Math.ceil(slides.length / 4); // Total slide (kelompok restoran per slide)
-const cardWidth = slides[0].offsetWidth; // Mendapatkan lebar satu kartu restoran
-const cardsPerSlide = 4; // Kita tahu bahwa ada 4 kartu per slide
-const slideWidth = cardWidth * cardsPerSlide; // Total lebar satu slide
+const totalSlides = Math.ceil(slides.length / 4);
+const cardWidth = slides[0].offsetWidth;
+const cardsPerSlide = 4;
+const slideWidth = cardWidth * cardsPerSlide;
 
-console.log('cardWidth:', cardWidth); // Debugging: melihat lebar kartu
-console.log('slideWidth:', slideWidth); // Debugging: melihat lebar slide
+console.log('cardWidth:', cardWidth);
+console.log('slideWidth:', slideWidth);
 
 document.getElementById('scrollLeft').addEventListener('click', function() {
     if (currentSlide > 0) {
         currentSlide--;
-        slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // Geser ke kiri
+        slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
         console.log(`Geser ke kiri, currentSlide: ${currentSlide}`);
     }
 });
@@ -160,11 +250,9 @@ document.getElementById('scrollLeft').addEventListener('click', function() {
 document.getElementById('scrollRight').addEventListener('click', function() {
     if (currentSlide < totalSlides - 1) {
         currentSlide++;
-        slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // Geser ke kanan
+        slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
         console.log(`Geser ke kanan, currentSlide: ${currentSlide}`);
     }
 });
-
-
 </script>
 {% endblock content %}
