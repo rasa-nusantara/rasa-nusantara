@@ -16,7 +16,7 @@ from django.contrib.auth.decorators import login_required
 from favorite.models import Favorite
 from main.models import Restaurant
 
-def homepage(request, login_failed=False):
+def homepage(request):
     restaurants = Restaurant.objects.order_by('-rating')[:4]
     user_favorites = []
     if request.user.is_authenticated:
@@ -24,8 +24,7 @@ def homepage(request, login_failed=False):
 
     context = {
         'restaurants': restaurants,
-        'user_favorites': user_favorites, 
-        'login_failed': login_failed
+        'user_favorites': user_favorites,
     }
     return render(request, 'main.html', context)
 
@@ -53,18 +52,20 @@ def register(request):
     return render(request, 'register.html', context)
 
 def login_user(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
+   if request.method == 'POST':
+      form = AuthenticationForm(data=request.POST)
+      if form.is_valid():
+        user = form.get_user()
+        login(request, user)
+        response = HttpResponseRedirect(reverse("main:homepage"))
+        response.set_cookie('last_login', str(datetime.datetime.now()))
+        return response
 
-        if user is not None:
-            login(request, user)
-            return redirect('main:homepage')  # Redirect ke homepage jika login sukses
-        else:
-            messages.error(request, "Username atau password yang Anda masukkan salah.")
-            return homepage(request, login_failed=True)  # Kirimkan flag login_failed ke homepage view
-    return homepage(request, login_failed=False)
+   else:
+      form = AuthenticationForm(request)
+   context = {'form': form}
+   return render(request, 'login.html', context)
+
 
 def logout_user(request):
     logout(request)
@@ -74,4 +75,12 @@ def logout_user(request):
 
 def product_detail(request, restaurant_id):
     restaurant = get_object_or_404(Restaurant, id=restaurant_id)
-    return render(request, 'product_detail.html', {'restaurant': restaurant})
+    user_favorites = []
+    if request.user.is_authenticated:
+        user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
+
+    context = {
+        'restaurant': restaurant,
+        'user_favorites': user_favorites,
+    }
+    return render(request, 'product_detail.html', context)

@@ -92,42 +92,49 @@
         "Lokasi Restoran":"Jl. KH. Ahmad Dahlan No.62",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.1,
-        "Variasi Makanan":"Oseng Mercon Daging Sapi, Oseng Mercon Ayam, Ayam Geprek Mercon, Ayam Goreng, Babat Bacem"
+        "Variasi Makanan":"Oseng Mercon Daging Sapi, Oseng Mercon Ayam, Ayam Geprek Mercon, Ayam Goreng, Babat Bacem",
+        "Foto":"https://assets-pergikuliner.com/juvc-2kJGoIIXbdZeGbHGbKwugo=/945x0/smart/filters:watermark(https://assets-pergikuliner.com/assets/pegimakan-logo-3086a7c6e15809ddc0438b11b4fbe8e6.png,-0,-3,10):no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/1280164/picture-1550566610.jpg"
+
     },
     {
         "Nama Restoran":"Oseng Mercon Mas Toni",
         "Lokasi Restoran":"Jalan KH. Ahmad Dahlan Nomor 87",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.2,
-        "Variasi Makanan":"Oseng Mercon Ayam, Oseng Mercon Lele, Oseng Mercon Nila, Oseng Mercon Cakalang, Oseng Mercon Telur Double, Mercon Babat Sapi, Mercon Paru, Mercon Udang, Oseng Mercon Ati Ampela, Oseng Mercon Burung Puyuh, Oseng Mercon Ceker, Nasi Goreng Mercon Babat +Telur, Nasi Goreng Mercon Paru, Nasi Goreng Udang, Nasi Goreng Mercon Ati + Telur, Nasi Goreng Mercon Udang + Telur"
+        "Variasi Makanan":"Oseng Mercon Ayam, Oseng Mercon Lele, Oseng Mercon Nila, Oseng Mercon Cakalang, Oseng Mercon Telur Double, Mercon Babat Sapi, Mercon Paru, Mercon Udang, Oseng Mercon Ati Ampela, Oseng Mercon Burung Puyuh, Oseng Mercon Ceker, Nasi Goreng Mercon Babat +Telur, Nasi Goreng Mercon Paru, Nasi Goreng Udang, Nasi Goreng Mercon Ati + Telur, Nasi Goreng Mercon Udang + Telur",
+        "Foto":"https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01hpg9jwrcmda94r4fydy7sgw0.jpgb"
     },
     {
         "Nama Restoran":"Oseng-oseng Mercon Mbok Sum",
         "Lokasi Restoran":"Jalan KH. Ahmad Dahlan Nomor 21",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.2,
-        "Variasi Makanan":"Nasi Gudeg, Nasi Putih, Oseng-Oseng Mercon, Ayam Dada, Ayam Brutu, Ayam Paha Atas, Ayam Paha Bawah, Ayam Kepala, Ayam Sayap, Ati Ampela, Telur, Bebek, Burung Dara, Kol Goreng, Teh, Jeruk, Kopi, Susu, Sekoteng, Jahe"
+        "Variasi Makanan":"Nasi Gudeg, Nasi Putih, Oseng-Oseng Mercon, Ayam Dada, Ayam Brutu, Ayam Paha Atas, Ayam Paha Bawah, Ayam Kepala, Ayam Sayap, Ati Ampela, Telur, Bebek, Burung Dara, Kol Goreng, Teh, Jeruk, Kopi, Susu, Sekoteng, Jahe",
+        "Foto":"https://www.jogja-handicraft.com/wp-content/uploads/2018/12/341_oseng-mercon-mbok-sum.jpg"
     },
     {
         "Nama Restoran":"Sate Klathak Pak Pong",
         "Lokasi Restoran":"Jalan Sultan Agung Nomor 18",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.3,
-        "Variasi Makanan":"Gulai Babat, Gulai Daging, Sate Biasa, Sate Klathak, Tengkleng, Tongseng Daging, Tongseng Otak, Tongseng Kepala Lidah Kikil, Kicik, Nasi Goreng, Kronyos, Teh (Panas/Es), Jeruk (Panas/Es), Lemon Tea, Es Tomat, Kopi, Susu, Saparella, Wedang Uwuh, Air Mineral, Soda Gembira"
+        "Variasi Makanan":"Gulai Babat, Gulai Daging, Sate Biasa, Sate Klathak, Tengkleng, Tongseng Daging, Tongseng Otak, Tongseng Kepala Lidah Kikil, Kicik, Nasi Goreng, Kronyos, Teh (Panas/Es), Jeruk (Panas/Es), Lemon Tea, Es Tomat, Kopi, Susu, Saparella, Wedang Uwuh, Air Mineral, Soda Gembira",
+        "Foto":"https://lh3.googleusercontent.com/A34ihMGblEPHyTMp1ybktfROczJKohVOcmcfQAYB_IqpV7OCkzdpZDx28LqtlfBgBslJIVm4mtscIzA1h06R3_SO4TkY4_BIVeV9Cie4tKUB7ldsLVkTvNGoDLvq1I82Y0k_mqwbO3EbBU68-SWOxA"
     },
     {
         "Nama Restoran":"Sate Klathak Mak Adi",
         "Lokasi Restoran":"Jalan Imogiri Timur KM 10",
         "Harga Rata-Rata Makanan di Toko (Rp)":22000,
         "Rating Toko":4.5,
-        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi"
+        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi",
+        "Foto":"https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1035/2023/11/05/2023-06-16-1637546612.jpg"
     },
     {
         "Nama Restoran":"Sate Klathak Pak Bari",
         "Lokasi Restoran":"Jalan Imogiri Timur Nomor 5",
         "Harga Rata-Rata Makanan di Toko (Rp)":27000,
         "Rating Toko":4.3,
-        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi"
+        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi",
+        "Foto":"https://kelilingjogja.id/wp-content/uploads/2022/02/Sate-Klathak-Pak-Bari.webp"
     },
     {
         "Nama Restoran": "Lontong Opor Dan Sego Gurih Bu Ani, Ngaglik",
@@ -212,21 +219,24 @@
         "Lokasi Restoran": "Jl. Ambarbinangun 1 RT05/Sub 2, Kalipakis, Tirtonirmolo, Kasihan, Bantul, D.I Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Sambel Terong, Teh Panas"
+        "Variasi Makanan": "Sayur Lodeh, Sambel Terong, Teh Panas",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c14022f0-0774-43d4-bc0d-c13166b79921_IMG_20210114_132604_974.jpg"
     },
     {
         "Nama Restoran": "Omah Kluwih",
         "Lokasi Restoran": "Jalan Alam Asri No 14 Area Sawah Sidokarto Kec Godean Kabupaten Sleman Daerah Istimewa Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Es Jeruk, Tempe Mendoan"
+        "Variasi Makanan": "Sayur Lodeh, Es Jeruk, Tempe Mendoan",
+        "Foto":"https://dzglkev4c34xb.cloudfront.net/horego.com/godean/restaurant/omah-kluwih/food/thumbnail/af1qippt1u4epubzqjhxtlw0cinat4lwo5zpy4v_vwi4.jpg"
     },
     {
         "Nama Restoran": "One Stop Parking, Patangpuluhan",
         "Lokasi Restoran": "Jl. Patangpuluhan, Gang Gambir Sawit WB.3/227, Wirobrajan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 31000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Aneka Nasi, Ayam & Bebek"
+        "Variasi Makanan": "Sayur Lodeh, Aneka Nasi, Ayam & Bebek",
+        "Foto":"https://dzglkev4c34xb.cloudfront.net/horego.com/wirobrajan/restaurant/one-stop-parking-/food/thumbnail/af1qipmcjbg20q6ckakmvq9fwglq914ss4e8pjrhzmpo.jpg"
     },
     {
         "Nama Restoran": "Pulen Kopi Ponti, Candi Sambisari",

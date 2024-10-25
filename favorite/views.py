@@ -5,7 +5,7 @@ from .models import Favorite  # Assuming Favorite is defined in the favorite app
 
 @login_required
 def favorite_list(request):
-    favorites = Favorite.objects.filter(user=request.user)
+    favorites = Favorite.objects.filter(user=request.user)  # Ambil semua favorit milik user
     return render(request, 'favorite_list.html', {'favorites': favorites})
 
 @login_required
@@ -15,3 +15,5 @@ def remove_favorite(request, restaurant_id):
     if favorite.exists():
         favorite.delete()
     return redirect('favorite:favorite_list')
+
+

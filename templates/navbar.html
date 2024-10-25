@@ -10,10 +10,10 @@
     
       <!-- Bagian Tengah - Menu Navigasi Desktop -->
       <div class="hidden md:flex items-center space-x-10">
-        <a href="{% url 'main:homepage' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESTORAN</a>
-        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">MAKANAN</a>
-        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300">RESERVASI</a>
-        <a href="{% url 'favorite:favorite_list' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300">FAVORITE</a>
+        <a href="{% url 'main:homepage' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300 font-family: 'Inter', sans-serif;">RESTORAN</a>
+        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300 font-family: 'Inter', sans-serif;">MAKANAN</a>
+        <a href="#" class="text-white font-bold text-sm font-medium hover:text-gray-300 font-family: 'Inter', sans-serif;">RESERVASI</a>
+        <a href="{% url 'favorite:favorite_list' %}" class="text-white font-bold text-sm font-medium hover:text-gray-300 font-family: 'Inter', sans-serif;">FAVORITE</a>
       </div>
 
       <!-- Bagian Login/Logout -->
@@ -26,7 +26,7 @@
           </a>
         {% else %}
           <!-- Menampilkan tombol Login dan Register untuk pengguna yang belum login -->
-          <a href="javascript:void(0)" class="login-link text-center bg-orange-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 mr-2">
+          <a href="{% url 'main:login' %}" class="login-link text-center bg-orange-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 mr-2" style="font-family: 'Inter', sans-serif;">
             MASUK
           </a>
         {% endif %}
