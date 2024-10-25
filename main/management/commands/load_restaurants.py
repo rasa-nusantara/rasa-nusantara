@@ -41,13 +41,9 @@ class Command(BaseCommand):
                 try:
                     name = entry.get("Nama Restoran", "").strip()
                     location = entry.get("Lokasi Restoran", "").strip()
-                    
-                    # Ensure average_price is converted to Decimal format
                     average_price = Decimal(entry.get("Harga Rata-Rata Makanan di Toko (Rp)", 0))
-
-                    # Ensure rating is converted to float format
                     rating = float(entry.get("Rating Toko", 0.0))
-
+                    image_url = entry.get("Foto", "").strip()  # New image field
                     variasi_makanan = entry.get("Variasi Makanan", "").strip()
 
                     if not name or not location:
@@ -59,10 +55,12 @@ class Command(BaseCommand):
                         location=location,
                         defaults={
                             'average_price': average_price,
-                            'rating': rating
+                            'rating': rating,
+                            'image': image_url  # Set the image field during creation
                         }
                     )
 
+                    # Update fields if the restaurant already exists
                     if not created:
                         updated = False
                         if restaurant.average_price != average_price:
@@ -71,11 +69,14 @@ class Command(BaseCommand):
                         if restaurant.rating != rating:
                             restaurant.rating = rating
                             updated = True
+                        if restaurant.image != image_url:
+                            restaurant.image = image_url
+                            updated = True
                         if updated:
                             restaurant.save()
                             self.stdout.write(self.style.SUCCESS(f"Updated Restaurant: {name}"))
 
-                    # Process Menu Items, making sure 'Variasi Makanan' is a string
+                    # Process Menu Items
                     if isinstance(variasi_makanan, str):
                         menu_items = [item.strip() for item in variasi_makanan.split(',') if item.strip()]
                         for menu_name in menu_items:

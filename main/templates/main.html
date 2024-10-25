@@ -8,10 +8,6 @@
 {% block content %}
 {% include 'navbar.html' %}
 <div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full">
-    
-  <section class="mb-12">
-      <img src="{% static 'image/mainview.webp' %}" alt="Main view" class="w-full h-[600px] object-cover rounded-lg">
-  </section>
 
   <section class="mb-12">
     <div class="flex items-center justify-between">
@@ -29,178 +25,59 @@
       <input type="submit" class="text-white bg-[#EB7C3F] hover:bg-[#d96f39] px-4 py-2 rounded-full cursor-pointer ml-auto mr-5 mb-6" value="Lihat Restoran Lain">
     </div>
 
-      <!-- Tombol Geser Kiri -->
-      <button id="scrollLeft" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-700 text-white rounded-full p-2 z-10 ml-5">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-      </button>
-
-      <!-- Tombol Geser Kanan -->
-      <button id="scrollRight" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-700 text-white rounded-full p-2 z-10 mr-5">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-      </button>
-
-      <!-- Container Produk dengan 2 Slide -->
-      <div id="restaurantSlides" class="flex transition-transform duration-500 overflow-hidden" style="max-width: 100%;">
-          <!-- Slide 1: 4 Restoran Pertama -->
-          <div class="flex space-x-6" style="min-width: 100%; gap: 24px; padding: 0 24px;">
-              {% for restaurant in restaurants|slice:":4" %}
-                  <div class="bg-white shadow-lg rounded-2xl overflow-hidden w-[25%] h-30 flex-shrink-0 flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl mt-5 mb-5 ml-5">
-                      {% if restaurant.image %}
-                          <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="rounded-2xl h-[180px] object-cover mr-5">
-                      {% else %}
-                          <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="rounded-2xl bg-slate-200 h-[180px] object-cover">
-                      {% endif %}
-                      <div class="flex flex-col ml-3">
-                        <div class="flex items-center justify-between mt-2">
-                            <h3 class="text-lg font-bold text-gray-800">{{ restaurant.name }}</h3>
-                            <div class="flex items-start mr-2">
-                                {% if request.user.is_authenticated %}
-                                    <!-- Toggle Favorite Form with AJAX -->
-                                    <form id="favorite-form-{{ restaurant.id }}" data-restaurant-id="{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
-                                        {% csrf_token %}
-                                        {% if restaurant.id in user_favorites %}
-                                            <!-- Already Favorited: Display as Red -->
-                                            <button type="button" 
-                                            class="favorite-button w-6 h-6 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" 
-                                            onclick="toggleFavorite('{{ restaurant.id }}')">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                                                </svg>
-                                            </button>
-                                        {% else %}
-                                            <!-- Not Favorited: Display as White -->
-                                            <button  type="button" 
-                                            class="favorite-button w-6 h-6 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300" 
-                                            onclick="toggleFavorite('{{ restaurant.id }}')">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                                                </svg>
-                                            </button>
-                                        {% endif %}
-                                    </form>
-                                {% else %}
-                                    <button 
-                                        class="w-6 h-6 mr-1 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
-                                        onclick="alert('Silakan login terlebih dahulu untuk menambahkan ke favorit.');"
-                                        aria-label="Love"
-                                    >
+    <!-- Container Produk dengan Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-6">
+        {% for restaurant in restaurants|slice:":4" %}
+            <!-- Card -->
+            <a href="{% url 'main:product_detail' restaurant.id %}" class="block relative">
+                <div class="bg-white shadow-lg rounded-2xl overflow-hidden w-full h-auto transition duration-500 hover:scale-105 hover:shadow-2xl">
+                    <!-- Gambar -->
+                    {% if restaurant.image %}
+                        <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
+                    {% else %}
+                        <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover bg-slate-200">
+                    {% endif %}
+                    
+                    <!-- Konten card -->
+                    <div class="p-4 flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-between">
+                            <!-- Nama Restoran dengan max 20 karakter -->
+                            <h3 class="text-lg font-bold text-gray-800 truncate">{{ restaurant.name|truncatechars:28 }}</h3>
+                            <!-- Tombol Favorite -->
+                            {% if request.user.is_authenticated %}
+                                <form id="favorite-form-{{ restaurant.id }}" data-restaurant-id="{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="button" class="favorite-button w-6 h-6 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300" onclick="event.preventDefault(); toggleFavorite('{{ restaurant.id }}'); event.stopPropagation();">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
                                         </svg>
                                     </button>
-                                {% endif %}
-                            </div>
+                                </form>
+                            {% else %}
+                                <button 
+                                    class="w-6 h-6 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
+                                    onclick="alert('Silakan login terlebih dahulu untuk menambahkan ke favorit.'); event.stopPropagation();"
+                                    aria-label="Love"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                    </svg>
+                                </button>
+                            {% endif %}
                         </div>
                         <p class="text-sm text-gray-600 mb-1 truncate">{{ restaurant.location }}</p>
-                        <div class="flex flex-row">
-                            <img src="{% static 'image/star.png'%}" alt="Rating" class="w[15px] h-[15px] object-cover rounded-lg">
-                            <p class="text-sm text-gray-600 mb-3">{{ restaurant.rating }}/5</p>
+                        <div class="flex items-center">
+                            <img src="{% static 'image/star.png' %}" alt="Rating" class="w-[15px] h-[15px] object-cover rounded-lg">
+                            <p class="text-sm text-gray-600 ml-2">{{ restaurant.rating }}/5</p>
                         </div>
                     </div>
-                  </div>
-              {% endfor %}
-          </div>
-      </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
   </section>
 </div>
 
-<div id="loginModal" class="modal hidden fixed z-50 inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="modal-content bg-white h-[60%] p-6 rounded-2xl shadow-lg w-1/3 mx-auto flex flex-col justify-center">
-        <span class="close text-red-500 text-2xl font-bold cursor-pointer">&times;</span>
-        <div class="flex flex-row justify-center align-items">
-            <img src="{% static 'image/logocoklat.png' %}" alt="Rasa Nusantara" class="w-[180px] h-[90] rounded-lg mb-3">
-        </div>
-
-        <!-- Form Login -->
-        <form method="POST" action="{% url 'main:login' %}">
-            {% csrf_token %}
-            <div class="mb-4 mt-4">
-                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-                <input type="text" id="username" name="username" required
-                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-
-            <div class="mb-4">
-                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                <input type="password" id="password" name="password" required
-                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-
-              <!-- Tampilkan pesan error jika ada -->
-            {% if messages %}
-            <div class="mb-4" id="error-message-container">
-                {% for message in messages %}
-                    <p class="text-red-500 text-sm">{{ message }}</p>  <!-- Tampilkan pesan error -->
-                {% endfor %}
-            </div>
-            {% endif %}
-
-            <button type="submit" class="mt-4 w-full py-2 bg-orange-400 text-white rounded-full">Masuk</button>
-        </form>
-
-        <a href="{% url 'main:register' %}" class="text-sm text-blue-500 mt-4">Belum punya akun? Daftar</a>
-    </div>
-</div>
-</div>
-
-<script>
-    // Fungsi untuk membuka modal login jika login gagal
-    window.onload = function() {
-        var loginFailed = "{{ login_failed|yesno:'true,false' }}" === 'true';  // Flag dari Django
-        if (loginFailed) {
-            document.getElementById('loginModal').classList.remove('hidden');  // Buka modal jika login gagal
-        }
-    };
-    
-    // Fungsi untuk membuka modal login ketika pengguna meng-klik tombol login
-    document.querySelector('.login-link').addEventListener('click', function(e) {
-        e.preventDefault();
-        clearErrorMessages();  // Kosongkan pesan error jika ada
-        clearInputFields();    // Kosongkan input fields
-        document.getElementById('loginModal').classList.remove('hidden');  // Buka modal
-    });
-    
-    // Fungsi untuk menutup modal login ketika tombol "close" ditekan
-    document.querySelector('.close').addEventListener('click', function() {
-        document.getElementById('loginModal').classList.add('hidden');  // Tutup modal
-        clearErrorMessages();  // Hapus pesan error saat modal ditutup
-        resetLoginFailedFlag();  // Reset flag login_failed agar modal tidak muncul lagi
-    });
-    
-    // Menutup modal jika meng-klik area di luar modal
-    window.addEventListener('click', function(e) {
-        var modal = document.getElementById('loginModal');
-        if (e.target == modal) {
-            modal.classList.add('hidden');
-            clearErrorMessages();  // Hapus pesan error saat modal ditutup
-            resetLoginFailedFlag();  // Reset flag login_failed agar modal tidak muncul lagi
-        }
-    });
-    
-    // Fungsi untuk menghapus pesan error dari modal
-    function clearErrorMessages() {
-        var errorMessageContainer = document.getElementById('error-message-container');
-        if (errorMessageContainer) {
-            errorMessageContainer.innerHTML = '';  // Kosongkan elemen pesan error
-        }
-    }
-    
-    // Fungsi untuk mengosongkan input field (username dan password)
-    function clearInputFields() {
-        document.getElementById('username').value = '';  // Kosongkan field username
-        document.getElementById('password').value = '';  // Kosongkan field password
-    }
-    
-    // Fungsi untuk mereset flag login_failed di URL agar modal tidak muncul lagi
-    function resetLoginFailedFlag() {
-        history.replaceState(null, null, window.location.href.split("?")[0]);  // Hapus parameter di URL jika ada
-    }
-    </script>
-                
 <script>
 function toggleFavorite(restaurantId) {
     const form = document.getElementById('favorite-form-' + restaurantId);
@@ -230,32 +107,5 @@ function toggleFavorite(restaurantId) {
         console.error('Error:', error);
     });
 }
-
-let currentSlide = 0;
-const slideContainer = document.getElementById('restaurantSlides');
-const slides = slideContainer.children;
-const totalSlides = Math.ceil(slides.length / 4);
-const cardWidth = slides[0].offsetWidth;
-const cardsPerSlide = 4;
-const slideWidth = cardWidth * cardsPerSlide;
-
-console.log('cardWidth:', cardWidth);
-console.log('slideWidth:', slideWidth);
-
-document.getElementById('scrollLeft').addEventListener('click', function() {
-    if (currentSlide > 0) {
-        currentSlide--;
-        slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-        console.log(`Geser ke kiri, currentSlide: ${currentSlide}`);
-    }
-});
-
-document.getElementById('scrollRight').addEventListener('click', function() {
-    if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-        slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-        console.log(`Geser ke kanan, currentSlide: ${currentSlide}`);
-    }
-});
 </script>
 {% endblock content %}

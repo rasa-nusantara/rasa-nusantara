@@ -17,7 +17,7 @@ from favorite.models import Favorite
 from main.models import Restaurant
 
 def homepage(request, login_failed=False):
-    restaurants = Restaurant.objects.all()
+    restaurants = Restaurant.objects.order_by('-rating')[:4]
     user_favorites = []
     if request.user.is_authenticated:
         user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
@@ -71,3 +71,7 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('main:homepage'))
     response.delete_cookie('last_login')
     return (response)
+
+def product_detail(request, restaurant_id):
+    restaurant = get_object_or_404(Restaurant, id=restaurant_id)
+    return render(request, 'product_detail.html', {'restaurant': restaurant})
