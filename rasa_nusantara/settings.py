@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'favorite',
     'adminview',
+    'review'
 ]
 
 MIDDLEWARE = [

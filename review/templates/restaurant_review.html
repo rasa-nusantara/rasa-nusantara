@@ -117,7 +117,7 @@
       $('#review-form').on('submit', function(event){
           event.preventDefault();
           $.ajax({
-              url: "{% url 'add_review_ajax' restaurant.name %}",
+              url: "{% url 'restaurant' restaurant.name 'add_review_ajax' %}",
               type: "POST",
               data: $(this).serialize(),
               success: function(response) {
@@ -167,7 +167,7 @@
       $('#edit-review-form').on('submit', function(event){
         event.preventDefault();
         $.ajax({
-            url: "{% url 'edit_review_ajax' %}", // Set the URL for editing reviews
+            url: "{% url 'edit_review_ajax' restaurant.id  %}",
             type: "POST",
             data: $(this).serialize(),
             success: function(response) {
