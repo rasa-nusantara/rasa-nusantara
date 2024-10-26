@@ -6,17 +6,36 @@
 {% endblock meta %}
 
 {% block content %}
-
 {% include 'navbar.html' %}
 
 <!-- Konten Utama dengan Padding-Top untuk Menghindari Terhalang Navbar -->
 <section class="mb-12 relative">
   <div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full pt-20">
-    <div class="flex flex-row items-center justify-center">
-      <h1 class="text-2xl text-white mb-6 text-center">Daftar Restoran</h1>
+    <div class="flex flex-row items-center justify-center mb-6">
+      <h1 class="text-2xl text-white text-center mr-4">Daftar Restoran</h1>
+
+      <!-- Form Dropdown Kategori dan Sorting -->
+      <form method="GET" class="flex items-center space-x-4">
+        <!-- Dropdown untuk memilih kategori -->
+        <select name="category" onchange="this.form.submit()" class="border p-2 rounded bg-white text-gray-800">
+          <option value="">Pilih Kategori</option>
+          {% for category in categories %}
+              <option value="{{ category.id }}" {% if category.id == selected_category %}selected{% endif %}>
+                  {{ category.name }}
+              </option>
+          {% endfor %}
+        </select>
+
+        <!-- Dropdown untuk sorting harga -->
+        <select name="sorting" onchange="this.form.submit()" class="border p-2 rounded bg-white text-gray-800">
+          <option value="">Urutkan Berdasarkan Harga</option>
+          <option value="low_to_high" {% if selected_sort == 'low_to_high' %}selected{% endif %}>Harga Terendah</option>
+          <option value="high_to_low" {% if selected_sort == 'high_to_low' %}selected{% endif %}>Harga Tertinggi</option>
+        </select>
+      </form>
     </div>
-  
-    <!-- Section Restoran Populer -->
+    
+    <!-- Section Restoran -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6">
       {% for restaurant in restaurants %}
           {% include 'card_product.html' %}
@@ -24,14 +43,4 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.getElementById("priceSortSelect").addEventListener("change", function() {
-    const selectedSort = this.value;
-    let url = new URL(window.location.href);
-    url.searchParams.set("sort", selectedSort);
-    window.location.href = url.toString();
-  });
-</script>
-
 {% endblock content %}

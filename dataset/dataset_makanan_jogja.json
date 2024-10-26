@@ -4,734 +4,857 @@
         "Lokasi Restoran":"Jalan Asem Gede Nomor 8, Jetis",
         "Harga Rata-Rata Makanan di Toko (Rp)":20000,
         "Rating Toko":4.2,
-        "Variasi Makanan":"Nasi Gudeg Krecek Telur, Nasi Gudeg Krecek Ceker, Nasi Gudeg Krecek Ati Ampela, Nasi Gudeg Krecek Ayam Dada, Nasi Gudeg Krecek Ayam Paha, Nasi Gudeg Krecek Tahu Tempe Bacem"
+        "Variasi Makanan":"Nasi Gudeg Krecek Telur, Nasi Gudeg Krecek Ceker, Nasi Gudeg Krecek Ati Ampela, Nasi Gudeg Krecek Ayam Dada, Nasi Gudeg Krecek Ayam Paha, Nasi Gudeg Krecek Tahu Tempe Bacem",
+        "Foto":"https://visitingjogja.jogjaprov.go.id/wp-content/uploads/2022/07/gudeg-mercon-bu-tinah-by-@gembulfoodie.jpg",
+        "Kategori":"Gudeg"
     },
     {
         "Nama Restoran":"Gudeg Mbok Lindu",
         "Lokasi Restoran":"Jalan Sosrowijayan Nomor 41-43",
         "Harga Rata-Rata Makanan di Toko (Rp)":20000,
         "Rating Toko":4.6,
-        "Variasi Makanan":"Nasi Gudeg Telur, Bubur Gudeg Telur, Gudeg Telur dan Suwir"
+        "Variasi Makanan":"Nas Gudeg Telur, Bubur Gudeg Telur, Gudeg Telur dan Suwir",
+        "Foto":"https://awsimages.detik.net.id/community/media/visual/2023/11/27/warung-gudeg-mbok-lindu-jogja_169.jpeg?w=1200",
+        "Kategori":"Gudeg"
     },
     {
         "Nama Restoran":"Gudeg Permata Bu Narti",
         "Lokasi Restoran":"Jalan Gajah Mada Nomor 2",
         "Harga Rata-Rata Makanan di Toko (Rp)":14000,
         "Rating Toko":4.5,
-        "Variasi Makanan":"Nasi Gudeg Telur, Nasi Gudeg Ati Ampela, Nasi Gudeg Dada + Telur, Nasi Gudeg Paha Bawah, Nasi Gudeg Sayap, Nasi Gudeg Kepala, Nasi Gudeg Tahu Tempe, Nasi Gudeg Paha Atas"
+        "Variasi Makanan":"Nasi Gudeg Telur, Nasi Gudeg Ati Ampela, Nasi Gudeg Dada + Telur, Nasi Gudeg Paha Bawah, Nasi Gudeg Sayap, Nasi Gudeg Kepala, Nasi Gudeg Tahu Tempe, Nasi Gudeg Paha Atas",
+        "Foto":"https://www.pilar.id/wp-content/uploads/2023/03/7C0AFDCF-B3E2-4B3E-B289-7C588276B6BA.jpeg",
+        "Kategori":"Gudeg"
     },
     {
         "Nama Restoran":"Gudeg Bu Djuminten",
         "Lokasi Restoran":"Jalan Asam Gede Nomor 14",
         "Harga Rata-Rata Makanan di Toko (Rp)":25000,
         "Rating Toko":4.5,
-        "Variasi Makanan":"Nasi Gudeg Polos, Nasi Gudeg + Tahu, Nasi Gudeg + Telur, Nasi Gudeg + Telur + Tahu, Nasi Gudeg + Kepala, Nasi Gudeg + Kepala + Telur, Nasi Putih, Nasi Gudeg + Ati Ampela, Es Teh Manis, Teh Manis, Es Teh Tawar, Teh Tawar"
+        "Variasi Makanan":"Nasi Gudeg Polos, Nasi Gudeg + Tahu, Nasi Gudeg + Telur, Nasi Gudeg + Telur + Tahu, Nasi Gudeg + Kepala, Nasi Gudeg + Kepala + Telur, Nasi Putih, Nasi Gudeg + Ati Ampela, Es Teh Manis, Teh Manis, Es Teh Tawar, Teh Tawar",
+        "Foto":"https://gudeg.net/cni-content/uploads/modules/direktori/logo/20160314022515.jpg",
+        "Kategori":"Gudeg"
     },
     {
         "Nama Restoran":"Gudeg Pawon",
         "Lokasi Restoran":"Jl. Prof. DR. Soepomo Sh UH/IV Nomor 36",
         "Harga Rata-Rata Makanan di Toko (Rp)":25000,
         "Rating Toko":4.5,
-        "Variasi Makanan":"Nasi Gudeg Sayap, Nasi Gudeg Paha Atas, Nasi Gudeg Dada, Nasi Gudeg Paha Bawah, Nasi Gudeg Kepala, Nasi Gudeg Ati Ampela, Nasi Gudeg Telur "
+        "Variasi Makanan":"Nasi Gudeg Sayap, Nasi Gudeg Paha Atas, Nasi Gudeg Dada, Nasi Gudeg Paha Bawah, Nasi Gudeg Kepala, Nasi Gudeg Ati Ampela, Nasi Gudeg Telur ",
+        "Foto":"https://eranasional.com/wp-content/uploads/2020/02/pawon-gudeg-jogja-dwtdigipreneur.jpg",
+        "Kategori":"Gudeg"
     },
     {
         "Nama Restoran":"Bakpia Pathok 25",
         "Lokasi Restoran":"Jalan Karel Sasuit Tubun Nomor 504",
         "Harga Rata-Rata Makanan di Toko (Rp)":42500,
         "Rating Toko":4.6,
-        "Variasi Makanan":"Bakpia Pathok 25 Original Cokelat, Bakpia Pathok 25 Original Nanas, Bakpia Pathok 25 Original Kacang Hijau, Bakpia Pathok 25 Original Aneka Rasa, Bakpia Pathok 25 Original Keju, Bakpia Pathok 25 Premium Kacang Hijau, Bakpia Pathok 25 Premium Susu, Bakpia Pathok 25 Premium Cokelat, Bakpia Pathok 25 Premium Telo Ungu, Bakpia Pathok 25 Premium Kumbu, Bakpia Pathok 25 Premium Nanas, Bakpia Pathok 25 Premium Cappuccino, Bakpia Pathok 25 Premium Keju, Bakpia Pathok 25 Premium Durian, Bakpia Pathok 25 Premium Green Tea"
+        "Variasi Makanan":"Bakpia Pathok 25 Original Cokelat, Bakpia Pathok 25 Original Nanas, Bakpia Pathok 25 Original Kacang Hijau, Bakpia Pathok 25 Original Aneka Rasa, Bakpia Pathok 25 Original Keju, Bakpia Pathok 25 Premium Kacang Hijau, Bakpia Pathok 25 Premium Susu, Bakpia Pathok 25 Premium Cokelat, Bakpia Pathok 25 Premium Telo Ungu, Bakpia Pathok 25 Premium Kumbu, Bakpia Pathok 25 Premium Nanas, Bakpia Pathok 25 Premium Cappuccino, Bakpia Pathok 25 Premium Keju, Bakpia Pathok 25 Premium Durian, Bakpia Pathok 25 Premium Green Tea",
+        "Foto":"https://bob.kemenparekraf.go.id/wp-content/uploads/2022/09/pathok-25-by-@bakpia25_official.jpg",
+        "Kategori":"Bakpia"
     },
     {
         "Nama Restoran":"Bakpia Kurnia Sari",
         "Lokasi Restoran":"Jalan Glagahsari Nomor 91",
         "Harga Rata-Rata Makanan di Toko (Rp)":35000,
         "Rating Toko":4.4,
-        "Variasi Makanan":"Bakpia Bolen 5 Potong, Bakpia Isi 40, Bakpia Keju isi 15, Bakpia Kacang hijau isi 15, Bakpia Kumbu Hitam Isi 15, Bakpia Coklat Isi 15, Bakpia Susu Isi 15, Bakpia Greentea Isi 15, Bakpia Kopi isi 15, Bakpia Ubi Ungu Isi 15, Bakpia Tiramisu Isi 15, Bakpia Susu Durian Isi 15, Bakpia Coklat Mete Isi 15, Bakpia Keju Edam Isi 15, Pia Choco Crunchy Isi 4, Paket 3 Box Bakpia Mini, Bakpia Oreo Isi 15"
+        "Variasi Makanan":"Bakpia Bolen 5 Potong, Bakpia Isi 40, Bakpia Keju isi 15, Bakpia Kacang hijau isi 15, Bakpia Kumbu Hitam Isi 15, Bakpia Coklat Isi 15, Bakpia Susu Isi 15, Bakpia Greentea Isi 15, Bakpia Kopi isi 15, Bakpia Ubi Ungu Isi 15, Bakpia Tiramisu Isi 15, Bakpia Susu Durian Isi 15, Bakpia Coklat Mete Isi 15, Bakpia Keju Edam Isi 15, Pia Choco Crunchy Isi 4, Paket 3 Box Bakpia Mini, Bakpia Oreo Isi 15",
+        "Foto":"https://www.yogyes.com/id/yogyakarta-culinary/bakpia-kurnia-sari/1.jpg",
+        "Kategori":"Bakpia"
     },
     {
         "Nama Restoran":"Bakpia Patuk 75",
         "Lokasi Restoran":"Jalan Karel Sasuit Tubun Nomor 75",
         "Harga Rata-Rata Makanan di Toko (Rp)":35000,
         "Rating Toko":4.7,
-        "Variasi Makanan":"Bakpia Klasik isi 15, Bakpia Super isi 10, Bakpia Klasik isi 20, Bakpia Super isi 15, Pia Toegoe isi 15"
+        "Variasi Makanan":"Bakpia Klasik isi 15, Bakpia Super isi 10, Bakpia Klasik isi 20, Bakpia Super isi 15, Pia Toegoe isi 15",
+        "Foto":"https://paxelmarket.co/wp-content/uploads/2022/12/bakpia-75-jogja-20150807-195258-13a9669e6dbc8f9e79120ee0440b45a5.jpg",
+        "Kategori":"Bakpia"
     },
     {
         "Nama Restoran":"Bakpia Pathok 145",
         "Lokasi Restoran":"Jalan Gambiran Nomor 67A",
         "Harga Rata-Rata Makanan di Toko (Rp)":35000,
         "Rating Toko":4.4,
-        "Variasi Makanan":"Bakpia Kacang Hijau, Bakpia Kumbu Hitam, Bakpia Coklat, Bakpia Keju, Bakpia Durian, Bakpia Aneka Rasa, Wingko Babat, Yangko, Ampyang Jahe, Gula Kelapa Muda "
+        "Variasi Makanan":"Bakpia Kacang Hijau, Bakpia Kumbu Hitam, Bakpia Coklat, Bakpia Keju, Bakpia Durian, Bakpia Aneka Rasa, Wingko Babat, Yangko, Ampyang Jahe, Gula Kelapa Muda ",
+        "Foto":"https://www.bakpia145sriastuti.com/images/kotak/kumbu%20hitam.jpg",
+        "Kategori":"Bakpia"
     },
     {
         "Nama Restoran":"Bakpiaku",
         "Lokasi Restoran":"Jalan Gajah Mada Nomor 60",
         "Harga Rata-Rata Makanan di Toko (Rp)":35000,
         "Rating Toko":4.5,
-        "Variasi Makanan":"Bakpiaku Kumbu Hitam, Bakpiaku Durian, Bakpiaku Cappucino, Bakpiaku Susu, Bakpiaku Green Tea, Bakpiaku Kacang Hijau, Bakpiaku Coklat, Bakpiaku Keju"
+        "Variasi Makanan":"Bakpiaku Kumbu Hitam, Bakpiaku Durian, Bakpiaku Cappucino, Bakpiaku Susu, Bakpiaku Green Tea, Bakpiaku Kacang Hijau, Bakpiaku Coklat, Bakpiaku Keju",
+        "Foto":"https://images.tokopedia.net/img/cache/700/VqbcmM/2022/11/3/b7c88821-c6e5-4c3e-908a-368c559e3d19.jpg",
+        "Kategori":"Bakpia"
     },
     {
         "Nama Restoran":"Oseng Mercon Bu Narti",
         "Lokasi Restoran":"Jalan KH. Ahmad Dahlan Nomor 110",
         "Harga Rata-Rata Makanan di Toko (Rp)":25000,
         "Rating Toko":3.8,
-        "Variasi Makanan":"Oseng Mercon, Oseng Mercon Ayam, Oseng Mercon Lele, Oseng Mercon Burung Puyuh, Nasi Putih, Es Teh, Es Jeruk, Tempe Mendoan, Tahu Mendoan, Sate Telur Puyuh, Ceker Mercon, Usus Mercon"
+        "Variasi Makanan":"Oseng Mercon, Oseng Mercon Ayam, Oseng Mercon Lele, Oseng Mercon Burung Puyuh, Nasi Putih, Es Teh, Es Jeruk, Tempe Mendoan, Tahu Mendoan, Sate Telur Puyuh, Ceker Mercon, Usus Mercon",
+        "Foto":"https://www.yogyes.com/id/yogyakarta-culinary/oseng-oseng-mercon/1.jpg",
+        "Kategori":"Oseng"
     },
     {
         "Nama Restoran":"Oseng Mercon 62",
         "Lokasi Restoran":"Jl. KH. Ahmad Dahlan No.62",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.1,
-        "Variasi Makanan":"Oseng Mercon Daging Sapi, Oseng Mercon Ayam, Ayam Geprek Mercon, Ayam Goreng, Babat Bacem"
+        "Variasi Makanan":"Oseng Mercon Daging Sapi, Oseng Mercon Ayam, Ayam Geprek Mercon, Ayam Goreng, Babat Bacem",
+        "Foto":"https://assets-pergikuliner.com/juvc-2kJGoIIXbdZeGbHGbKwugo=/945x0/smart/filters:watermark(https://assets-pergikuliner.com/assets/pegimakan-logo-3086a7c6e15809ddc0438b11b4fbe8e6.png,-0,-3,10):no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/1280164/picture-1550566610.jpg",
+        "Kategori":"Oseng, Ayam"
     },
     {
         "Nama Restoran":"Oseng Mercon Mas Toni",
         "Lokasi Restoran":"Jalan KH. Ahmad Dahlan Nomor 87",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.2,
-        "Variasi Makanan":"Oseng Mercon Ayam, Oseng Mercon Lele, Oseng Mercon Nila, Oseng Mercon Cakalang, Oseng Mercon Telur Double, Mercon Babat Sapi, Mercon Paru, Mercon Udang, Oseng Mercon Ati Ampela, Oseng Mercon Burung Puyuh, Oseng Mercon Ceker, Nasi Goreng Mercon Babat +Telur, Nasi Goreng Mercon Paru, Nasi Goreng Udang, Nasi Goreng Mercon Ati + Telur, Nasi Goreng Mercon Udang + Telur"
+        "Variasi Makanan":"Oseng Mercon Ayam, Oseng Mercon Lele, Oseng Mercon Nila, Oseng Mercon Cakalang, Oseng Mercon Telur Double, Mercon Babat Sapi, Mercon Paru, Mercon Udang, Oseng Mercon Ati Ampela, Oseng Mercon Burung Puyuh, Oseng Mercon Ceker, Nasi Goreng Mercon Babat +Telur, Nasi Goreng Mercon Paru, Nasi Goreng Udang, Nasi Goreng Mercon Ati + Telur, Nasi Goreng Mercon Udang + Telur",
+        "Foto":"https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01hpg9jwrcmda94r4fydy7sgw0.jpgb",
+        "Kategori":"Oseng"
     },
     {
         "Nama Restoran":"Oseng-oseng Mercon Mbok Sum",
         "Lokasi Restoran":"Jalan KH. Ahmad Dahlan Nomor 21",
         "Harga Rata-Rata Makanan di Toko (Rp)":30000,
         "Rating Toko":4.2,
-        "Variasi Makanan":"Nasi Gudeg, Nasi Putih, Oseng-Oseng Mercon, Ayam Dada, Ayam Brutu, Ayam Paha Atas, Ayam Paha Bawah, Ayam Kepala, Ayam Sayap, Ati Ampela, Telur, Bebek, Burung Dara, Kol Goreng, Teh, Jeruk, Kopi, Susu, Sekoteng, Jahe"
+        "Variasi Makanan":"Nasi Gudeg, Nasi Putih, Oseng-Oseng Mercon, Ayam Dada, Ayam Brutu, Ayam Paha Atas, Ayam Paha Bawah, Ayam Kepala, Ayam Sayap, Ati Ampela, Telur, Bebek, Burung Dara, Kol Goreng, Teh, Jeruk, Kopi, Susu, Sekoteng, Jahe",
+        "Foto":"https://www.jogja-handicraft.com/wp-content/uploads/2018/12/341_oseng-mercon-mbok-sum.jpg",
+        "Kategori":"Oseng, Gudeg, Ayam"
+    },
+    {
+        "Nama Restoran":"Sate Klathak Pak Pong",
+        "Lokasi Restoran":"Jalan Sultan Agung Nomor 18",
+        "Harga Rata-Rata Makanan di Toko (Rp)":30000,
+        "Rating Toko":4.3,
+        "Variasi Makanan":"Gulai Babat, Gulai Daging, Sate Biasa, Sate Klathak, Tengkleng, Tongseng Daging, Tongseng Otak, Tongseng Kepala Lidah Kikil, Kicik, Nasi Goreng, Kronyos, Teh (Panas/Es), Jeruk (Panas/Es), Lemon Tea, Es Tomat, Kopi, Susu, Saparella, Wedang Uwuh, Air Mineral, Soda Gembira",
+        "Foto":"https://lh3.googleusercontent.com/A34ihMGblEPHyTMp1ybktfROczJKohVOcmcfQAYB_IqpV7OCkzdpZDx28LqtlfBgBslJIVm4mtscIzA1h06R3_SO4TkY4_BIVeV9Cie4tKUB7ldsLVkTvNGoDLvq1I82Y0k_mqwbO3EbBU68-SWOxA",
+        "Kategori":"Sate, Wedang"
     },
     {
         "Nama Restoran":"Sate Klathak Mak Adi",
         "Lokasi Restoran":"Jalan Imogiri Timur KM 10",
         "Harga Rata-Rata Makanan di Toko (Rp)":22000,
         "Rating Toko":4.5,
-        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi"
+        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi",
+        "Foto":"https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1035/2023/11/05/2023-06-16-1637546612.jpg",
+        "Kategori":"Sate, Wedang"
+
     },
     {
         "Nama Restoran":"Sate Klathak Pak Bari",
         "Lokasi Restoran":"Jalan Imogiri Timur Nomor 5",
         "Harga Rata-Rata Makanan di Toko (Rp)":27000,
         "Rating Toko":4.3,
-        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi"
+        "Variasi Makanan":"Sate Klathak, Sate Biasa, Sate Goreng, Tongseng Daging, Tongseng Kepala, Tongseng Kikil, Tengklang Biasa, Tengkleng Iga, Gulai Jeroan, Gulai Tulang, Krenyos, Nasgor Kambing, Toseng/gulai otak, Jeruk Es/Panas, Teh Es/Panas, Wedang uwuh, Air Es, Nasi",
+        "Foto":"https://kelilingjogja.id/wp-content/uploads/2022/02/Sate-Klathak-Pak-Bari.webp",
+        "Kategori":"Sate, Wedang"
     },
     {
         "Nama Restoran": "Lontong Opor Dan Sego Gurih Bu Ani, Ngaglik",
         "Lokasi Restoran": "Jl. Kakap VII No.9, Mladangan, Minomartani, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55581",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.2,
-        "Variasi Makanan": "Sego Gurih"
+        "Variasi Makanan": "Sego Gurih",
+        "Kategori":"Sego Gurih"
     },
     {
         "Nama Restoran": "Serabi Kocor Mantrigawen, Magangan Kulon",
         "Lokasi Restoran": "Jl. Magangan Kulon, Kraton, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Sego Gurih, Lontong Opor, Nasi Kuning"
+        "Variasi Makanan": "Sego Gurih, Lontong Opor, Nasi Kuning",
+        "Kategori":"Sego Gurih"
     },
     {
         "Nama Restoran": "Pecel Lanang Bu Umyatun, Gatak",
         "Lokasi Restoran": "Jl. Rukeman No. 74b, Kasihan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 12000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Sego Gurih, Ayam Bacem, Kikil Petir"
+        "Variasi Makanan": "Sego Gurih, Ayam Bacem, Kikil Petir",
+        "Kategori":"Sego Gurih, Ayam"
     },
     {
         "Nama Restoran": "Ayam Dapur Sang Juara, Sedayu",
         "Lokasi Restoran": "Perum Sedayu Permai, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 28000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Sego Gurih, Ayam Bakar, Nutrisari"
+        "Variasi Makanan": "Sego Gurih, Ayam Bakar, Nutrisari",
+        "Kategori":"Sego Gurih, Ayam"
     },
     {
         "Nama Restoran": "Ramesan Ndeso, Gang Arjuna",
         "Lokasi Restoran": "Jl. Bantul, Gang Arjuna, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 9000,
         "Rating Toko": 4.0,
-        "Variasi Makanan": "Sego Gurih, Kopi, Cepat Saji"
+        "Variasi Makanan": "Sego Gurih, Kopi, Cepat Saji",
+        "Kategori":"Sego Gurih"
     },
     {
         "Nama Restoran": "Kremesan Wong Ndeso, Perumahan Pertamina",
         "Lokasi Restoran": "Jl. Perumahan Pertamina, Blok I No. 14, Kalasan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 22000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Wedang Jahe, Sambel Ayam"
+        "Variasi Makanan": "Wedang Jahe, Sambel Ayam",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Pawone, Hartono Mall Yogyakarta",
         "Lokasi Restoran": "Hartono Mall, Lantai 2 No. 12 & 15, Jl. Ring Road Utara, Depok, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 30000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Wedang Jahe, Sambel Teri, Teh Panas"
+        "Variasi Makanan": "Wedang Jahe, Sambel Teri, Teh Panas",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Sop Buntut Bu Menuk, Kaliurang KM 7.8",
         "Lokasi Restoran": "Jl. Kaliurang KM 7.8, Ngaglik, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 25000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Wedang Jahe, Sop Buntut, Bakso"
+        "Variasi Makanan": "Wedang Jahe, Sop Buntut, Bakso",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Momogie Kitchen, Lempongsari",
         "Lokasi Restoran": "Jl. Lempongsari Raya Baru No 4, Ngaglik, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Wedang Jahe Sereh, Rice Bowl Telor, Sate Ati Ampela"
+        "Variasi Makanan": "Wedang Jahe Sereh, Rice Bowl Telor, Sate Ati Ampela",
+        "Kategori":"Wedang, Sate"
     },
     {
         "Nama Restoran": "Wedang Ronde Barokah II, Depok",
         "Lokasi Restoran": "Jl. Anggrek Sambilegi Kidul Maguwoharjo, Depok, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Wedang Jahe, Wedang Ronde, Tahu Petis"
+        "Variasi Makanan": "Wedang Jahe, Wedang Ronde, Tahu Petis",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Mirota Bakery & Resto, Gondokusuman",
         "Lokasi Restoran": "Jl. Faridan Muridan Noto No.7, Gondokusuman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 79000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Bakmi Goreng, Soto Ayam"
+        "Variasi Makanan": "Sayur Lodeh, Bakmi Goreng, Soto Ayam",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Nasi Pecel Khas Blitar Bu Iwied, Kasihan",
         "Lokasi Restoran": "Jl. Ambarbinangun 1 RT05/Sub 2, Kalipakis, Tirtonirmolo, Kasihan, Bantul, D.I Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Sambel Terong, Teh Panas"
+        "Variasi Makanan": "Sayur Lodeh, Sambel Terong, Teh Panas",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Omah Kluwih",
         "Lokasi Restoran": "Jalan Alam Asri No 14 Area Sawah Sidokarto Kec Godean Kabupaten Sleman Daerah Istimewa Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Es Jeruk, Tempe Mendoan"
+        "Variasi Makanan": "Sayur Lodeh, Es Jeruk, Tempe Mendoan",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "One Stop Parking, Patangpuluhan",
         "Lokasi Restoran": "Jl. Patangpuluhan, Gang Gambir Sawit WB.3/227, Wirobrajan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 31000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Aneka Nasi, Ayam & Bebek"
+        "Variasi Makanan": "Sayur Lodeh, Aneka Nasi, Ayam & Bebek",
+        "Kategori":"Lainnya, Ayam"
     },
     {
         "Nama Restoran": "Pulen Kopi Ponti, Candi Sambisari",
         "Lokasi Restoran": "Jl. Candi Sambisari No.16 A, Kalasan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Sayur Lodeh, Sayur Sop, Kopi Jahe"
+        "Variasi Makanan": "Sayur Lodeh, Sayur Sop, Kopi Jahe",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Kedai Lontong Sayur Mbak Win, Ruko Pasar Telogorejo",
         "Lokasi Restoran": "Ruko Pasar Telogorejo, Jl. Godean Km. 5, Gamping, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Lontong Sayur, Lontong Opor Telur"
+        "Variasi Makanan": "Lontong Sayur, Lontong Opor Telur",
+        "Kategori":"Lontong"
     },
     {
         "Nama Restoran": "Lontong Sayur Uda Asdi, Andong",
         "Lokasi Restoran": "Jl. Andong, Umbulharjo, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 11000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Lontong Sayur, Lontong Pecel Ayam, Tempe Goreng"
+        "Variasi Makanan": "Lontong Sayur, Lontong Pecel Ayam, Tempe Goreng",
+        "Kategori":"Lontong"
     },
     {
         "Nama Restoran": "Nasi Kuning Nurul, Kricak",
         "Lokasi Restoran": "Jl. Magelang, Kricak Kidul, Tegalrejo, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Nasi Kuning, Bakwan Sayur, Telur Balado"
+        "Variasi Makanan": "Nasi Kuning, Bakwan Sayur, Telur Balado",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Lontong Sayur & Pecel Padang 2 Saudara, Pramuka",
         "Lokasi Restoran": "Jl. Pramuka No. 110, Umbulharjo, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Lontong Sayur, Bubur Sumsum, Kacang Ijo"
+        "Variasi Makanan": "Lontong Sayur, Bubur Sumsum, Kacang Ijo",
+        "Kategori":"Lontong"
     },
     {
         "Nama Restoran": "Bubur Ayam Sembilan Babarsari, Depok",
         "Lokasi Restoran": "Jl. Babarsari No 9, Depok, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Sate Puyuh, Bubur Polos, Lontong Sayur"
+        "Variasi Makanan": "Sate Puyuh, Bubur Polos, Lontong Sayur",
+        "Kategori":"Lontong, Sate"
     },
     {
         "Nama Restoran": "Rujak cingur dan Tahu tek ARJUNA",
         "Lokasi Restoran": "Jln. Flamboyan, Gang Arjuna, Tambakrejo, Sariharjo, Ngaglik, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 14000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Rujak Cingur, Tahu Tek, Peyek Rebon"
+        "Variasi Makanan": "Rujak Cingur, Tahu Tek, Peyek Rebon",
+        "Kategori":"Rujak Cingur"
     },
     {
         "Nama Restoran": "Rujak Cingur, Gado-gado Dan Tahu Tek Kedai Sumilir",
         "Lokasi Restoran": "Jl.Bantulan-sidoarum Godean Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Rujak Cingur Super Pedas, Lotek, Tahu Tek"
+        "Variasi Makanan": "Rujak Cingur Super Pedas, Lotek, Tahu Tek",
+        "Kategori":"Rujak Cingur"
     },
     {
         "Nama Restoran": "Rujak Cingur Surabaya Bu Thamrin, Madukismo",
         "Lokasi Restoran": "Jl. Madukismo No. 34, Kasihan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Rujak Cingur, Lotek Bakwan, Kupat Tahu"
+        "Variasi Makanan": "Rujak Cingur, Lotek Bakwan, Kupat Tahu",
+        "Kategori":"Rujak Cingur"
     },
     {
         "Nama Restoran": "Sego Saduk Suroboyo, Cokro",
         "Lokasi Restoran": "Jl Bumijo Lor No 24-22, Jetis, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 25000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Rujak Cingur, Nasi Bebek Besar, Ayam Kampung Penyet"
+        "Variasi Makanan": "Rujak Cingur, Nasi Bebek Besar, Ayam Kampung Penyet",
+        "Kategori":"Rujak Cingur, Ayam"
     },
     {
         "Nama Restoran": "Mangut Lele Mbah Marto",
         "Lokasi Restoran": "Jalan Parangtritis Km 7, Panggungharjo, Sewon, Bantul, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Mangut Lele, Opor Ayam, Garang Asem, Gudeg"
+        "Variasi Makanan": "Mangut Lele, Opor Ayam, Garang Asem, Gudeg",
+        "Kategori":"Mangut Lele, Gudeg"
     },
     {
         "Nama Restoran": "Mangut Lele & Sego Pecel Yu Temu",
         "Lokasi Restoran": "Desa Bangunjiwo, Kasihan, Bantul, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Mangut Lele, Nasi Pecel"
+        "Variasi Makanan": "Mangut Lele, Nasi Pecel",
+        "Kategori":"Mangut Lele"
     },
     {
         "Nama Restoran": "Mangut Lele Bu Is",
         "Lokasi Restoran": "Jalan Imogiri Barat No 12, Turi, Sumberagung, Jetis, Bantul, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Mangut Lele, Tempe Gembus Goreng, Tumis Cabai, Sambal Petis"
+        "Variasi Makanan": "Mangut Lele, Tempe Gembus Goreng, Tumis Cabai, Sambal Petis",
+        "Kategori":"Mangut Lele"
     },
     {
         "Nama Restoran": "Mangut Eyang Uti",
         "Lokasi Restoran": "Jalan Raya Kadisoka, Maguwo, Purwomartani, Kalasan, Sleman, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Mangut Lele, Mangut Gurame, Mangut Telur Bebek, Mangut Ayam Kampung, Mangut Nila"
+        "Variasi Makanan": "Mangut Lele, Mangut Gurame, Mangut Telur Bebek, Mangut Ayam Kampung, Mangut Nila",
+        "Kategori":"Mangut Lele, Ayam"
     },
     {
         "Nama Restoran": "Pendopo Mangut Idaman",
         "Lokasi Restoran": "Jalan Pekapalan No 7, Prawirodirjan, Gondomanan, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Mangut Lele, Mangut Ikan"
+        "Variasi Makanan": "Mangut Lele, Mangut Ikan",
+        "Kategori":"Mangut Lele"
     },
     {
         "Nama Restoran": "Pecel Senggol Beringharjo",
         "Lokasi Restoran": "Jl. Pabringan No.84, Ngupasan, Gondomanan, Yogyakarta City, Special Region of Yogyakarta 55122",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Sego Pecel, Sate, Baceman"
+        "Variasi Makanan": "Sego Pecel, Sate, Baceman",
+        "Kategori":"Mangut Lele, Sate"
     },
     {
         "Nama Restoran": "Pecel Bu Ramelan",
         "Lokasi Restoran": "Jalan Laksda Adisucipto Km. 6, Nomor 2, Timur Hotel Ambarukmo, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 6000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Sego Pecel, Soto"
+        "Variasi Makanan": "Sego Pecel, Soto",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Warung SGPC Bu Wiryo",
         "Lokasi Restoran": "Jalan Agro CT VIII Klebengan, Selokan Mataram, Jogja",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Sego Pecel, Sup"
+        "Variasi Makanan": "Sego Pecel, Sup",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Pecel Wader Pak Bejo",
         "Lokasi Restoran": "Jalan Wiroyo, Mantup, Baturetno, Banguntapan, Bantul",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Sego Pecel, Ikan Wader Goreng, Sambal Bawang"
+        "Variasi Makanan": "Sego Pecel, Ikan Wader Goreng, Sambal Bawang",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Pecel Pincuk Gumilang",
         "Lokasi Restoran": "Jl. Laksda Adisucipto No.31, Ngentak, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Sego Pecel, Empal, Tahu, Tempe Bacem"
+        "Variasi Makanan": "Sego Pecel, Empal, Tahu, Tempe Bacem",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Ayam Goreng Mbok Berek",
         "Lokasi Restoran": "Jl. Pugeran Timur No.24, Suryodiningratan, Kec. Mantrijeron, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55141",
         "Harga Rata-Rata Makanan di Toko (Rp)": 80000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Ayam Kalasan, Kremesan, Lalapan"
+        "Variasi Makanan": "Ayam Kalasan, Kremesan, Lalapan",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Goreng Suharti",
         "Lokasi Restoran": "Jl. Laksda Adisucipto No. 208, Caturtunggal, Sleman",
         "Harga Rata-Rata Makanan di Toko (Rp)": 63000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Ayam Kalasan, Kremesan, Sambal"
+        "Variasi Makanan": "Ayam Kalasan, Kremesan, Sambal",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Goreng Tojoyo",
         "Lokasi Restoran": "Jl. Urip Sumoharjo No. 133, Klitren, Kota Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 35000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Ayam Kalasan, Jeroan, Sup"
+        "Variasi Makanan": "Ayam Kalasan, Jeroan, Sup",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Goreng Ny. Suharti",
         "Lokasi Restoran": "Jl. Gedong Kuning No. 187, Kotagede, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 125000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Ayam Goreng Kalasan, Kremesan, Sayuran"
+        "Variasi Makanan": "Ayam Goreng Kalasan, Kremesan, Sayuran",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Goreng Bugisan",
         "Lokasi Restoran": "Jl. Bugisan No. 42, Ngestiharjo, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 26500,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Ayam Goreng Kalasan, Nasi, Sambal"
+        "Variasi Makanan": "Ayam Goreng Kalasan, Nasi, Sambal",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Tengkleng Gajah",
         "Lokasi Restoran": "Jalan Kaliurang Km. 9,3, Dusun Bulurejo, Minomartani, Ngaglik, Sleman",
         "Harga Rata-Rata Makanan di Toko (Rp)": 47000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Tengkleng Gajah Kuah, Tengkleng Gajah Sambal Bawang, Tongseng, Sate Goreng, Nasi Goreng Kambing"
+        "Variasi Makanan": "Tengkleng Gajah Kuah, Tengkleng Gajah Sambal Bawang, Tongseng, Sate Goreng, Nasi Goreng Kambing",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Tengkleng Bhenjoyo",
         "Lokasi Restoran": "Jl. Parangtritis No. 18-20, Brontokusuman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 50000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Tengkleng Kambing, Tongseng Kambing, Sate Kambing"
+        "Variasi Makanan": "Tengkleng Kambing, Tongseng Kambing, Sate Kambing",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Soto Tengkleng Pak Marno",
         "Lokasi Restoran": "Gg. Mawar No.1, Santren, Caturtunggal, Depok, Sleman",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Soto Tengkleng Ayam, Soto Tengkleng Sapi"
+        "Variasi Makanan": "Soto Tengkleng Ayam, Soto Tengkleng Sapi",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Tengkleng Solo Timoho",
         "Lokasi Restoran": "Jl. Kerto No.8, Muja Muju, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 39000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Tengkleng, Sate Kambing, Nasi Goreng Kambing"
+        "Variasi Makanan": "Tengkleng, Sate Kambing, Nasi Goreng Kambing",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Tengkleng HOHAH",
         "Lokasi Restoran": "Jl. Wonosari Km 7.5, Mantup, Baturetno, Bantul",
         "Harga Rata-Rata Makanan di Toko (Rp)": 50000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Tengkleng Kambing, Sate Kambing, Tongseng"
+        "Variasi Makanan": "Tengkleng Kambing, Sate Kambing, Tongseng",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Wedang Ronde Mbah Payem",
         "Lokasi Restoran": "Jalan Kauman, Ngupasan, Gondomanan, Kota Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 7000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Wedang Ronde"
+        "Variasi Makanan": "Wedang Ronde",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Wedang Ronde Lek Dhie",
         "Lokasi Restoran": "Jalan Dagen No. 7-12, Sosromenduran, Gedong Tengen, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Wedang Ronde dengan Roti, Kolang Kaling, Kacang Tanah"
+        "Variasi Makanan": "Wedang Ronde dengan Roti, Kolang Kaling, Kacang Tanah",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Wedang Ronde Wasis",
         "Lokasi Restoran": "Jl. Kapt. Tendean, Dongkelan Utara, Jampiroso, Kec. Temanggung, Kabupaten Temanggung, Jawa Tengah 56212",
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Wedang Ronde Khas Temanggung"
+        "Variasi Makanan": "Wedang Ronde Khas Temanggung",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Wedang Ronde Sor Ringin",
         "Lokasi Restoran": "Jalan Anggakaya 1, Depan Kantor Desa Condong Catur, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Wedang Ronde, Bakmi"
+        "Variasi Makanan": "Wedang Ronde, Bakmi",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Wedang Ronde Pak Jumono",
         "Lokasi Restoran": "Depan GOR Universitas Negeri Yogyakarta, Sleman",
         "Harga Rata-Rata Makanan di Toko (Rp)": 7000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Wedang Ronde"
+        "Variasi Makanan": "Wedang Ronde",
+        "Kategori":"Wedang"
     },
     {
         "Nama Restoran": "Parsley Bakery & Cake Shop",
         "Lokasi Restoran": "Jl. Kaliurang Km 5.3, Depok, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 80000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Lapis Legit, Tiger Roll, Croissant"
+        "Variasi Makanan": "Lapis Legit, Tiger Roll, Croissant",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Melia Bakery & Cake Tempel",
         "Lokasi Restoran": "Jl. Magelang Km 18, Tempel, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 49000,
         "Rating Toko": 4.0,
-        "Variasi Makanan": "Lapis Legit, Bolen Pisang, Spekuk"
+        "Variasi Makanan": "Lapis Legit, Bolen Pisang, Spekuk",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Marina Cake Bakery",
         "Lokasi Restoran": "Jl. Godean Km 7.3, Godean, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 38000,
         "Rating Toko": 3.8,
-        "Variasi Makanan": "Lapis Legit, Sobek Coklat, Roti Pizza"
+        "Variasi Makanan": "Lapis Legit, Sobek Coklat, Roti Pizza",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Lapis Sultan Jogja",
         "Lokasi Restoran": "Jl. Palagan Km 7.5 No. 8A, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 75000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Lapis Legit Original, Lapis Legit Prune, Lapis Legit Keju"
+        "Variasi Makanan": "Lapis Legit Original, Lapis Legit Prune, Lapis Legit Keju",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Holland Bakery",
         "Lokasi Restoran": "Jl. Sudirman No. 48, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 176000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Lapis Legit, Roti Tawar, Donat"
+        "Variasi Makanan": "Lapis Legit, Roti Tawar, Donat",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Soto Blengong Pak Gino",
         "Lokasi Restoran": "Jalan Malioboro, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Soto Blengong, Sate Usus, Perkedel"
+        "Variasi Makanan": "Soto Blengong, Sate Usus, Perkedel",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Soto Blengong Kadipiro",
         "Lokasi Restoran": "Jl. Wates No. 33, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Soto Blengong, Sate Puyuh, Tempe Goreng"
+        "Variasi Makanan": "Soto Blengong, Sate Puyuh, Tempe Goreng",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Soto Blengong Pak Marto",
         "Lokasi Restoran": "Jl. Mayor Jenderal S. Parman No. 44, Ngampilan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Soto Blengong Babat, Soto Daging"
+        "Variasi Makanan": "Soto Blengong Babat, Soto Daging",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Soto Blengong Mbah Karto",
         "Lokasi Restoran": "Jl. Kranggan No. 2, Jetis, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 6000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Soto Blengong, Soto Daging"
+        "Variasi Makanan": "Soto Blengong, Soto Daging",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Soto Blengong Sawah",
         "Lokasi Restoran": "Jl. Soragan No. 13, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Soto Blengong Ayam, Soto Daging"
+        "Variasi Makanan": "Soto Blengong Ayam, Soto Daging",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Ayam Geprek Bu Rum",
         "Lokasi Restoran": "Jl. Wulung, Papringan, Caturtunggal, Depok, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Ayam Geprek, Nasi, Sayur, Kuah Tongseng"
+        "Variasi Makanan": "Ayam Geprek, Nasi, Sayur, Kuah Tongseng",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Geprek Bu Nanik",
         "Lokasi Restoran": "Jl. Wulung, Papringan, Caturtunggal, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Ayam Geprek Kuah Tongseng, Sayur, Telur"
+        "Variasi Makanan": "Ayam Geprek Kuah Tongseng, Sayur, Telur",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Geprek dan Susu (Preksu)",
         "Lokasi Restoran": "Jl. Samironobaru No. 1C, Caturtunggal, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Ayam Geprek, Topping Keju, Susu Spesial Preksu"
+        "Variasi Makanan": "Ayam Geprek, Topping Keju, Susu Spesial Preksu",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Geprek Bu Made",
         "Lokasi Restoran": "Jl. Wulung No. 26, Papringan, Caturtunggal, Depok, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Ayam Geprek Sambal Terasi"
+        "Variasi Makanan": "Ayam Geprek Sambal Terasi",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Geprek Mbok Moro",
         "Lokasi Restoran": "Jl. Bantul No. 31, Suryodiningratan, Mantrijeron, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Ayam Geprek, Saus Rendang, Saus Barbeque"
+        "Variasi Makanan": "Ayam Geprek, Saus Rendang, Saus Barbeque",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ingkung Mbah Cempluk",
         "Lokasi Restoran": "Desa Wisata Santan, Pajangan, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 125000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Ingkung Ayam Utuh, Ingkung Goreng, Wader Lombok Ijo"
+        "Variasi Makanan": "Ingkung Ayam Utuh, Ingkung Goreng, Wader Lombok Ijo",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ingkung Mbah Kentol",
         "Lokasi Restoran": "Jl. Wonokromo, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 120000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Ingkung Ayam Kukus, Sambal Tomat"
+        "Variasi Makanan": "Ingkung Ayam Kukus, Sambal Tomat",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ingkung Sambilegi Bu Yadi",
         "Lokasi Restoran": "Jl. Rambutan No. 26, Sambilegi Kidul, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 110000,
         "Rating Toko": 4.3,
-        "Variasi Makanan": "Ingkung Ayam Utuh, Sambal Bawang"
+        "Variasi Makanan": "Ingkung Ayam Utuh, Sambal Bawang",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Ayam Ingkung Mbak Sri",
         "Lokasi Restoran": "Jl. Kebon Agung Km 6, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 140000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Ingkung Panggang, Sambal Dele, Sayur Asem"
+        "Variasi Makanan": "Ingkung Panggang, Sambal Dele, Sayur Asem",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Kandang Ingkung",
         "Lokasi Restoran": "Jl. Pakem - Turi, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 149000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Ingkung Ayam, Oseng Jantung Pisang, Nasi Gurih"
+        "Variasi Makanan": "Ingkung Ayam, Oseng Jantung Pisang, Nasi Gurih",
+        "Kategori":"Oseng, Ayam"
     },
     {
         "Nama Restoran": "Sate Kambing Bu Umi",
         "Lokasi Restoran": "Jl. Samas, Bambanglipuro, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Gulai Kambing, Sate Kambing, Tongseng"
+        "Variasi Makanan": "Gulai Kambing, Sate Kambing, Tongseng",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Sate Kambing Syafi Sidatan",
         "Lokasi Restoran": "Jl. Kalidengen, Temon, Kulon Progo, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 18000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Gulai Kambing, Sop Kambing, Tongseng"
+        "Variasi Makanan": "Gulai Kambing, Sop Kambing, Tongseng",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Depot Madura 1 Cak Hasan",
         "Lokasi Restoran": "Jl. Affandi No. 28, Depok, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Gulai Kambing, Sate Kambing, Nasi Goreng Kambing"
+        "Variasi Makanan": "Gulai Kambing, Sate Kambing, Nasi Goreng Kambing",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Nasi Kapau Uda Jack",
         "Lokasi Restoran": "Jl. Cendrawasih No. 32B, Mrican, Depok, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 26000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Gulai Kepala Kambing, Nasi Kapau"
-    },
-    {
-        "Nama Restoran": "Sate Klathak Pak Pong",
-        "Lokasi Restoran": "Jl. Imogiri Timur Km 10, Bantul, Yogyakarta",
-        "Harga Rata-Rata Makanan di Toko (Rp)": 21000,
-        "Rating Toko": 4.8,
-        "Variasi Makanan": "Sate Klathak, Gulai Kambing"
+        "Variasi Makanan": "Gulai Kepala Kambing, Nasi Kapau",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakso Balungan Pak Granat",
         "Lokasi Restoran": "Jl. Kolonel Sugiyono No.58, Mergangsan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Bakso Balungan, Tetelan, Mie Ayam"
+        "Variasi Makanan": "Bakso Balungan, Tetelan, Mie Ayam",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakso Balungan Pak Granat Mantrijeron",
         "Lokasi Restoran": "Jl. Suryowijayan No 28, Mantrijeron, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Bakso Balungan, Mie Ayam Ceker, Bakso Goreng"
+        "Variasi Makanan": "Bakso Balungan, Mie Ayam Ceker, Bakso Goreng",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakso Balungan Pojok Mirota",
         "Lokasi Restoran": "Jl. Godean Km 6, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Bakso Balungan, Bakso Komplit, Nasi"
+        "Variasi Makanan": "Bakso Balungan, Bakso Komplit, Nasi",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakso Tetelan Konco Kenthel",
         "Lokasi Restoran": "Jl. Gedongkuning No. 12, Kotagede, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 11000,
         "Rating Toko": 4.4,
-        "Variasi Makanan": "Bakso Balungan, Tetelan, Bakso Urat"
+        "Variasi Makanan": "Bakso Balungan, Tetelan, Bakso Urat",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakso Balungan Bu Citro",
         "Lokasi Restoran": "Jl. Magelang Km 4,5, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Bakso Balungan, Mie Ayam"
+        "Variasi Makanan": "Bakso Balungan, Mie Ayam",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakmi Jawa Mbah Mo",
         "Lokasi Restoran": "Jl. Parangtritis Km 11, Bantul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog"
+        "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakmi Jawa Pak Pele",
         "Lokasi Restoran": "Jalan Pojok Tenggara, Alun-Alun Kidul, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog"
+        "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakmi Jawa Mas Timbul",
         "Lokasi Restoran": "Jl. Jambon No. 63, Kragilan, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 19000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Bakmi Nyemek, Nasi Goreng, Magelangan"
+        "Variasi Makanan": "Bakmi Nyemek, Nasi Goreng, Magelangan",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakmi Jawa Pak Rebo",
         "Lokasi Restoran": "Jl. Brigjen Katamso, Keparakan, Mergangsan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.5,
-        "Variasi Makanan": "Bakmi Nyemek, Bakmi Godhog, Bakmi Goreng"
+        "Variasi Makanan": "Bakmi Nyemek, Bakmi Godhog, Bakmi Goreng",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Bakmi Jawa Pak Kadin",
         "Lokasi Restoran": "Jl. Bintaran Kidul No. 6, Mergangsan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog"
+        "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Nasi Gurih Ayam Suwir Mbah Amo, Gowongan",
         "Lokasi Restoran": "Gowongan JT 3/381, Jetis, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Nasi Gurih Ayam Suwir, Nasi Langgi"
+        "Variasi Makanan": "Nasi Gurih Ayam Suwir, Nasi Langgi",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Nasi Kuning Dapoer Mak Lie, Pandega Marta",
         "Lokasi Restoran": "Jl. Wahid Hasyim No 126, Dabag Condong Catur, Depok, Sleman, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
-        "Variasi Makanan": "Nasi Langgi, Nasi Sate Ayam, Juice Strawberry"
+        "Variasi Makanan": "Nasi Langgi, Nasi Sate Ayam, Juice Strawberry",
+        "Kategori":"Sate"
     },
     {
         "Nama Restoran": "Nasi Langgi Yu Warnii, Godean",
         "Lokasi Restoran": "Jl. Ngapak - Kentheng Los 58, Jl. Sukirjan No.18 KM.10, Godean, Sidoagung, Godean, Sleman Regency, Special Region of Yogyakarta 55264",
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.6,
-        "Variasi Makanan": "Nasi Langgi with Jengkol Balado, Ayam Serundeng"
+        "Variasi Makanan": "Nasi Langgi with Jengkol Balado, Ayam Serundeng",
+        "Kategori":"Ayam"
     },
     {
         "Nama Restoran": "Muna Cung (Nasi Kuning), Beskalan",
         "Lokasi Restoran": "Jl. Beskalan, Gondomanan, Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 25000,
         "Rating Toko": 4.7,
-        "Variasi Makanan": "Nasi Langgi Babat, Nasi Kuning Babat, Kering Kentang"
+        "Variasi Makanan": "Nasi Langgi Babat, Nasi Kuning Babat, Kering Kentang",
+        "Kategori":"Lainnya"
     },
     {
         "Nama Restoran": "Nasi Langgi Pak Man",
         "Lokasi Restoran": "Jl. Pingit and multiple branches in Yogyakarta",
         "Harga Rata-Rata Makanan di Toko (Rp)": 6000,
         "Rating Toko": 4.9,
-        "Variasi Makanan": "Nasi Langgi with various toppings like kering tempe, oseng jamur, oseng teri"
+        "Variasi Makanan": "Nasi Langgi with various toppings like kering tempe, oseng jamur, oseng teri",
+        "Kategori":"Oseng"
     }
 ]
