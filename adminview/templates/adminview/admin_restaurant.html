@@ -1,4 +1,3 @@
-{# adminview/templates/adminview/admin_restaurant.html #}
 {% extends 'base.html' %}
 {% load static %}
 
@@ -24,20 +23,23 @@ Admin View - Rasa Nusantara
                 {% else %}
                 <img src="{% static 'image/default_restaurant.webp' %}" alt="{{ restaurant.name }}" class="w-full h-[180px] object-cover">
                 {% endif %}
-
+        
                 <div class="p-4 flex flex-col">
                     <h3 class="text-lg font-bold mb-1 text-gray-800">{{ restaurant.name }}</h3>
                     <p>{{ restaurant.location }}</p>
                     <p>Rating: {{ restaurant.rating }}/5</p>
-                    <p>Price: ${{ restaurant.average_price }}</p>
+                    <p>Price: {{ restaurant.average_price }}</p>
                     
                     <div class="flex gap-2 mt-4">
                         <a href="{% url 'adminview:edit_restaurant' restaurant.id %}" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Edit</a>
                         <button onclick="confirmDelete({{ restaurant.id }})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
+                        <a href="{% url 'menu_management:admin_menu' restaurant.id %}" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">View Menu</a>
+
                     </div>
                 </div>
             </div>
             {% endfor %}
+        
         </div>
     </div>
 </div>

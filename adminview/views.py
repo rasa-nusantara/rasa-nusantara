@@ -6,11 +6,18 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.admin.views.decorators import staff_member_required
 from django.forms import ModelForm
+from django.shortcuts import render, get_object_or_404
+from menu_management.models import MenuItem, Restaurant
+from django.shortcuts import render
+from menu_management.views import admin_menu_view, add_menu, edit_menu, delete_menu
+
 
 class RestaurantForm(ModelForm):
     class Meta:
         model = Restaurant
         fields = ['name', 'location', 'average_price', 'rating']
+
+
 
 @staff_member_required(login_url='main:login')
 def admin_restaurant_view(request):

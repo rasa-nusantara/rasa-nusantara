@@ -1,11 +1,11 @@
 from django.urls import path
-from . import views
+from .views import admin_menu_view, add_menu, edit_menu, delete_menu
 
 app_name = 'menu_management'
 
 urlpatterns = [
-    path('admin_menu/<int:restaurant_id>/', views.admin_menu_view, name='admin_menu'),
-    path('add/<int:restaurant_id>/', views.add_menu, name='add_menu'),
-    path('edit/<int:restaurant_id>/<int:id>/', views.edit_menu, name='edit_menu'),
-    path('delete/<int:restaurant_id>/<int:id>/', views.delete_menu, name='delete_menu'),
+    path('admin_menu/<uuid:restaurant_id>/', admin_menu_view, name='admin_menu'),
+    path('admin_menu/add/<uuid:restaurant_id>/', add_menu, name='add_menu'),
+    path('admin_menu/edit/<uuid:restaurant_id>/<uuid:id>/', edit_menu, name='edit_menu'),
+    path('admin_menu/delete/<uuid:restaurant_id>/<uuid:id>/', delete_menu, name='delete_menu'),
 ]

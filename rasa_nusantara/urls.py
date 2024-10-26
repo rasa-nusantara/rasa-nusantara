@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('reviews/', include('review.urls')),
     path('adminview/', include('adminview.urls')),
-    path('ubahmenu/', include('menu_management.urls'))
+    path('ubahmenu/', include('menu_management.urls')),  # Ini untuk mengarah ke menu_management
 ]
