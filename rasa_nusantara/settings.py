@@ -40,7 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'favorite',
+<<<<<<< Updated upstream
     'adminview'
+=======
+    'adminview',
+    'review',
+    'reservasi'
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [

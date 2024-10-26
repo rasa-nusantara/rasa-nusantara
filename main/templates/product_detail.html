@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>{{ restaurant.name }}</title>
+{% endblock meta %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<div class="min-h-screen bg-[#453229] flex items-center justify-center p-8">
+    <div class="bg-gradient-to-br from-[#F5F5DC] to-[#FFF8DC] p-8 rounded-3xl shadow-xl w-full max-w-4xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="relative flex flex-col items-center">
+                {% if restaurant.image %}
+                    <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" class="w-full h-64 object-cover rounded-xl mb-6">
+                {% else %}
+                    <img src="https://www.creativefabrica.com/wp-content/uploads/2020/03/09/Simple-Fork-Plate-Icon-Restaurant-Logo-Graphics-3446203-1-1-580x348.jpg" alt="{{ restaurant.name }}" class="w-full h-64 object-cover rounded-xl mb-6">
+                {% endif %}
+
+                <div class="absolute top-2 right-2">
+                    {% if request.user.is_authenticated %}
+                        <form id="favorite-form-{{ restaurant.id }}" data-restaurant-id="{{ restaurant.id }}" action="{% url 'main:toggle_favorite' restaurant.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="button" 
+                                class="favorite-button w-10 h-10 {% if restaurant.id in user_favorites %}bg-red-500 text-white{% else %}bg-white text-gray-600{% endif %} border border-gray-300 rounded-full flex items-center justify-center transition-colors duration-300" 
+                                onclick="toggleFavorite('{{ restaurant.id }}')">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </button>
+                        </form>
+                    {% else %}
+                        <button 
+                            class="w-10 h-10 bg-white text-gray-600 border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-300"
+                            onclick="alert('Silakan login terlebih dahulu untuk menambahkan ke favorit.');">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    {% endif %}
+                </div>
+                <div class="w-full">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'restaurant_review' restaurant.name %}" class="block w-full">
+                            <button class="w-full bg-[#FF7F50] hover:bg-[#E67348] text-white py-2 rounded-lg mb-3">Tambah Review</button>
+                        </a>
+                    {% else %}
+                        <button 
+                            class="w-full bg-[#FF7F50] hover:bg-[#E67348] text-white py-2 rounded-lg mb-3"
+                            onclick="alert('Silakan login terlebih dahulu untuk menambahkan review.');">
+                            Tambah Review
+                        </button>
+                    {% endif %}
+                </div>
+                <a href="{% url 'reservasi:create_reservation' restaurant.id %}" class="block w-full">
+                    <button class="w-full bg-[#5C4033] hover:bg-[#4F3629] text-white py-2 rounded-lg">Reservasi</button>
+                </a>
+                <!-- Tombol Kembali ke Homepage -->
+                <a href="{% url 'main:homepage' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg mt-3 text-center">Kembali ke Halaman Utama</a>
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <h1 class="text-4xl font-bold text-[#5C4033] mb-4">{{ restaurant.name }}</h1>
+                <p class="text-lg text-gray-700 mb-2"><strong>Lokasi:</strong> {{ restaurant.location }}</p>
+                <p class="text-lg text-gray-700 mb-2"><strong>Harga Rata-Rata:</strong> Rp{{ restaurant.average_price }}</p>
+                <div class="flex items-center mb-4">
+                    <img src="{% static 'image/star.png' %}" alt="Rating" class="w-6 h-6">
+                    <span class="ml-2 text-yellow-500 text-xl font-semibold">{{ restaurant.rating }}/5</span>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-xl font-bold mb-2 text-[#5C4033]">Menu:</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        {% for item in restaurant.menu_items.all %}
+                            <li>{{ item.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleFavorite(restaurantId) {
+    const form = document.getElementById('favorite-form-' + restaurantId);
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+    }).then(response => response.json())
+      .then(data => {
+          const button = form.querySelector('.favorite-button');
+          if (data.is_favorite) {
+              button.classList.add('bg-red-500', 'text-white');
+              button.classList.remove('bg-white', 'text-gray-600');
+          } else {
+              button.classList.remove('bg-red-500', 'text-white');
+              button.classList.add('bg-white', 'text-gray-600');
+          }
+      }).catch(error => {
+          console.error('Error:', error);
+      });
+}
+</script>
+{% endblock content %}

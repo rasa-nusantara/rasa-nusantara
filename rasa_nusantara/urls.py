@@ -21,4 +21,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+<<<<<<< Updated upstream
+=======
+    path('favorite/', include('favorite.urls')),
+    path('reviews/', include('review.urls')),
+    path('reservasi/', include('reservasi.urls')),
+>>>>>>> Stashed changes
 ]
