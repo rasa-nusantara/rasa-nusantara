@@ -20,9 +20,13 @@ Admin View - Menu Management
             <div class="bg-white shadow-lg rounded-lg overflow-hidden w-[22%] flex-shrink-0 flex flex-col">
                 <div class="p-4 flex flex-col">
                     <h3 class="text-lg font-bold mb-1 text-gray-800">{{ menu_item.name }}</h3>
-                    <p>Description: {{ menu_item.description }}</p>
-                    <p>Price: ${{ menu_item.price }}</p>
-                    <p>Availability: {{ menu_item.availability }}</p>
+                    
+                    <!-- Menampilkan kategori yang terkait dengan menu item -->
+                    <p>Categories:
+                        {% for category in menu_item.categories.all %}
+                            {{ category.name }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
 
                     <div class="flex gap-2 mt-4">
                         <a href="{% url 'menu_management:edit_menu' restaurant.id menu_item.id %}" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Edit</a>
