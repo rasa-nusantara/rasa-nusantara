@@ -87,9 +87,12 @@ def product_detail(request, restaurant_id):
     if request.user.is_authenticated:
         user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
 
+    referer = request.META.get('HTTP_REFERER', '')
+    
     context = {
         'restaurant': restaurant,
         'user_favorites': user_favorites,
+        'referer': referer
     }
     return render(request, 'product_detail.html', context)
 

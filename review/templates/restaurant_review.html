@@ -66,7 +66,7 @@
         
                         <div class="edit-delete-dropdown absolute right-0 mt-2 w-32 bg-white border rounded shadow-lg hidden">
                             <a href="#" class="block px-4 py-2 text-gray-700 edit-review">Edit</a>
-                            <a href="{% url 'delete_review' review.id %}" class="block px-4 py-2 text-red-600 hover:bg-gray-200">Delete</a>
+                            <a href="{% url 'review:delete_review' review.id %}" class="block px-4 py-2 text-red-600 hover:bg-gray-200">Delete</a>
                         </div>
                     </div>
                     {% endif %}
@@ -117,7 +117,7 @@
       $('#review-form').on('submit', function(event){
           event.preventDefault();
           $.ajax({
-              url: "{% url 'restaurant' restaurant.name 'add_review_ajax' %}",
+              url: "{% url 'review:add_review_ajax' restaurant.name %}",
               type: "POST",
               data: $(this).serialize(),
               success: function(response) {
@@ -167,7 +167,7 @@
       $('#edit-review-form').on('submit', function(event){
         event.preventDefault();
         $.ajax({
-            url: "{% url 'edit_review_ajax' restaurant.id  %}",
+            url: "{% url 'review:edit_review_ajax' %}",
             type: "POST",
             data: $(this).serialize(),
             success: function(response) {
