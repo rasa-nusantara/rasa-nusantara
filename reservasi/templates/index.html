@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto mt-12 bg-[#3C2A21] shadow-lg rounded-lg overflow-hidden p-8 text-white">
+    <h1 class="text-3xl font-bold text-center text-white mb-6">Reservasi</h1>
+    <p class="text-lg text-center mb-8">Selamat datang di sistem reservasi kami. Pesan tempat untuk pengalaman kuliner yang tak terlupakan.</p>
+
+    <!-- Tombol Buat Reservasi -->
+    <div class="flex justify-center">
+        <a href="{% url 'reservasi:create_reservation' %}" 
+           class="w-full sm:w-auto bg-[#EB7C3F] text-white font-semibold py-3 px-8 rounded-full text-center hover:bg-[#d96f39] transition duration-300">
+            Buat Reservasi
+        </a>
+    </div>
+</div>
+{% endblock %}

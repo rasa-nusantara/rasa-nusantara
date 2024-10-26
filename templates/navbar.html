@@ -38,6 +38,9 @@
           <a href="{% url 'main:login' %}" class="login-link text-center bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full transition duration-300 mr-2" style="font-family: 'Inter', sans-serif;">
             MASUK
           </a>
+          <a href="{% url 'main:register' %}" class="text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+            DAFTAR
+          </a>
         {% endif %}
       </div>
       
@@ -91,10 +94,10 @@
       const btn = document.querySelector("button.mobile-menu-button");
       const menu = document.querySelector(".mobile-menu");
 
-      // Toggle menu saat tombol diklik
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
+        // Toggle menu saat tombol diklik
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
     });
 
         // Dapatkan elemen modal dan tombol untuk membuka modal

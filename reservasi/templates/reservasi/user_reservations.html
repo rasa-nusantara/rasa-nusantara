@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-[#5C4033] flex flex-col">
+    <!-- Include the navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Main content -->
+    <div class="flex-grow flex justify-center items-start p-6 mt-16">
+        <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl">
+            <h1 class="text-3xl font-bold mb-6">Reservasi Anda</h1>
+
+            <!-- Filter Options -->
+            <div class="mb-4">
+                <form method="get" action="{% url 'reservasi:user_reservations' %}">
+                    <select name="filter" onchange="this.form.submit()" class="border rounded p-2">
+                        <option value="all" {% if filter_option == 'all' %}selected{% endif %}>Semua</option>
+                        <option value="today" {% if filter_option == 'today' %}selected{% endif %}>Hari Ini</option>
+                        <option value="upcoming" {% if filter_option == 'upcoming' %}selected{% endif %}>Akan Datang</option>
+                        <option value="due" {% if filter_option == 'due' %}selected{% endif %}>Terlewat</option>
+                    </select>
+                </form>
+            </div>
+
+            {% if reservations %}
+                <div class="space-y-6">
+                    {% for reservation in reservations %}
+                        <div class="border-b pb-4">
+                            <h2 class="text-xl font-semibold">{{ reservation.restaurant.name }}</h2>
+                            <p><strong>Tanggal:</strong> {{ reservation.reservation_date }}</p>
+                            <p><strong>Waktu:</strong> {{ reservation.reservation_time }}</p>
+                            <p><strong>Jumlah Tamu:</strong> {{ reservation.number_of_people }}</p>
+                            {% if reservation.special_request %}
+                                <p><strong>Permintaan Khusus:</strong> {{ reservation.special_request }}</p>
+                            {% endif %}
+                            <div class="mt-2">
+                                <button class="text-blue-600 hover:underline edit-reservation" data-id="{{ reservation.id }}">Edit</button>
+                                <a href="{% url 'reservasi:cancel_reservation' reservation.id %}" class="text-red-600 hover:underline ml-4">Batalkan</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Anda belum memiliki reservasi.</p>
+            {% endif %}
+            
+            <div class="mt-6">
+                <a href="{% url 'main:homepage' %}" class="block w-full px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 text-center">Kembali ke Halaman Utama</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Reservation Modal -->
+<div id="editReservationModal" class="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center" style="display:none;">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <span class="close text-gray-500 text-xl cursor-pointer">&times;</span>
+        <h2 class="text-2xl font-bold mb-4 text-center">Edit Reservasi</h2>
+        <form id="edit-reservation-form" method="post" action="{% url 'reservasi:edit_reservation' 0 %}">
+            {% csrf_token %}
+            <input type="hidden" name="reservation_id" id="reservation_id">
+            <div class="mb-4">
+                <label for="reservation_date" class="block text-sm font-medium text-gray-700">Tanggal Reservasi:</label>
+                <input type="date" name="reservation_date" id="reservation_date" class="border rounded p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="reservation_time" class="block text-sm font-medium text-gray-700">Waktu Reservasi:</label>
+                <input type="time" name="reservation_time" id="reservation_time" class="border rounded p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="number_of_people" class="block text-sm font-medium text-gray-700">Jumlah Tamu:</label>
+                <input type="number" name="number_of_people" id="number_of_people" class="border rounded p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="special_request" class="block text-sm font-medium text-gray-700">Permintaan Khusus:</label>
+                <textarea name="special_request" id="special_request" placeholder="Ketik Permintaan Disini..." class="border rounded p-2 w-full"></textarea>
+            </div>
+            <div class="flex justify-between">
+                <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg">Simpan Perubahan</button>
+                <button type="button" class="close bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg">Batal</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Open the modal when the edit button is clicked
+    document.querySelectorAll('.edit-reservation').forEach(button => {
+        button.addEventListener('click', function() {
+            const reservationId = this.getAttribute('data-id');
+            // Fetch reservation details via AJAX
+            fetch(`/reservasi/edit/${reservationId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Populate the form with reservation data
+                        document.getElementById('reservation_id').value = data.reservation.id;
+                        document.getElementById('reservation_date').value = data.reservation.reservation_date;
+                        document.getElementById('reservation_time').value = data.reservation.reservation_time;
+                        document.getElementById('number_of_people').value = data.reservation.number_of_people;
+                        document.getElementById('special_request').value = data.reservation.special_request;
+                        document.getElementById('editReservationModal').style.display = 'flex'; // Show the modal
+                    } else {
+                        alert('Failed to load reservation details.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching reservation details:', error);
+                    alert('An error occurred while fetching reservation details.');
+                });
+        });
+    });
+
+    // Close the modal
+    document.querySelectorAll('.close').forEach(closeButton => {
+        closeButton.addEventListener('click', function() {
+            document.getElementById('editReservationModal').style.display = 'none';
+        });
+    });
+
+    // Handle form submission
+    document.getElementById('edit-reservation-form').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the default form submission
+
+        const formData = new FormData(this);  // Create a FormData object from the form
+
+        // Update the action URL with the reservation ID
+        const reservationId = document.getElementById('reservation_id').value;
+        this.action = `/reservasi/edit/${reservationId}/`;
+
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'  // Indicate that this is an AJAX request
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // alert(data.message);  // Show success message
+                window.location.reload();  // Reload the page to see updated reservations
+            } else {
+                alert('Error updating reservation: ' + JSON.stringify(data.errors));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+{% endblock %}

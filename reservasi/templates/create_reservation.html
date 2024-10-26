@@ -1,0 +1,8 @@
+<div class="reservation-container">
+    <h2 class="reservation-title">Make a Reservation</h2>
+    <form method="POST" class="reservation-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-button">Submit Reservation</button>
+    </form>
+</div>

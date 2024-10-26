@@ -30,14 +30,11 @@
                                 <h3 class="text-lg font-bold text-gray-800">{{ favorite.restaurant.name|truncatechars:28 }}</h3>
                                 <div>
                                     <!-- Tombol remove favorite -->
-                                    <form action="{% url 'favorite:remove_favorite' favorite.restaurant.id %}" method="post">
-                                        {% csrf_token %}
-                                        <button type="submit" class="favorite-button w-6 h-6 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/>
-                                            </svg>
-                                        </button>
-                                    </form>
+                                    <button type="button" class="favorite-button w-6 h-6 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300" data-url="{% url 'favorite:remove_favorite' favorite.restaurant.id %}" onclick="event.preventDefault(); removeFavorite(this);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                             <p class="text-sm text-gray-600 mb-1 truncate">{{ favorite.restaurant.location }}</p>
@@ -59,5 +56,55 @@
         </div>
     </section>
 </div>
+
+<script>
+function removeFavorite(button) {
+    const url = button.getAttribute('data-url');  // Ambil URL dari data-url di tombol
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': '{{ csrf_token }}',
+            'X-Requested-With': 'XMLHttpRequest'  // Header AJAX
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            // Hapus kartu restoran dari DOM jika permintaan berhasil
+            const favoriteCard = button.closest('a');
+            favoriteCard.remove();
+            
+            // Perbarui jumlah favorit
+            const favoriteCount = document.querySelector('.text-lg');
+            favoriteCount.textContent = `(${document.querySelectorAll('.grid > a').length} Restoran)`;
+            
+            if (document.querySelectorAll('.grid > a').length === 0) {
+                // Jika tidak ada restoran favorit lagi, tampilkan pesan kosong
+                document.querySelector('.grid').innerHTML = `
+                    <div class="text-center col-span-full flex flex-col items-center justify-center min-h-screen">
+                        <p class="text-white text-lg mb-4">Anda belum mempunyai restoran favorit.</p>
+                        <a href="{% url 'main:restaurant' %}" class="text-center bg-[#EB7C3F] hover:bg-[#d96f39] text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                            Lihat Restoran
+                        </a>
+                    </div>
+                `;
+            }
+        } else {
+            alert(data.message || 'Gagal menghapus favorit.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan. Coba lagi.');
+    });
+}
+    </script>
+        
 
 {% endblock content %}

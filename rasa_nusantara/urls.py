@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('favorite/', include('favorite.urls')),
     path('review/', include(('review.urls', 'review'), namespace='review')),
+    path('reservasi/', include('reservasi.urls')),
 ]
