@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Daftar Restoran</title>
+{% endblock meta %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full">
+  <!-- Gambar Besar di Atas Daftar Restoran -->
+  <section class="mb-12">
+    <img src="{% static 'image/mainview.webp' %}" alt="Main View" class="w-full h-[600px] object-cover rounded-lg"> <!-- Gambar besar -->
+  </section>
+
+  <section class="mb-12">
+    <h1 class="text-3xl text-white text-center mb-6">Daftar Restoran</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-5">
+        {% for restaurant in restaurants %}
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold text-gray-800">{{ restaurant.name }}</h2>
+                    <p><strong>Location:</strong> {{ restaurant.location }}</p>
+                    <p><strong>Average Price:</strong> Rp {{ restaurant.average_price }}</p>
+                    <p><strong>Rating:</strong> {{ restaurant.rating }}/5</p>
+                    <a href="{% url 'restaurant_review' restaurant.name %}">
+                        <button class="bg-[#EB7C3F] hover:bg-[#d96f39] text-white font-bold py-2 px-4 rounded-full mt-4">Review This Restaurant</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% endblock content %}

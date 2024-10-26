@@ -8,6 +8,7 @@ urlpatterns = [
     path('favorites/toggle/<uuid:restaurant_id>/', toggle_favorite, name='toggle_favorite'),  # Perbaikan URL pattern untuk UUID
     path('login', login_user, name='login'),
     path('register', register, name='register'),
-    path('logout', logout_user, name='logout'),
+    path('logout/', logout_user, name='logout'),
+    path('restaurant/',restaurant,name='restaurant'),
     path('restaurant/<uuid:restaurant_id>/', product_detail, name='product_detail'),
 ]

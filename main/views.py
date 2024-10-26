@@ -39,6 +39,13 @@ def toggle_favorite(request, restaurant_id):
         is_favorite = True
     return JsonResponse({'is_favorite': is_favorite})
 
+def restaurant(request):
+    restaurants = Restaurant.objects.all()
+    context = {
+        'restaurants': restaurants
+    }
+    return render(request, 'page_restaurant.html', context)
+
 def register(request):
     form = UserCreationForm()
 
@@ -66,7 +73,6 @@ def login_user(request):
    context = {'form': form}
    return render(request, 'login.html', context)
 
-
 def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('main:homepage'))
@@ -84,3 +90,21 @@ def product_detail(request, restaurant_id):
         'user_favorites': user_favorites,
     }
     return render(request, 'product_detail.html', context)
+
+def restaurant_list(request):
+    restaurants = Restaurant.objects.all()
+
+    sort_option = request.GET.get('sort')
+    if sort_option == 'highest':
+        restaurants = restaurants.order_by('-average_price')
+    elif sort_option == 'lowest':
+        restaurants = restaurants.order_by('average_price')
+
+    context = {
+        'restaurants': restaurants,
+        'sort_price': sort_option  
+    }
+    return render(request, 'page_restaurant.html', context)
+
+
+
