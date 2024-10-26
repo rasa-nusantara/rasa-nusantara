@@ -159,7 +159,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.2,
         "Variasi Makanan": "Sego Gurih",
-        "Kategori":"Sego Gurih"
+        "Kategori":"Sego Gurih",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c9bd04c1-564b-4f12-8ba5-d75c6ca94676.jpg"
     },
     {
         "Nama Restoran": "Serabi Kocor Mantrigawen, Magangan Kulon",
@@ -167,7 +168,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Sego Gurih, Lontong Opor, Nasi Kuning",
-        "Kategori":"Sego Gurih"
+        "Kategori":"Sego Gurih",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/310b457b-aa9d-4802-b139-b2ad2d3c1429_Go-Biz_20200903_191500.jpeg"
     },
     {
         "Nama Restoran": "Pecel Lanang Bu Umyatun, Gatak",
@@ -175,7 +177,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 12000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Sego Gurih, Ayam Bacem, Kikil Petir",
-        "Kategori":"Sego Gurih, Ayam"
+        "Kategori":"Sego Gurih, Ayam",
+        "Foto": "https://lh3.googleusercontent.com/p/AF1QipOpbCP2YxRDRP789nrjGO3nNWgoyhRH-2g3h_2h=s680-w680-h510"
     },
     {
         "Nama Restoran": "Ayam Dapur Sang Juara, Sedayu",
@@ -183,7 +186,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 28000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Sego Gurih, Ayam Bakar, Nutrisari",
-        "Kategori":"Sego Gurih, Ayam"
+        "Kategori":"Sego Gurih, Ayam",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/13dd4113-3f9b-4234-9d33-690191361383_Go-Biz_20201116_002801.jpeg"
     },
     {
         "Nama Restoran": "Ramesan Ndeso, Gang Arjuna",
@@ -191,7 +195,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 9000,
         "Rating Toko": 4.0,
         "Variasi Makanan": "Sego Gurih, Kopi, Cepat Saji",
-        "Kategori":"Sego Gurih"
+        "Kategori":"Sego Gurih",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/297475e0-1d92-4ca8-b89f-1be6d42d9d7f_Go-Biz_20220517_134238.jpeg"
     },
     {
         "Nama Restoran": "Kremesan Wong Ndeso, Perumahan Pertamina",
@@ -199,7 +204,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 22000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Wedang Jahe, Sambel Ayam",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/6710ba42-007a-4bf4-81e4-f8fec5bbe948_IMG_20200927_094855_872.jpg"
     },
     {
         "Nama Restoran": "Pawone, Hartono Mall Yogyakarta",
@@ -207,7 +213,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 30000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Wedang Jahe, Sambel Teri, Teh Panas",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOdV-PPwmczz6kq9jJ9qa2iLZS3K1405tm2m51y=s680-w680-h510"
     },
     {
         "Nama Restoran": "Sop Buntut Bu Menuk, Kaliurang KM 7.8",
@@ -215,7 +222,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 25000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Wedang Jahe, Sop Buntut, Bakso",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/fec462d6-4e2e-41d0-86eb-2a623cc859a1.jpg"
     },
     {
         "Nama Restoran": "Momogie Kitchen, Lempongsari",
@@ -223,7 +231,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Wedang Jahe Sereh, Rice Bowl Telor, Sate Ati Ampela",
-        "Kategori":"Wedang, Sate"
+        "Kategori":"Wedang, Sate",
+        "Foto" : "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a25d5a50-91a7-4d09-85c5-4843015bd742_IMG_20201001_150000_763.jpg"
     },
     {
         "Nama Restoran": "Wedang Ronde Barokah II, Depok",
@@ -231,7 +240,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Wedang Jahe, Wedang Ronde, Tahu Petis",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/146068cb-1b25-450d-bf38-9f3999a90a4a_38455caa-a212-4365-8161-4b3f8010509b_Go-Biz_20190808_114032.jpeg"
     },
     {
         "Nama Restoran": "Mirota Bakery & Resto, Gondokusuman",
@@ -239,7 +249,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 79000,
         "Rating Toko": 4.8,
         "Variasi Makanan": "Sayur Lodeh, Bakmi Goreng, Soto Ayam",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto" : "https://www.gudeg.net/cni-content/uploads/modules/direktori/logo/thumbs/large/20180828015514.JPG"
     },
     {
         "Nama Restoran": "Nasi Pecel Khas Blitar Bu Iwied, Kasihan",
@@ -247,7 +258,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.8,
         "Variasi Makanan": "Sayur Lodeh, Sambel Terong, Teh Panas",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOTKTqGCS2ph98nct95RU9MeiK8PRcuwfEeCA1c=s680-w680-h510"
     },
     {
         "Nama Restoran": "Omah Kluwih",
@@ -255,7 +267,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
         "Variasi Makanan": "Sayur Lodeh, Es Jeruk, Tempe Mendoan",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto": "https://lh3.googleusercontent.com/p/AF1QipN5kfHrXqAe_DUt6IdemtntnqBWzK13cX82YjBD=s680-w680-h510"
     },
     {
         "Nama Restoran": "One Stop Parking, Patangpuluhan",
@@ -263,7 +276,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 31000,
         "Rating Toko": 4.8,
         "Variasi Makanan": "Sayur Lodeh, Aneka Nasi, Ayam & Bebek",
-        "Kategori":"Lainnya, Ayam"
+        "Kategori":"Lainnya, Ayam",
+        "Foto":"https://media-cdn.yummyadvisor.com/store/f0eb9ea4-8041-4fa9-b0d9-43ef54379b30.jpg"
     },
     {
         "Nama Restoran": "Pulen Kopi Ponti, Candi Sambisari",
@@ -271,7 +285,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
         "Variasi Makanan": "Sayur Lodeh, Sayur Sop, Kopi Jahe",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://gudeg.net/cni-content/uploads/modules/posts/20180427050953.jpg"
     },
     {
         "Nama Restoran": "Kedai Lontong Sayur Mbak Win, Ruko Pasar Telogorejo",
@@ -279,7 +294,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Lontong Sayur, Lontong Opor Telur",
-        "Kategori":"Lontong"
+        "Kategori":"Lontong",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/e69ea488-b91b-4a5c-b163-427b6851bede_Go-Biz_20220319_123351.jpeg"
     },
     {
         "Nama Restoran": "Lontong Sayur Uda Asdi, Andong",
@@ -287,7 +303,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 11000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Lontong Sayur, Lontong Pecel Ayam, Tempe Goreng",
-        "Kategori":"Lontong"
+        "Kategori":"Lontong",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/f4e11660-bbfc-46d3-b35e-ba8b4be7e60c_9976b36d-5750-471c-a28c-c8219956cb75.jpg"
     },
     {
         "Nama Restoran": "Nasi Kuning Nurul, Kricak",
@@ -295,7 +312,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Nasi Kuning, Bakwan Sayur, Telur Balado",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipPtSArrYzDdbKuAsVnJj6KPzTKy3UsUJl_xW0CU=s680-w680-h510"
     },
     {
         "Nama Restoran": "Lontong Sayur & Pecel Padang 2 Saudara, Pramuka",
@@ -303,7 +321,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Lontong Sayur, Bubur Sumsum, Kacang Ijo",
-        "Kategori":"Lontong"
+        "Kategori":"Lontong",
+        "Foto":"https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/1435ccc8-320a-4f1e-b9d7-960510f853cb_Go-Biz_20230626_075439.jpeg?w=250"
     },
     {
         "Nama Restoran": "Bubur Ayam Sembilan Babarsari, Depok",
@@ -311,7 +330,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Sate Puyuh, Bubur Polos, Lontong Sayur",
-        "Kategori":"Lontong, Sate"
+        "Kategori":"Lontong, Sate",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipO6u_pT1LMhdZb6U68ETpr8TdB3efYLnJnrB-x3=s680-w680-h510"
     },
     {
         "Nama Restoran": "Rujak cingur dan Tahu tek ARJUNA",
@@ -319,7 +339,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 14000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Rujak Cingur, Tahu Tek, Peyek Rebon",
-        "Kategori":"Rujak Cingur"
+        "Kategori":"Rujak Cingur",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/dbe3d238-4590-4900-a324-b5218be3db6c_Go-Biz_20210414_173300.jpeg"
     },
     {
         "Nama Restoran": "Rujak Cingur, Gado-gado Dan Tahu Tek Kedai Sumilir",
@@ -327,7 +348,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Rujak Cingur Super Pedas, Lotek, Tahu Tek",
-        "Kategori":"Rujak Cingur"
+        "Kategori":"Rujak Cingur",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipMoXKtz3Rtzzcd3wgSt-nHFjO9192SboCdX4oD0=s680-w680-h510"
     },
     {
         "Nama Restoran": "Rujak Cingur Surabaya Bu Thamrin, Madukismo",
@@ -335,7 +357,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Rujak Cingur, Lotek Bakwan, Kupat Tahu",
-        "Kategori":"Rujak Cingur"
+        "Kategori":"Rujak Cingur",
+        "Foto":"https://i.ytimg.com/vi/2m5RCq4K97M/sddefault.jpg"
     },
     {
         "Nama Restoran": "Sego Saduk Suroboyo, Cokro",
@@ -343,7 +366,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 25000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Rujak Cingur, Nasi Bebek Besar, Ayam Kampung Penyet",
-        "Kategori":"Rujak Cingur, Ayam"
+        "Kategori":"Rujak Cingur, Ayam",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2f380147-4ca6-4c47-b94f-21722a67962d_Go-Biz_20210801_123743.jpeg?auto=format"
     },
     {
         "Nama Restoran": "Mangut Lele Mbah Marto",
@@ -351,7 +375,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Mangut Lele, Opor Ayam, Garang Asem, Gudeg",
-        "Kategori":"Mangut Lele, Gudeg"
+        "Kategori":"Mangut Lele, Gudeg",
+        "Foto":"https://joglojateng.com/wp-content/uploads/2023/02/2023-02-24-08_44_03-Jogja-layoutjoglojateng@gmail.com-Gmail-%E2%80%94-Mozilla-Firefox.jpg"
     },
     {
         "Nama Restoran": "Mangut Lele & Sego Pecel Yu Temu",
@@ -359,7 +384,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Mangut Lele, Nasi Pecel",
-        "Kategori":"Mangut Lele"
+        "Kategori":"Mangut Lele",
+        "Foto": "https://lh3.googleusercontent.com/p/AF1QipPf6GDmslY91MMKmGe4lYqK3RIW2Y-t_HaWj6E2=s680-w680-h510"
     },
     {
         "Nama Restoran": "Mangut Lele Bu Is",
@@ -367,7 +393,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Mangut Lele, Tempe Gembus Goreng, Tumis Cabai, Sambal Petis",
-        "Kategori":"Mangut Lele"
+        "Kategori":"Mangut Lele",
+        "Foto":"https://asset-2.tstatic.net/tribunnews/foto/bank/images/mangut-lele-bu-is_20150801_183744.jpg"
     },
     {
         "Nama Restoran": "Mangut Eyang Uti",
@@ -375,7 +402,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Mangut Lele, Mangut Gurame, Mangut Telur Bebek, Mangut Ayam Kampung, Mangut Nila",
-        "Kategori":"Mangut Lele, Ayam"
+        "Kategori":"Mangut Lele, Ayam",
+        "Foto":"https://gudeg.net/cni-content/uploads/modules/direktori/logo/20200117112150.jpg"
     },
     {
         "Nama Restoran": "Pendopo Mangut Idaman",
@@ -383,7 +411,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Mangut Lele, Mangut Ikan",
-        "Kategori":"Mangut Lele"
+        "Kategori":"Mangut Lele",
+        "Foto": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/03b976a9-898b-48d4-90af-e2822cdea1d5.jpg"
     },
     {
         "Nama Restoran": "Pecel Senggol Beringharjo",
@@ -391,7 +420,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Sego Pecel, Sate, Baceman",
-        "Kategori":"Mangut Lele, Sate"
+        "Kategori":"Mangut Lele, Sate",
+        "Foto":"https://awsimages.detik.net.id/community/media/visual/2021/10/25/pecel-pasar-beringharjo.jpeg?w=1200"
     },
     {
         "Nama Restoran": "Pecel Bu Ramelan",
@@ -399,7 +429,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 6000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Sego Pecel, Soto",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://mabur.co/wp-content/uploads/2024/06/IMG_20240609_071445-scaled.jpg"
     },
     {
         "Nama Restoran": "Warung SGPC Bu Wiryo",
@@ -407,7 +438,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Sego Pecel, Sup",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://nagantour.com/wp-content/uploads/2023/08/kuliner-sgpc-bu-wiryo.webp"
     },
     {
         "Nama Restoran": "Pecel Wader Pak Bejo",
@@ -415,7 +447,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Sego Pecel, Ikan Wader Goreng, Sambal Bawang",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://gudeg.net/cni-content/uploads/modules/direktori/logo/20190703031630.jpg"
     },
     {
         "Nama Restoran": "Pecel Pincuk Gumilang",
@@ -423,7 +456,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Sego Pecel, Empal, Tahu, Tempe Bacem",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwIqC-rUcrFeXbup8d-x0W8SoCxC9nKjMRSA&s"
     },
     {
         "Nama Restoran": "Ayam Goreng Mbok Berek",
@@ -431,7 +465,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 80000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Ayam Kalasan, Kremesan, Lalapan",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://cdns.klimg.com/merdeka.com/i/w/news/2022/01/26/1401250/content_images/670x335/20220126085847-1-ayam-goreng-mbok-berek-001-shani-rasyid.jpg"
     },
     {
         "Nama Restoran": "Ayam Goreng Suharti",
@@ -439,7 +474,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 63000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Ayam Kalasan, Kremesan, Sambal",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto": "https://lh3.googleusercontent.com/p/AF1QipPPmvsy_rds-nzaCizzZNTGpzjnA0FQMXLlPxsS=s680-w680-h510"
     },
     {
         "Nama Restoran": "Ayam Goreng Tojoyo",
@@ -447,7 +483,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 35000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Ayam Kalasan, Jeroan, Sup",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://media-cdn.tripadvisor.com/media/photo-s/16/66/5b/8c/interiornya-jadul.jpg"
     },
     {
         "Nama Restoran": "Ayam Goreng Ny. Suharti",
@@ -455,7 +492,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 125000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Ayam Goreng Kalasan, Kremesan, Sayuran",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipO6tl-OOWc8OHH8omB-u3ZaT3mJaVpHl8BjeZkp=s680-w680-h510"
     },
     {
         "Nama Restoran": "Ayam Goreng Bugisan",
@@ -463,7 +501,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 26500,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Ayam Goreng Kalasan, Nasi, Sambal",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/e1540ce0-e4d7-4bbb-a340-9d4dbc7435fc_Go-Biz_20190330_113132.jpeg"
     },
     {
         "Nama Restoran": "Tengkleng Gajah",
@@ -471,7 +510,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 47000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Tengkleng Gajah Kuah, Tengkleng Gajah Sambal Bawang, Tongseng, Sate Goreng, Nasi Goreng Kambing",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://www.unileverfoodsolutions.co.id/id/inspirasi-chef/bango-9-dari-10/resep-sukses/tengkleng-gajah/jcr:content/parsys/content-aside-footer/textimage/image.transform/jpeg-optimized/image.1619540625544.jpg"
     },
     {
         "Nama Restoran": "Tengkleng Bhenjoyo",
@@ -479,7 +519,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 50000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Tengkleng Kambing, Tongseng Kambing, Sate Kambing",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1035/2023/12/16/tengkleng-bhenjoyo-318421560.jpg"
     },
     {
         "Nama Restoran": "Soto Tengkleng Pak Marno",
@@ -487,7 +528,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Soto Tengkleng Ayam, Soto Tengkleng Sapi",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipPj1ZFWmg_Ou_Z8FTJYvMaDmwrr4SKK7-_4qhlw=s680-w680-h510"
     },
     {
         "Nama Restoran": "Tengkleng Solo Timoho",
@@ -495,7 +537,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 39000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Tengkleng, Sate Kambing, Nasi Goreng Kambing",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOSsVCEF23h6ypWWM4Zbigaxned0Uq8GaXLbcBJ=s680-w680-h510"
     },
     {
         "Nama Restoran": "Tengkleng HOHAH",
@@ -503,7 +546,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 50000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Tengkleng Kambing, Sate Kambing, Tongseng",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipMr88BMhSH100Za3quhK-cKt6myLUo_ZmB-wIEh=s680-w680-h510"
     },
     {
         "Nama Restoran": "Wedang Ronde Mbah Payem",
@@ -511,7 +555,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 7000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Wedang Ronde",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto":"https://jogjakita.co.id/wp-content/uploads/2021/06/wedang-ronde-mbah-payem.png"
     },
     {
         "Nama Restoran": "Wedang Ronde Lek Dhie",
@@ -519,7 +564,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Wedang Ronde dengan Roti, Kolang Kaling, Kacang Tanah",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto":"https://static.promediateknologi.id/crop/0x41:828x549/0x0/webp/photo/p2/222/2024/08/05/WhatsApp-Image-2024-08-05-at-152025-4023738284.jpeg"
     },
     {
         "Nama Restoran": "Wedang Ronde Wasis",
@@ -527,7 +573,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 8000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Wedang Ronde Khas Temanggung",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto": "https://pdbifiles.nos.jkt-1.neo.id/files/2018/12/09/roro_wedang-ronde-wasis-khas-temanggung.png"
     },
     {
         "Nama Restoran": "Wedang Ronde Sor Ringin",
@@ -535,7 +582,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Wedang Ronde, Bakmi",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto":"https://cdn.idntimes.com/content-images/community/2018/01/wedang-ronde-1-1024x692-4c39529bc8d41096821f29640c849919_600x400.jpg"
     },
     {
         "Nama Restoran": "Wedang Ronde Pak Jumono",
@@ -543,7 +591,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 7000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Wedang Ronde",
-        "Kategori":"Wedang"
+        "Kategori":"Wedang",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipM1GrDRHvAOXnqkZsUdnqA39WMJ9tcfS8QhaCOR=s680-w680-h510"
     },
     {
         "Nama Restoran": "Parsley Bakery & Cake Shop",
@@ -551,7 +600,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 80000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Lapis Legit, Tiger Roll, Croissant",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipMsY4U7LUMwIUVwlG4TOBKUvZ_ny6Gurb_o7_KH=s680-w680-h510"
     },
     {
         "Nama Restoran": "Melia Bakery & Cake Tempel",
@@ -559,7 +609,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 49000,
         "Rating Toko": 4.0,
         "Variasi Makanan": "Lapis Legit, Bolen Pisang, Spekuk",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/314322c0-e4ad-43b2-a8b4-b7603f78c89f_IMG_20200316_143230_649.jpg"
     },
     {
         "Nama Restoran": "Marina Cake Bakery",
@@ -567,7 +618,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 38000,
         "Rating Toko": 3.8,
         "Variasi Makanan": "Lapis Legit, Sobek Coklat, Roti Pizza",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/3716074a-1629-4683-94a4-38eaac8c12e4_brand-image_1595479109275.jpg"
     },
     {
         "Nama Restoran": "Lapis Sultan Jogja",
@@ -575,7 +627,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 75000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Lapis Legit Original, Lapis Legit Prune, Lapis Legit Keju",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lapissultanjogja.com/wp-content/uploads/2024/09/Ruangan-Ngopi-Lapis-Sultan-Jogja.webp"
     },
     {
         "Nama Restoran": "Holland Bakery",
@@ -583,7 +636,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 176000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Lapis Legit, Roti Tawar, Donat",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipNyZpQNVaKqIyz4PFdCCRsv-7FsQeSVqSk7V6bf=s680-w680-h510"
     },
     {
         "Nama Restoran": "Soto Blengong Pak Gino",
@@ -591,7 +645,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Soto Blengong, Sate Usus, Perkedel",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://www.alisson.id/wp-content/uploads/2020/11/Soto-pak-Gino.jpg"
     },
     {
         "Nama Restoran": "Soto Blengong Kadipiro",
@@ -599,7 +654,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Soto Blengong, Sate Puyuh, Tempe Goreng",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://www.yogyes.com/id/yogyakarta-culinary/soto-kadipiro/1.jpg"
     },
     {
         "Nama Restoran": "Soto Blengong Pak Marto",
@@ -607,7 +663,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Soto Blengong Babat, Soto Daging",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://cdn.kmbmedia.id/uploads/2020/02/pak-marto-1.jpg?resize=696%2C870&ssl=1"
     },
     {
         "Nama Restoran": "Soto Blengong Mbah Karto",
@@ -615,7 +672,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 6000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Soto Blengong, Soto Daging",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://visitingjogja.jogjaprov.go.id/wp-content/uploads/2022/07/soto-bathok-mbah-katro-@afifah_elmursyid.jpg"
     },
     {
         "Nama Restoran": "Soto Blengong Sawah",
@@ -623,7 +681,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 10000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Soto Blengong Ayam, Soto Daging",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOLqAiefTOfDCJh4RFI25ZScfBZexiwj40LrGmp=s680-w680-h510"
     },
     {
         "Nama Restoran": "Ayam Geprek Bu Rum",
@@ -631,7 +690,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Ayam Geprek, Nasi, Sayur, Kuah Tongseng",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://awsimages.detik.net.id/community/media/visual/2020/06/22/ayam-geprek-bu-rum-2.jpeg?w=1280"
     },
     {
         "Nama Restoran": "Ayam Geprek Bu Nanik",
@@ -639,7 +699,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Ayam Geprek Kuah Tongseng, Sayur, Telur",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://asset-2.tstatic.net/tribunnews/foto/bank/images/ayam-geprek_20150814_140442.jpg"
     },
     {
         "Nama Restoran": "Ayam Geprek dan Susu (Preksu)",
@@ -647,7 +708,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Ayam Geprek, Topping Keju, Susu Spesial Preksu",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://images.genpi.co/uploads/jogja/arsip/normal/2021/11/25/salah-satu-menu-ayam-di-preksu-foto-preksu-1y5u.jpg"
     },
     {
         "Nama Restoran": "Ayam Geprek Bu Made",
@@ -655,7 +717,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Ayam Geprek Sambal Terasi",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://asset-2.tstatic.net/kaltim/foto/bank/images/Ilustrasi-hidangan-Ayam-Geprek-Bu-Made.jpg"
     },
     {
         "Nama Restoran": "Ayam Geprek Mbok Moro",
@@ -663,7 +726,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Ayam Geprek, Saus Rendang, Saus Barbeque",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://makanjogja.com/imgartikel/Ayam-Mbok-Moro-Ayam-Geprek-Super-Pedas-Super-Lezat-artikel659.jpg"
     },
     {
         "Nama Restoran": "Ingkung Mbah Cempluk",
@@ -671,7 +735,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 125000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Ingkung Ayam Utuh, Ingkung Goreng, Wader Lombok Ijo",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://visitingjogja.jogjaprov.go.id/wp-content/uploads/2022/10/ingkung-mbah-cempluk-by-@mbahcempluk.id_.jpg"
     },
     {
         "Nama Restoran": "Ingkung Mbah Kentol",
@@ -679,7 +744,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 120000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Ingkung Ayam Kukus, Sambal Tomat",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/f28d5855-a74f-454e-ac25-914f2af5b2a4_Go-Biz_20211002_174025.jpeg"
     },
     {
         "Nama Restoran": "Ingkung Sambilegi Bu Yadi",
@@ -687,7 +753,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 110000,
         "Rating Toko": 4.3,
         "Variasi Makanan": "Ingkung Ayam Utuh, Sambal Bawang",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://dzglkev4c34xb.cloudfront.net/horego.com/depok/restaurant/rumah-makan-ingkung-sambilegi-bu-yadi/food/af1qipnajivqri9xakuaq0e8lrmcmvlysr_ufn7lqrp9.jpg"
     },
     {
         "Nama Restoran": "Ayam Ingkung Mbak Sri",
@@ -695,7 +762,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 140000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Ingkung Panggang, Sambal Dele, Sayur Asem",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://pict.sindonews.net/dyn/480/pena/news/2020/07/11/185/97428/ayam-ingkung-mbak-sri-nikmatnya-nendang-segurih-rasanya-zmg.jpg"
     },
     {
         "Nama Restoran": "Kandang Ingkung",
@@ -703,7 +771,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 149000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Ingkung Ayam, Oseng Jantung Pisang, Nasi Gurih",
-        "Kategori":"Oseng, Ayam"
+        "Kategori":"Oseng, Ayam",
+        "Foto":"https://asset.kompas.com/crops/3KqfufdHhjnjYCJbPyTLxqgL5dY=/0x99:1600x1166/750x500/data/photo/2022/08/25/6306f4786b8ba.jpeg"
     },
     {
         "Nama Restoran": "Sate Kambing Bu Umi",
@@ -711,7 +780,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Gulai Kambing, Sate Kambing, Tongseng",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c145f39e-4462-4d3a-a8ba-8e1c35e836ab_926a4e2e-e9ad-4e06-908e-876a34dc2593_Go-Biz_20200415_113920.jpeg"
     },
     {
         "Nama Restoran": "Sate Kambing Syafi Sidatan",
@@ -719,7 +789,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 18000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Gulai Kambing, Sop Kambing, Tongseng",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/67c04730-19cc-4755-a0c8-0ada0d1783a7_Go-Biz_20210217_111205.jpeg"
     },
     {
         "Nama Restoran": "Depot Madura 1 Cak Hasan",
@@ -727,7 +798,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Gulai Kambing, Sate Kambing, Nasi Goreng Kambing",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a9018388-c980-4e2c-8705-d4891ea6eee4_Go-Biz_20190518_181317.jpeg"
     },
     {
         "Nama Restoran": "Nasi Kapau Uda Jack",
@@ -735,7 +807,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 26000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Gulai Kepala Kambing, Nasi Kapau",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://static.promediateknologi.id/crop/11x52:799x591/0x0/webp/photo/p2/65/2023/11/29/20-3339036191.png"
     },
     {
         "Nama Restoran": "Bakso Balungan Pak Granat",
@@ -743,7 +816,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Bakso Balungan, Tetelan, Mie Ayam",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipORxCmIKcvLbWyl01iyh52SHzMZoH7gc8MO7K97=s680-w680-h510"
     },
     {
         "Nama Restoran": "Bakso Balungan Pak Granat Mantrijeron",
@@ -751,7 +825,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Bakso Balungan, Mie Ayam Ceker, Bakso Goreng",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOHlPQs6fBsbDbEC-b7HXc8jt1lscan2fJsvLwk=s680-w680-h510"
     },
     {
         "Nama Restoran": "Bakso Balungan Pojok Mirota",
@@ -759,7 +834,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 17000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Bakso Balungan, Bakso Komplit, Nasi",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d10ccb72-1049-41e0-84ce-f0d10d5bc193_712ddb7b-86cb-4f4d-9f62-46885869e6fd_Go-Biz_20200108_150727.jpeg"
     },
     {
         "Nama Restoran": "Bakso Tetelan Konco Kenthel",
@@ -767,7 +843,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 11000,
         "Rating Toko": 4.4,
         "Variasi Makanan": "Bakso Balungan, Tetelan, Bakso Urat",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOq4ORrQdvah8KinmYoYKw3Pyoe8-Ti8-flJySt=s680-w680-h510"
     },
     {
         "Nama Restoran": "Bakso Balungan Bu Citro",
@@ -775,7 +852,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Bakso Balungan, Mie Ayam",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://asset-2.tstatic.net/banyumas/foto/bank/images/bakso-balungan-bu-satiyo-terminal-ambarawa-kabupaten-semarang.jpg"
     },
     {
         "Nama Restoran": "Bakmi Jawa Mbah Mo",
@@ -783,7 +861,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://gudeg.net/cni-content/uploads/modules/direktori/logo/20160113122520.jpg"
     },
     {
         "Nama Restoran": "Bakmi Jawa Pak Pele",
@@ -791,7 +870,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipMs3j2neaM66GS5BDwdNPl-hcjbSzQss_xYHIyn=s680-w680-h510"
     },
     {
         "Nama Restoran": "Bakmi Jawa Mas Timbul",
@@ -799,7 +879,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 19000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Bakmi Nyemek, Nasi Goreng, Magelangan",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipNml1DiCTphsVeYTN-M-OzxEfXktMX2jbiQOVI4=s680-w680-h510"
     },
     {
         "Nama Restoran": "Bakmi Jawa Pak Rebo",
@@ -807,7 +888,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 20000,
         "Rating Toko": 4.5,
         "Variasi Makanan": "Bakmi Nyemek, Bakmi Godhog, Bakmi Goreng",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://s3.us-east-1.wasabisys.com/agendaindonesia/2023/10/Bakmi-Jawa-Pak-Rebo-Yogya.jpg"
     },
     {
         "Nama Restoran": "Bakmi Jawa Pak Kadin",
@@ -815,7 +897,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 15000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Bakmi Nyemek, Bakmi Goreng, Bakmi Godhog",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOPk8stTVv4SXbExrnBAVdhdFvGb6atQ21kvGdd=s680-w680-h510"
     },
     {
         "Nama Restoran": "Nasi Gurih Ayam Suwir Mbah Amo, Gowongan",
@@ -823,7 +906,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Nasi Gurih Ayam Suwir, Nasi Langgi",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d7e9e4b6-599a-4fd8-ac64-588a4d73f288.jpg"
     },
     {
         "Nama Restoran": "Nasi Kuning Dapoer Mak Lie, Pandega Marta",
@@ -831,7 +915,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 13000,
         "Rating Toko": 4.8,
         "Variasi Makanan": "Nasi Langgi, Nasi Sate Ayam, Juice Strawberry",
-        "Kategori":"Sate"
+        "Kategori":"Sate",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipOyj2NzzTNigxiFt4z8x58pXrrtYFjcmPqW_m3x=s680-w680-h510"
     },
     {
         "Nama Restoran": "Nasi Langgi Yu Warnii, Godean",
@@ -839,7 +924,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 16000,
         "Rating Toko": 4.6,
         "Variasi Makanan": "Nasi Langgi with Jengkol Balado, Ayam Serundeng",
-        "Kategori":"Ayam"
+        "Kategori":"Ayam",
+        "Foto":"https://lh3.googleusercontent.com/p/AF1QipPVn-6XslPctiVr78K0R1clf0Rjpbh6FWdPXW3z=s680-w680-h510"
     },
     {
         "Nama Restoran": "Muna Cung (Nasi Kuning), Beskalan",
@@ -847,7 +933,8 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 25000,
         "Rating Toko": 4.7,
         "Variasi Makanan": "Nasi Langgi Babat, Nasi Kuning Babat, Kering Kentang",
-        "Kategori":"Lainnya"
+        "Kategori":"Lainnya",
+        "Foto":"https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/107/2024/07/12/20230428154124-4110826500.jpg"
     },
     {
         "Nama Restoran": "Nasi Langgi Pak Man",
@@ -855,6 +942,7 @@
         "Harga Rata-Rata Makanan di Toko (Rp)": 6000,
         "Rating Toko": 4.9,
         "Variasi Makanan": "Nasi Langgi with various toppings like kering tempe, oseng jamur, oseng teri",
-        "Kategori":"Oseng"
+        "Kategori":"Oseng",
+        "Foto":"https://redaksi.inibaru.id/media/23174/large/normal/637865f6-0cd5-4361-b679-595e6593930c__large.jpg"
     }
 ]

@@ -67,6 +67,8 @@ def login_user(request):
         response = HttpResponseRedirect(reverse("main:homepage"))
         response.set_cookie('last_login', str(datetime.datetime.now()))
         return response
+      else:
+        messages.error(request, 'Username atau password salah. Coba lagi.')
 
    else:
       form = AuthenticationForm(request)
@@ -92,25 +94,20 @@ def product_detail(request, restaurant_id):
     return render(request, 'product_detail.html', context)
 
 def restaurant_list(request):
-    # Ambil semua restoran
     restaurants = Restaurant.objects.all()
 
     user_favorites = []
     if request.user.is_authenticated:
         user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
 
-    # Ambil semua kategori untuk pilihan filter
     categories = Category.objects.all()
 
-    # Ambil parameter kategori dan sorting dari query string
     category_id = request.GET.get('category')
     sort_option = request.GET.get('sorting')
 
-    # Filter berdasarkan kategori jika ada
     if category_id:
         restaurants = restaurants.filter(menu_items__categories__id=category_id).distinct()
 
-    # Sorting berdasarkan harga
     if sort_option == 'low_to_high':
         restaurants = restaurants.order_by('average_price')
     elif sort_option == 'high_to_low':
@@ -124,6 +121,3 @@ def restaurant_list(request):
         'user_favorites': user_favorites,
     }
     return render(request, 'page_restaurant.html', context)
-
-
-
