@@ -19,12 +19,10 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         file_path = options['file']
 
-        # Memastikan file JSON ada
         if not os.path.exists(file_path):
             self.stderr.write(self.style.ERROR(f"File '{file_path}' does not exist."))
             return
 
-        # Memastikan data JSON valid
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -49,12 +47,10 @@ class Command(BaseCommand):
                     variasi_makanan = entry.get("Variasi Makanan", "").strip()
                     kategori_str = entry.get("Kategori", "").strip()
 
-                    # Periksa bahwa data restoran memiliki name dan location
                     if not name or not location:
                         self.stderr.write(self.style.WARNING(f"Skipping entry with missing name or location: {entry}"))
                         continue
 
-                    # Membuat atau memperbarui objek Restaurant
                     restaurant, created = Restaurant.objects.get_or_create(
                         name=name,
                         location=location,
@@ -65,7 +61,6 @@ class Command(BaseCommand):
                         }
                     )
 
-                    # Update field jika restaurant sudah ada
                     if not created:
                         updated = False
                         if restaurant.average_price != average_price:
@@ -81,7 +76,6 @@ class Command(BaseCommand):
                             restaurant.save()
                             self.stdout.write(self.style.SUCCESS(f"Updated Restaurant: {name}"))
 
-                    # Memproses kategori
                     categories = []
                     if kategori_str:
                         kategori_list = [k.strip() for k in kategori_str.split(',') if k.strip()]
@@ -89,7 +83,6 @@ class Command(BaseCommand):
                             category, _ = Category.objects.get_or_create(name=kategori_name)
                             categories.append(category)
 
-                    # Memproses Menu Items dan menghubungkannya dengan kategori
                     if variasi_makanan:
                         menu_items = [item.strip() for item in variasi_makanan.split(',') if item.strip()]
                         for menu_name in menu_items:
@@ -100,7 +93,6 @@ class Command(BaseCommand):
                             if menu_created:
                                 self.stdout.write(self.style.SUCCESS(f"  - Added MenuItem: {menu_name}"))
                             
-                            # Set kategori pada MenuItem jika kategori tersedia
                             if categories:
                                 menu_item.categories.set(categories)
                                 menu_item.save()
