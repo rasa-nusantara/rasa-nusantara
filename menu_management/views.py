@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib import messages
 from main.models import Restaurant, MenuItem, Category
 from .forms import MenuItemForm
 
@@ -28,9 +27,6 @@ def admin_menu_view(request, restaurant_id):
 
 @user_passes_test(lambda u: u.is_staff, login_url='main:login')
 def add_menu(request, restaurant_id):
-    """
-    View to add a new menu item to a restaurant.
-    """
     restaurant = get_object_or_404(Restaurant, id=restaurant_id)
     if request.method == 'POST':
         form = MenuItemForm(request.POST)
@@ -42,7 +38,6 @@ def add_menu(request, restaurant_id):
             category_names = request.POST.getlist('categories')  
             handle_categories(menu_item, category_names)
 
-            messages.success(request, 'Menu item added successfully!')
             return redirect('adminview:admin_menu', restaurant.id)
     else:
         form = MenuItemForm()
@@ -66,8 +61,6 @@ def edit_menu(request, restaurant_id, id):
             # Update categories based on selected options
             category_names = request.POST.getlist('categories')
             handle_categories(updated_item, category_names)
-
-            messages.success(request, 'Menu item updated successfully!')
             return redirect('menu_management:admin_menu', restaurant_id=restaurant_id)
     else:
         form = MenuItemForm(instance=menu_item)
@@ -84,5 +77,4 @@ def edit_menu(request, restaurant_id, id):
 def delete_menu(request, restaurant_id, id):
     menu_item = get_object_or_404(MenuItem, id=id, restaurant__id=restaurant_id)
     menu_item.delete()
-    messages.success(request, 'Menu item deleted successfully!')
     return redirect('adminview:admin_menu', restaurant_id=restaurant_id)

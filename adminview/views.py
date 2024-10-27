@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib import messages
 from main.models import Restaurant
 from django.http import JsonResponse, HttpResponseRedirect
 from django.urls import reverse
@@ -57,7 +56,6 @@ def add_restaurant(request):
                     'message': 'Restaurant added successfully!',
                     'redirect_url': reverse('adminview:admin_restaurant')
                 })
-            messages.success(request, 'Restaurant added successfully!')
             return redirect('adminview:admin_restaurant')
         else:
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -85,7 +83,6 @@ def edit_restaurant(request, uuid):
                     'message': 'Restaurant updated successfully!',
                     'redirect_url': reverse('adminview:admin_restaurant')
                 })
-            messages.success(request, 'Restaurant updated successfully!')
             return redirect('adminview:admin_restaurant')
         else:
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -106,5 +103,4 @@ def edit_restaurant(request, uuid):
 def delete_restaurant(request, uuid):
     restaurant = get_object_or_404(Restaurant, id=uuid)
     restaurant.delete()
-    messages.success(request, 'Restaurant deleted successfully!')
     return redirect('adminview:admin_restaurant')
