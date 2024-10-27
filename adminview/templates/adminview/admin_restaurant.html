@@ -15,6 +15,29 @@
             <a href="{% url 'adminview:add_restaurant' %}" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">Add New Restaurant</a>
         </div>
 
+        <div class="flex flex-row items-center justify-center mb-6">      
+            <!-- Form Dropdown Kategori dan Sorting -->
+            <form method="GET" class="flex items-center space-x-4">
+              <!-- Dropdown untuk memilih kategori -->
+              <select name="category" onchange="this.form.submit()" class="border p-2 rounded bg-white text-gray-800">
+                <option value="">Pilih Kategori</option>
+                {% for category in categories %}
+                    <option value="{{ category.id }}" {% if category.id == selected_category %}selected{% endif %}>
+                        {{ category.name }}
+                    </option>
+                {% endfor %}
+              </select>
+              <select name="sorting" onchange="this.form.submit()" class="border p-2 rounded bg-white text-gray-800">
+                <option value="">Urutkan Berdasarkan Harga</option>
+                <option value="low_to_high" {% if selected_sort == 'low_to_high' %}selected{% endif %}>Harga Terendah</option>
+                <option value="high_to_low" {% if selected_sort == 'high_to_low' %}selected{% endif %}>Harga Tertinggi</option>
+              </select>
+            </form>
+            </form>
+        </div>
+
+            <!-- Dropdown untuk sorting harga -->
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6">
             {% for restaurant in restaurants %}
                 <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:scale-105 hover:shadow-2xl">

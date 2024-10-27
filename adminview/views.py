@@ -10,6 +10,7 @@ from django.shortcuts import render, get_object_or_404
 from menu_management.models import MenuItem, Restaurant
 from django.shortcuts import render
 from menu_management.views import admin_menu_view, add_menu, edit_menu, delete_menu
+from main.models import *
 
 
 class RestaurantForm(ModelForm):
@@ -22,8 +23,25 @@ class RestaurantForm(ModelForm):
 @staff_member_required(login_url='main:login')
 def admin_restaurant_view(request):
     restaurants = Restaurant.objects.all()
+
+    categories = Category.objects.all()
+
+    category_id = request.GET.get('category')
+    sort_option = request.GET.get('sorting')
+
+    if category_id:
+        restaurants = restaurants.filter(menu_items__categories__id=category_id).distinct()
+
+    if sort_option == 'low_to_high':
+        restaurants = restaurants.order_by('average_price')
+    elif sort_option == 'high_to_low':
+        restaurants = restaurants.order_by('-average_price')
+
     context = {
-        'restaurants': restaurants
+        'restaurants': restaurants,
+        'categories': categories,
+        'selected_category': int(category_id) if category_id else None,
+        'selected_sort': sort_option,
     }
     return render(request, 'adminview/admin_restaurant.html', context)
 

@@ -7,7 +7,13 @@
       <div class="flex items-center">
         <img src="{% static 'image/logo.png' %}" alt="Rasa Nusantara Logo" class="h-12 w-auto">
       </div>
-    
+      {% if user.is_authenticated and user.is_staff %}
+      <div class="hidden md:flex items-center space-x-10">
+        <a href="" class="text-sm font-bold font-medium {% if request.path == '/adminview/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
+        </a>
+      {% endif %}
+
+      {% if not user.is_staff %}
       <div class="hidden md:flex items-center space-x-10">
         <a href="{% url 'main:homepage' %}" class="text-sm font-bold font-medium {% if request.path == '/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
           HALAMAN UTAMA
@@ -15,10 +21,12 @@
         <a href="{%url 'main:restaurant' %}" class="text-sm font-bold font-medium {% if request.path == '/restaurant/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
           RESTORAN
         </a>
-        <a href="#" class="text-sm font-bold font-medium {% if request.path == '/reservasi/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
+        {% endif %}
+
+        {% if user.is_authenticated and not user.is_staff %}
+        <a href="{% url 'reservasi:user_reservations' %}" class="text-sm font-bold font-medium {% if request.path == '/reservasi/user_reservations/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
           RESERVASI
         </a>
-        {% if user.is_authenticated %}
         <a href="{% url 'favorite:favorite_list' %}" class="text-sm font-bold font-medium {% if request.path == '/favorite/list/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
           FAVORIT
         </a>
@@ -56,16 +64,24 @@
   <!-- Menu Mobile yang tersembunyi dan muncul ketika tombol diklik -->
   <div class="mobile-menu hidden md:hidden px-4 w-full md:max-w-full bg-[#543C30]">
     <div class="pt-2 pb-3 space-y-1 mx-auto">
+
+      {% if user.is_authenticated and user.is_staff %}
+      <a href="{% url 'adminview:admin_restaurant' %}" class="block text-sm font-medium {% if request.path == '/adminview/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
+        HALAMAN UTAMA
+      </a>
+      {% endif %}
+      
       <a href="{% url 'main:homepage' %}" class="block text-sm font-medium {% if request.path == '/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         HALAMAN UTAMA
       </a>
       <a href="{% url 'main:restaurant' %}" class="block text-sm font-medium {% if request.path == '/restaurant/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         RESTORAN
       </a>
-      <a href="#" class="block text-sm font-medium {% if request.path == '/reservasi/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
+
+      {% if user.is_authenticated and not user.is_staff %}
+      <a href="{% url 'reservasi:user_reservations' %}" class="block text-sm font-medium {% if request.path == '/reservasi/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         RESERVASI
       </a>
-      {% if user.is_authenticated %}
       <a href="{% url 'favorite:favorite_list' %}" class="block text-sm font-medium {% if request.path == '/favorite/list/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         FAVORIT
       </a>
