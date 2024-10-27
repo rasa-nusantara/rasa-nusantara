@@ -18,6 +18,13 @@ Admin View - Rasa Nusantara
         <div class="bg-white shadow-lg rounded-lg overflow-hidden w-[22%] flex-shrink-0 flex flex-col">
             <div class="p-4 flex flex-col">
                 <h2 class="text-lg font-bold mb-1 text-gray-800">{{ item.name }}</h2>
+                <p class="text-gray-600 mb-2">Categories: 
+                    {% if item.categories.all %}
+                        {{ item.categories.all|join:', ' }}
+                    {% else %}
+                        No categories assigned
+                    {% endif %}
+                </p>
                 <div class="flex gap-2 mt-4">
                     <a href="{% url 'adminview:edit_menu' restaurant.id item.id %}" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Edit</a>
                     <form action="{% url 'adminview:delete_menu' restaurant.id item.id %}" method="POST" style="display:inline;">

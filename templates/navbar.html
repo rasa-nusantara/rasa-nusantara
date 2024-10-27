@@ -9,7 +9,7 @@
       </div>
       {% if user.is_authenticated and user.is_staff %}
       <div class="hidden md:flex items-center space-x-10">
-        <a href="" class="text-sm font-bold font-medium {% if request.path == '/adminview/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">
+        <a href="{% url 'adminview:admin_restaurant' %}" class="text-sm font-bold font-medium {% if request.path == '/adminview/' %}text-orange-500{% else %}text-white hover:text-gray-300{% endif %}">DAFTAR RESTORAN
         </a>
       {% endif %}
 
