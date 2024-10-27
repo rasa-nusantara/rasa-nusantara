@@ -67,19 +67,20 @@
 
       {% if user.is_authenticated and user.is_staff %}
       <a href="{% url 'adminview:admin_restaurant' %}" class="block text-sm font-medium {% if request.path == '/adminview/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
-        HALAMAN UTAMA
       </a>
       {% endif %}
       
+      {% if not user.is_staff %}
       <a href="{% url 'main:homepage' %}" class="block text-sm font-medium {% if request.path == '/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         HALAMAN UTAMA
       </a>
       <a href="{% url 'main:restaurant' %}" class="block text-sm font-medium {% if request.path == '/restaurant/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         RESTORAN
       </a>
+      {% endif %}
 
       {% if user.is_authenticated and not user.is_staff %}
-      <a href="{% url 'reservasi:user_reservations' %}" class="block text-sm font-medium {% if request.path == '/reservasi/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
+      <a href="{% url 'reservasi:user_reservations' %}" class="block text-sm font-medium {% if request.path == '/reservasi/user_reservations/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         RESERVASI
       </a>
       <a href="{% url 'favorite:favorite_list' %}" class="block text-sm font-medium {% if request.path == '/favorite/list/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
