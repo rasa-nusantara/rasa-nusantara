@@ -46,8 +46,8 @@ def admin_restaurant_view(request):
     return render(request, 'adminview/admin_restaurant.html', context)
 
 @staff_member_required(login_url='main:login')
-def edit_restaurant(request, id):
-    restaurant = get_object_or_404(Restaurant, id=id)
+def edit_restaurant(request, uuid):
+    restaurant = get_object_or_404(Restaurant, id=uuid)
     
     if request.method == 'POST':
         form = RestaurantForm(request.POST, instance=restaurant)
@@ -61,8 +61,8 @@ def edit_restaurant(request, id):
     return render(request, 'adminview/edit_restaurant.html', {'form': form, 'restaurant': restaurant})
 
 @staff_member_required(login_url='main:login')
-def delete_restaurant(request, id):
-    restaurant = get_object_or_404(Restaurant, id=id)
+def delete_restaurant(request, uuid):
+    restaurant = get_object_or_404(Restaurant, id=uuid)
     restaurant.delete()
     messages.success(request, 'Restaurant deleted successfully!')
     return redirect('adminview:admin_restaurant')
