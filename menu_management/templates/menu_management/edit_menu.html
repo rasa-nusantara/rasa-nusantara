@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+    {% if menu_item %} Edit Menu Item - Admin View {% else %} Add Menu Item - Admin View {% endif %}
+{% endblock meta %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="min-h-screen flex flex-col bg-[#453229] w-full pt-20 pb-8">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">{% if menu_item %} Edit Menu Item {% else %} Add New Menu Item {% endif %}</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">{{ field.label }}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            
+            <div class="flex gap-4">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    {% if menu_item %} Save Changes {% else %} Add Menu Item {% endif %}
+                </button>
+                <a href="{% url 'menu_management:admin_menu' restaurant.id %}" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancel</a>
+            </div>
+        </form>        
+    </div>
+</div>
+{% endblock content %}

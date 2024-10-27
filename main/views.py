@@ -59,21 +59,23 @@ def register(request):
     return render(request, 'register.html', context)
 
 def login_user(request):
-   if request.method == 'POST':
-      form = AuthenticationForm(data=request.POST)
-      if form.is_valid():
-        user = form.get_user()
-        login(request, user)
-        response = HttpResponseRedirect(reverse("main:homepage"))
-        response.set_cookie('last_login', str(datetime.datetime.now()))
-        return response
-      else:
-        messages.error(request, 'Username atau password salah. Coba lagi.')
-
-   else:
-      form = AuthenticationForm(request)
-   context = {'form': form}
-   return render(request, 'login.html', context)
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            if user.is_staff:
+                response = HttpResponseRedirect(reverse("adminview:admin_restaurant"))
+            else:
+                response = HttpResponseRedirect(reverse("main:homepage"))
+            response.set_cookie('last_login', str(datetime.datetime.now()))
+            return response
+        else:
+            messages.error(request, 'Username atau password salah. Coba lagi.')
+    else:
+        form = AuthenticationForm(request)
+    context = {'form': form}
+    return render(request, 'login.html', context)
 
 def logout_user(request):
     logout(request)

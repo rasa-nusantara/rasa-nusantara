@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+Add Restaurant - Admin View
+{% endblock meta %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="min-h-screen flex flex-col bg-[#453229] w-full pt-20 pb-8">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Add New Restaurant</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">{{ field.label }}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            
+            <div class="flex gap-4">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add Restaurant</button>
+                <a href="{% url 'adminview:admin_restaurant' %}" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
