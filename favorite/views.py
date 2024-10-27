@@ -6,7 +6,7 @@ from django.http import JsonResponse
 
 @login_required
 def favorite_list(request):
-    favorites = Favorite.objects.filter(user=request.user)  # Ambil semua favorit milik user
+    favorites = Favorite.objects.filter(user=request.user)  
     return render(request, 'favorite_list.html', {'favorites': favorites})
 
 @login_required

@@ -13,12 +13,9 @@
     </section>
 
     <section class="mb-12 mt-2 flex items-center justify-center min-h-[60vh]">
-        <!-- Menggunakan grid layout untuk 4 kolom per baris -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6">
             {% for favorite in favorites %}
-                <!-- Link mengarah ke halaman detail -->
                 <a href="{% url 'main:product_detail' favorite.restaurant.id %}">
-                    <!-- Kartu restoran -->
                     <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col transition duration-500 hover:scale-105 hover:shadow-2xl">
                         {% if favorite.restaurant.image %}
                             <img src="{{ favorite.restaurant.image }}" alt="{{ favorite.restaurant.name }}" class="rounded-t-2xl h-[180px] object-cover">
@@ -29,7 +26,6 @@
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-bold text-gray-800">{{ favorite.restaurant.name|truncatechars:28 }}</h3>
                                 <div>
-                                    <!-- Tombol remove favorite -->
                                     <button type="button" class="favorite-button w-6 h-6 bg-red-500 text-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300" data-url="{% url 'favorite:remove_favorite' favorite.restaurant.id %}" onclick="event.preventDefault(); removeFavorite(this);">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/>
@@ -59,13 +55,13 @@
 
 <script>
 function removeFavorite(button) {
-    const url = button.getAttribute('data-url');  // Ambil URL dari data-url di tombol
+    const url = button.getAttribute('data-url');  
 
     fetch(url, {
         method: 'POST',
         headers: {
             'X-CSRFToken': '{{ csrf_token }}',
-            'X-Requested-With': 'XMLHttpRequest'  // Header AJAX
+            'X-Requested-With': 'XMLHttpRequest'  
         },
     })
     .then(response => {
@@ -76,16 +72,13 @@ function removeFavorite(button) {
     })
     .then(data => {
         if (data.success) {
-            // Hapus kartu restoran dari DOM jika permintaan berhasil
             const favoriteCard = button.closest('a');
             favoriteCard.remove();
             
-            // Perbarui jumlah favorit
             const favoriteCount = document.querySelector('.text-lg');
             favoriteCount.textContent = `(${document.querySelectorAll('.grid > a').length} Restoran)`;
             
             if (document.querySelectorAll('.grid > a').length === 0) {
-                // Jika tidak ada restoran favorit lagi, tampilkan pesan kosong
                 document.querySelector('.grid').innerHTML = `
                     <div class="text-center col-span-full flex flex-col items-center justify-center min-h-screen">
                         <p class="text-white text-lg mb-4">Anda belum mempunyai restoran favorit.</p>
