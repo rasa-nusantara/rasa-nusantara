@@ -28,6 +28,31 @@ def homepage(request):
     }
     return render(request, 'main.html', context)
 
+def show_json(request):
+    restaurants = Restaurant.objects.all()
+    restaurant_list = []
+    
+    for restaurant in restaurants:
+        menu_items = restaurant.menu_items.all()  # Mengambil semua menu items untuk restaurant ini
+        
+        restaurant_data = {
+            'id': str(restaurant.id),  # Convert UUID to string
+            'name': restaurant.name,
+            'location': restaurant.location,
+            'average_price': str(restaurant.average_price),  # Convert Decimal to string
+            'rating': restaurant.rating,
+            'image': restaurant.image,
+            'menu_items': [
+                {
+                    'id': str(item.id),
+                    'name': item.name
+                } for item in menu_items
+            ]
+        }
+        restaurant_list.append(restaurant_data)
+    
+    return JsonResponse(restaurant_list, safe=False)
+
 @login_required
 def toggle_favorite(request, restaurant_id):
     restaurant = get_object_or_404(Restaurant, id=restaurant_id)
@@ -107,6 +132,8 @@ def restaurant_list(request):
         'sort_price': sort_option  
     }
     return render(request, 'page_restaurant.html', context)
+
+
 
 
 

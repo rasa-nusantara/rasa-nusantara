@@ -6,6 +6,12 @@ from django.http import HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from main.models import Restaurant
 from django.http import JsonResponse
+from django.http import HttpResponse
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+
 
 @login_required
 # def add_review(request, restaurant_name):
@@ -81,15 +87,7 @@ def delete_review(request, id):
     return HttpResponseRedirect(reverse('restaurant_review', kwargs={'name': review.restaurant_name}))
 
 
-def restaurant_list(request):
-    # Mendapatkan semua restoran dari database
-    restaurants = Restaurant.objects.all()
 
-    context = {
-        'restaurants': restaurants
-    }
-    
-    return render(request, 'restaurant_list.html', context)
 
 
 def restaurant_review(request, name):
@@ -124,5 +122,71 @@ def edit_review_ajax(request):
         })
     return JsonResponse({'error': 'Invalid request'}, status=400)
 
+def show_json(request):
+    data = Review.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@csrf_exempt
+def create_review_flutter(request):
+    if request.method == 'POST':
+        try:
+            # Debug print
+            print(f"Received data: {request.POST}")
+            
+            # Buat review baru
+            new_review = Review.objects.create(
+                user=request.user,
+                restaurant_name=request.POST.get('restaurant_name'),
+                rating=int(request.POST.get('rating')),
+                comment=request.POST.get('comment')
+            )
+            
+            new_review.save()
+            
+            return JsonResponse({
+                "status": "success",
+                "message": "Review berhasil ditambahkan!"
+            }, status=200)
+            
+        except Exception as e:
+            return JsonResponse({
+                "status": "error",
+                "message": str(e)
+            }, status=400)
+            
+    return JsonResponse({
+        "status": "error",
+        "message": "Invalid request method"
+    }, status=401)
+
+# Untuk mendapatkan review berdasarkan nama restoran
+@csrf_exempt
+@login_required
+def get_restaurant_reviews(request, restaurant_name):
+    if request.method == 'GET':
+        try:
+            reviews = Review.objects.filter(restaurant_name=restaurant_name)
+            # Gunakan custom serializer untuk menyertakan username
+            review_data = []
+            for review in reviews:
+                review_dict = {
+                    "model": "review.review",
+                    "pk": review.pk,
+                    "fields": {
+                        "user": review.user.username,  # Ambil username alih-alih user ID
+                        "restaurant_name": review.restaurant_name,
+                        "rating": review.rating,
+                        "comment": review.comment,
+                        "created_at": review.created_at.isoformat()
+                    }
+                }
+                review_data.append(review_dict)
+            return JsonResponse(review_data, safe=False)
+        except Exception as e:
+            print(f"Debug - Error: {str(e)}")
+            return JsonResponse({
+                "status": "error",
+                "message": str(e)
+            }, status=500)
 
 

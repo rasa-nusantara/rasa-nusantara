@@ -68,9 +68,6 @@
       {% if user.is_authenticated %}
       <a href="{% url 'favorite:favorite_list' %}" class="block text-sm font-medium {% if request.path == '/favorite/list/' %}text-orange-500{% else %}text-gray-300 hover:text-white{% endif %}">
         Favorite</a>
-      <a href="{% url 'restaurant_list' %}" class="block text-gray-300 hover:text-white text-sm font-medium">
-        Review</a>
-      </a>
       {% endif %}
       {% if user.is_authenticated %}
         <!-- Menu untuk pengguna yang sudah login -->
