@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from favorite.views import favorite_list
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +29,7 @@ urlpatterns = [
     path('reviews/', include('review.urls')),
     path('reservasi/', include('reservasi.urls')),
 >>>>>>> Stashed changes
+    path('favorite/', include('favorite.urls')),
+    path('reviews/', include('review.urls')),
+    path('auth/', include('authentication.urls')),
 ]

@@ -1,0 +1,472 @@
+[
+    {
+        "Nama_Makanan": "Nasi Gudeg"
+    },
+    {
+        "Nama_Makanan": "Bakpia Pathuk"
+    },
+    {
+        "Nama_Makanan": "Oseng-Oseng Mercon"
+    },
+    {
+        "Nama_Makanan": "Sate Klatak"
+    },
+    {
+        "Nama_Makanan": "Yangko"
+    },
+    {
+        "Nama_Makanan": "Cenil"
+    },
+    {
+        "Nama_Makanan": "Geplak"
+    },
+    {
+        "Nama_Makanan": "Bakmi Jogja"
+    },
+    {
+        "Nama_Makanan": "Gatot Gunungkidul"
+    },
+    {
+        "Nama_Makanan": "Nasi Tiwul"
+    },
+    {
+        "Nama_Makanan": "Sego Abang Jirak"
+    },
+    {
+        "Nama_Makanan": "Sayur Lombok Ijo"
+    },
+    {
+        "Nama_Makanan": "Sego Pecel"
+    },
+    {
+        "Nama_Makanan": "Mangut Lele"
+    },
+    {
+        "Nama_Makanan": "Bakmi Pentil"
+    },
+    {
+        "Nama_Makanan": "Peyek Tumpuk",
+        "Deskripsi": "Peyek Tumpuk digoreng dengan bertumpuk-tumpuk sehingga bentuknya menjadi bulat tidak beraturan",
+        "Harga_Rata_Rata": 22000
+    },
+    {
+        "Nama_Makanan": "Mie Des",
+        "Deskripsi": "Makanan yang terbuat dari tepung tapioka yang memiliki tekstur kenyal dan panjang",
+        "Harga_Rata_Rata": 23000
+    },
+    {
+        "Nama_Makanan": "Kue Adrem",
+        "Deskripsi": "Kue ini dibuat dengan bahan baku utama tepung beras dan gula jawa merah yang digoreng",
+        "Harga_Rata_Rata": 12000
+    },
+    {
+        "Nama_Makanan": "Tengkleng Gajah",
+        "Deskripsi": "Tengkleng Gajah adalah makanan khas Jogjakarta yang terbuat dari daging kambing yang disajikan dalam porsi besar",
+        "Harga_Rata_Rata": 37000
+    },
+    {
+        "Nama_Makanan": "Mie Lethek",
+        "Deskripsi": "Mie berbahan dasar bihun yang berwarna kecoklatan sehingga terlihat kotor",
+        "Harga_Rata_Rata": 11000
+    },
+    {
+        "Nama_Makanan": "Soto Lenthok",
+        "Deskripsi": "Keunikan dari Soto Lenthok adalah lauknya yang berupa lenthok",
+        "Harga_Rata_Rata": 13000
+    },
+    {
+        "Nama_Makanan": "Sup Merah",
+        "Deskripsi": "Sup Merah mempunyai keunikan tersendiri karena kuah sup yang biasanya bening, kini menjadi merah",
+        "Harga_Rata_Rata": 31000
+    },
+    {
+        "Nama_Makanan": "Sate Kere",
+        "Deskripsi": "Kuliner berbahan dasar gajih atau lemak sapi yang diberi bumbu rempah khusus",
+        "Harga_Rata_Rata": 10000
+    },
+    {
+        "Nama_Makanan": "Kipo",
+        "Deskripsi": "Jajanan berbahan ketan berwarna hijau dengan isi gula jawa, dipanggang di atas cobek.",
+        "Harga_Rata_Rata": 3000
+    },
+    {
+        "Nama_Makanan": "Kicak",
+        "Deskripsi": "Jajanan yang terbuat dari jadah, gula, dan parutan kelapa yang dicampur dengan nangka, pandan, dan ditambahkan vanili",
+        "Harga_Rata_Rata": 6000
+    },
+    {
+        "Nama_Makanan": "Keripik Belut",
+        "Deskripsi": "Belut yang dijadikan keripik",
+        "Harga_Rata_Rata": 26000
+    },
+    {
+        "Nama_Makanan": "Krecek",
+        "Deskripsi": "Kerupuk kulit yang dimasak bareng bersama sambel dan memiliki rasa pedas dan gurih yang dominan",
+        "Harga_Rata_Rata": 5000     
+    },
+    {
+        "Nama_Makanan": "Cilok Gajahan",
+        "Deskripsi": "Cilok Jalanan",
+        "Harga_Rata_Rata": 1000
+    },
+    {
+        "Nama_Makanan": "Wedang Ronde",
+        "Deskripsi": "Minuman hangat yang berisi bola-bola tepung ketan berisi kacang tanah, disajikan dalam kuah jahe manis.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Wedang Uwuh",
+        "Deskripsi": "Minuman tradisional khas Imogiri yang terbuat dari campuran rempah-rempah seperti jahe, kayu secang, daun cengkeh, dan gula batu.",
+        "Harga_Rata_Rata": 10000
+    },
+    {
+        "Nama_Makanan": "Brongkos",
+        "Deskripsi": "Masakan berkuah kental yang terbuat dari daging sapi dan kacang tolo dengan bumbu rempah yang kuat.",
+        "Harga_Rata_Rata": 18000
+    },
+    {
+        "Nama_Makanan": "Tiwul Gunungkidul",
+        "Deskripsi": "Makanan yang terbuat dari singkong yang dikeringkan, biasanya disajikan sebagai pengganti nasi.",
+        "Harga_Rata_Rata": 12000
+    },
+    {
+        "Nama_Makanan": "Jadah Tempe",
+        "Deskripsi": "Hidangan yang mengombinasikan ketan yang dikukus dan tempe bacem, biasanya dimakan bersama.",
+        "Harga_Rata_Rata": 15000
+    },
+    {
+        "Nama_Makanan": "Ayam Goreng Kalasan",
+        "Deskripsi": "Ayam yang dimasak dengan bumbu khas Yogyakarta dan digoreng hingga garing, biasanya disajikan dengan sambal.",
+        "Harga_Rata_Rata": 25000
+    },
+    {
+        "Nama_Makanan": "Sate Ambal",
+        "Deskripsi": "Sate ayam khas Kebumen dengan bumbu yang unik dari tempe yang dihaluskan.",
+        "Harga_Rata_Rata": 22000
+    },
+    {
+        "Nama_Makanan": "Bakmi Jawa",
+        "Deskripsi": "Bakmi yang dimasak dengan bumbu rempah khas Jawa, bisa berupa bakmi goreng atau bakmi kuah.",
+        "Harga_Rata_Rata": 18000
+    },
+    {
+        "Nama_Makanan": "Gethuk",
+        "Deskripsi": "Makanan ringan yang terbuat dari singkong yang ditumbuk dan dicampur dengan gula merah atau kelapa.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Jenang Gendhil",
+        "Deskripsi": "Jenang yang kenyal dan manis, terbuat dari tepung ketan dan disajikan dengan kuah santan.",
+        "Harga_Rata_Rata": 7000
+    },
+    {
+        "Nama_Makanan": "Sambel Krecek",
+        "Deskripsi": "Olahan kulit sapi yang dimasak dengan santan dan bumbu pedas, sering dijadikan pelengkap Gudeg.",
+        "Harga_Rata_Rata": 9000
+    },
+    {
+        "Nama_Makanan": "Bakmi Godhog",
+        "Deskripsi": "Mie rebus dengan kuah kaldu ayam yang gurih dan nikmat, dimasak dengan telur dan sayuran.",
+        "Harga_Rata_Rata": 15000
+    },
+    {
+        "Nama_Makanan": "Pecel Ndeso",
+        "Deskripsi": "Nasi pecel dengan bumbu kacang yang kental dan pedas, dilengkapi dengan berbagai sayuran rebus.",
+        "Harga_Rata_Rata": 11000
+    },
+    {
+        "Nama_Makanan": "Lupis Ketan",
+        "Deskripsi": "Jajanan tradisional yang terbuat dari ketan yang dibungkus daun pisang, disajikan dengan kelapa parut dan gula merah cair.",
+        "Harga_Rata_Rata": 6000
+    },
+    {
+        "Nama_Makanan": "Wedang Tahu",
+        "Deskripsi": "Minuman hangat dari sari kedelai dengan sirup jahe manis.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Bolu Merapi",
+        "Deskripsi": "Kue bolu dengan rasa manis dan tekstur lembut, sering dijadikan oleh-oleh khas Sleman.",
+        "Harga_Rata_Rata": 15000
+    },
+    {
+        "Nama_Makanan": "Tahu Gimbal",
+        "Deskripsi": "Tahu goreng yang disajikan dengan sayuran dan saus kacang.",
+        "Harga_Rata_Rata": 12000
+    },
+    {
+        "Nama_Makanan": "Sate Kelinci",
+        "Deskripsi": "Sate dari daging kelinci yang sering ditemukan di daerah pegunungan Yogyakarta.",
+        "Harga_Rata_Rata": 25000
+    },
+    {
+        "Nama_Makanan": "Serabi Notosuman",
+        "Deskripsi": "Pancake tradisional dari tepung beras dan santan, disajikan dengan taburan kelapa.",
+        "Harga_Rata_Rata": 7000
+    },
+    {
+        "Nama_Makanan": "Keripik Tempe",
+        "Deskripsi": "Keripik yang terbuat dari tempe, digoreng hingga renyah.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Nasi Gandul",
+        "Deskripsi": "Nasi dengan kuah kaldu gurih yang disajikan dengan irisan daging.",
+        "Harga_Rata_Rata": 14000
+    },
+    {
+        "Nama_Makanan": "Jadah Manten",
+        "Deskripsi": "Kue tradisional dari ketan yang dibentuk menyerupai jajanan pernikahan.",
+        "Harga_Rata_Rata": 9000
+    },
+    {
+        "Nama_Makanan": "Mie Ayam Grabyas",
+        "Deskripsi": "Mie ayam dengan topping ayam suwir yang melimpah.",
+        "Harga_Rata_Rata": 15000
+    },
+    {
+        "Nama_Makanan": "Bakmi Nyemek",
+        "Deskripsi": "Mie dengan kuah sedikit dan bumbu gurih, khas Yogyakarta.",
+        "Harga_Rata_Rata": 13000
+    },
+    {
+        "Nama_Makanan": "Gulai Kambing",
+        "Deskripsi": "Gulai dengan kuah santan kental dan daging kambing yang lembut.",
+        "Harga_Rata_Rata": 25000
+    },
+    {
+        "Nama_Makanan": "Ketan Bubuk",
+        "Deskripsi": "Ketan yang disajikan dengan taburan bubuk kedelai dan kelapa parut.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Semar Mendem",
+        "Deskripsi": "Jajanan dari ketan dan isian daging ayam, dibungkus kulit dadar.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Sate Usus",
+        "Deskripsi": "Sate dari usus ayam yang dibumbui dan digoreng.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Ayam Ingkung",
+        "Deskripsi": "Ayam utuh yang dimasak dengan bumbu santan kental, biasanya disajikan dalam acara adat.",
+        "Harga_Rata_Rata": 45000
+    },
+    {
+        "Nama_Makanan": "Bakso Balungan",
+        "Deskripsi": "Bakso dengan tambahan balungan tulang sapi.",
+        "Harga_Rata_Rata": 12000
+    },
+    {
+        "Nama_Makanan": "Cethil",
+        "Deskripsi": "Makanan tradisional dari tepung tapioka yang kenyal dan berwarna-warni.",
+        "Harga_Rata_Rata": 3000
+    },
+    {
+        "Nama_Makanan": "Tiwul Manis",
+        "Deskripsi": "Tiwul dengan tambahan gula merah yang menghasilkan rasa manis khas.",
+        "Harga_Rata_Rata": 7000
+    },
+    {
+        "Nama_Makanan": "Opor Ayam",
+        "Deskripsi": "Ayam yang dimasak dengan santan kental dan bumbu opor.",
+        "Harga_Rata_Rata": 25000
+    },
+    {
+        "Nama_Makanan": "Sego Wiwit",
+        "Deskripsi": "Nasi tradisional yang biasanya disajikan dalam upacara adat Jawa.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Cimplung",
+        "Deskripsi": "Singkong yang direbus dalam air kelapa hingga empuk dan manis.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Rengginang",
+        "Deskripsi": "Kerupuk ketan yang digoreng, biasanya memiliki rasa gurih.",
+        "Harga_Rata_Rata": 3000
+    },
+    {
+        "Nama_Makanan": "Wajik",
+        "Deskripsi": "Kue manis yang terbuat dari ketan dan gula merah, bertekstur lengket.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Jenang Sumsum",
+        "Deskripsi": "Bubur tradisional dari tepung beras dan santan, disajikan dengan gula merah cair.",
+        "Harga_Rata_Rata": 6000
+    },
+    {
+        "Nama_Makanan": "Mangut Ikan Pari",
+        "Deskripsi": "Ikan pari asap yang dimasak dengan santan dan bumbu pedas.",
+        "Harga_Rata_Rata": 20000
+    },
+    {
+        "Nama_Makanan": "Wedang Bajigur",
+        "Deskripsi": "Minuman hangat dari santan, gula merah, dan jahe, sering disajikan dengan kelapa serut.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Wedang Angsle",
+        "Deskripsi": "Minuman manis hangat yang berisi ketan, kacang hijau, potongan roti, dan santan.",
+        "Harga_Rata_Rata": 9000
+    },
+    {
+        "Nama_Makanan": "Sate Klopo",
+        "Deskripsi": "Sate yang dilapisi kelapa parut sebelum dipanggang, memberikan rasa gurih yang khas.",
+        "Harga_Rata_Rata": 12000
+    },
+    {
+        "Nama_Makanan": "Jajan Pasar",
+        "Deskripsi": "Aneka kue tradisional yang sering dijajakan di pasar, seperti klepon, gethuk, dan onde-onde.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Ayam Geprek",
+        "Deskripsi": "Ayam goreng tepung yang dipukul-pukul dan disajikan dengan sambal bawang yang pedas.",
+        "Harga_Rata_Rata": 15000
+    },
+    {
+        "Nama_Makanan": "Sambal Tumpang",
+        "Deskripsi": "Sambal dari tempe busuk yang dimasak dengan bumbu santan dan cabai.",
+        "Harga_Rata_Rata": 7000
+    },
+    {
+        "Nama_Makanan": "Nasi Langgi",
+        "Deskripsi": "Nasi dengan lauk lengkap seperti serundeng, telur, daging, dan sambal.",
+        "Harga_Rata_Rata": 18000
+    },
+    {
+        "Nama_Makanan": "Kue Mendut",
+        "Deskripsi": "Kue ketan berisi gula kelapa, disajikan dengan kuah santan yang gurih.",
+        "Harga_Rata_Rata": 6000
+    },
+    {
+        "Nama_Makanan": "Kue Lapis Legit",
+        "Deskripsi": "Kue berlapis dengan rasa manis yang kaya, sering digunakan dalam acara adat.",
+        "Harga_Rata_Rata": 35000
+    },
+    {
+        "Nama_Makanan": "Sate Blengong",
+        "Deskripsi": "Sate yang dibuat dari daging blengong, yaitu unggas hasil persilangan itik dan entok.",
+        "Harga_Rata_Rata": 7500
+    },
+    {
+        "Nama_Makanan": "Grontol Jagung",
+        "Deskripsi": "makanan tradisional yang berasal dari jagung yang direbus dan dihidangkan dengan diberi taburan parutan kelapa.",
+        "Harga_Rata_Rata": 3000
+    },
+    {
+        "Nama_Makanan": "Kethak",
+        "Deskripsi": "Kethak terbuat dari sisa olahan minyak kelapa, yang memiliki rasa manis dan gurih.",
+        "Harga_Rata_Rata": 40000
+    },
+    {
+        "Nama_Makanan": "Growol",
+        "Deskripsi": "Growol merupakan panganan tradisional yang terbuat dari umbi ketela pohon, ubi kayu, atau singkong.",
+        "Harga_Rata_Rata": 10000
+    },
+    {
+        "Nama_Makanan": "Sambel Tumpang",
+        "Deskripsi": "Sambal yang dibuat dari tempe busuk yang dimasak dengan bumbu santan dan cabai.",
+        "Harga_Rata_Rata": 7000
+    },
+    {
+        "Nama_Makanan": "Jenang Grendul",
+        "Deskripsi": "Jenang yang terbuat dari tepung ketan, dibentuk bola-bola kecil, disajikan dengan kuah santan dan gula merah cair.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Bakmi Kethoprak",
+        "Deskripsi": "Mie khas Jawa dengan campuran tahu, tauge, dan bumbu kacang, sering disajikan dengan telur rebus.",
+        "Harga_Rata_Rata": 12000
+    },
+    {
+        "Nama_Makanan": "Sate Jaran",
+        "Deskripsi": "Sate yang terbuat dari daging kuda, disajikan dengan bumbu kacang pedas.",
+        "Harga_Rata_Rata": 18000
+    },
+    {
+        "Nama_Makanan": "Kupat Tahu Magelang",
+        "Deskripsi": "Hidangan ketupat dan tahu dengan tauge serta siraman bumbu kacang.",
+        "Harga_Rata_Rata": 15000
+    },
+    {
+        "Nama_Makanan": "Lontong Sayur Jogja",
+        "Deskripsi": "Lontong yang disajikan dengan sayuran bersantan pedas, cocok untuk sarapan pagi.",
+        "Harga_Rata_Rata": 14000
+    },
+    {
+        "Nama_Makanan": "Jenang Gulo",
+        "Deskripsi": "Panganan manis yang terbuat dari tepung ketan dengan campuran gula merah.",
+        "Harga_Rata_Rata": 10000
+    },
+    {
+        "Nama_Makanan": "Bubur Sumsum",
+        "Deskripsi": "Porridge yang dibuat dari tepung beras dan santan, disajikan dengan sirup gula merah.",
+        "Harga_Rata_Rata": 6000
+    },
+    {
+        "Nama_Makanan": "Mendoan",
+        "Deskripsi": "Tempe yang digoreng setengah matang dalam adonan tepung sehingga lembut dan nikmat.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Buntil",
+        "Deskripsi": "Sayuran yang diisi dengan kelapa parut berbumbu, dimasak dengan kuah santan pedas.",
+        "Harga_Rata_Rata": 9000
+    },
+    {
+        "Nama_Makanan": "Kipo Kotagede",
+        "Deskripsi": "Makanan kecil berbahan dasar tepung ketan dengan isi gula jawa, khas daerah Kotagede.",
+        "Harga_Rata_Rata": 4000
+    },
+    {
+        "Nama_Makanan": "Rujak Cingur",
+        "Deskripsi": "Rujak khas Jawa dengan campuran buah dan sayur, serta cingur atau moncong sapi.",
+        "Harga_Rata_Rata": 16000
+    },
+    {
+        "Nama_Makanan": "Sambal Kacang",
+        "Deskripsi": "Sambal dari kacang tanah yang digunakan sebagai pelengkap berbagai hidangan.",
+        "Harga_Rata_Rata": 3000
+    },
+    {
+        "Nama_Makanan": "Sayur Lodeh",
+        "Deskripsi": "Sayuran bersantan dengan isian tahu, tempe, dan berbagai sayuran segar.",
+        "Harga_Rata_Rata": 10000
+    },
+    {
+        "Nama_Makanan": "Ayam Kalasan",
+        "Deskripsi": "Ayam goreng khas Kalasan dengan bumbu yang khas dan rasa gurih.",
+        "Harga_Rata_Rata": 25000
+    },
+    {
+        "Nama_Makanan": "Wedang Jahe",
+        "Deskripsi": "Minuman tradisional berbahan dasar jahe, disajikan hangat dengan aroma rempah.",
+        "Harga_Rata_Rata": 8000
+    },
+    {
+        "Nama_Makanan": "Gecok Sapi",
+        "Deskripsi": "Masakan dari daging sapi atau jeroan yang dimasak dengan santan dan rempah.",
+        "Harga_Rata_Rata": 22000
+    },
+    {
+        "Nama_Makanan": "Ote-Ote",
+        "Deskripsi": "Gorengan berbentuk bulat yang diisi dengan sayuran, daging, atau seafood.",
+        "Harga_Rata_Rata": 5000
+    },
+    {
+        "Nama_Makanan": "Tengkleng Solo",
+        "Deskripsi": "Sup daging kambing dengan kuah kuning yang penuh dengan rempah dan citarasa gurih.",
+        "Harga_Rata_Rata": 30000
+    },
+    {
+        "Nama_Makanan": "Sego Gurih",
+        "Deskripsi": "Nasi gurih yang dimasak dengan santan, disajikan dengan lauk pauk tradisional.",
+        "Harga_Rata_Rata": 12000
+    }
+]

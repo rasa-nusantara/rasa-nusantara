@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-j^bz(nrco9c^2sar&=ng722u-x-^lt-f7m%p@)#c62pa(u$k(q
 PRODUCTION = os.getenv("PRODUCTION", False)
 DEBUG = not PRODUCTION
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "arisha-shaista-rasanusantara.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "arisha-shaista-rasanusantara.pbp.cs.ui.ac.id", "10.0.2.2"]
 
 # Application definition
 
@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'main',
     'favorite',
 <<<<<<< Updated upstream
-    'adminview'
+    'adminview',
+    'review',
+    'authentication',
+    'corsheaders',
 =======
     'adminview',
     'review',
@@ -50,6 +53,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,6 +62,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'rasa_nusantara.urls'
@@ -138,3 +143,10 @@ else:
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'

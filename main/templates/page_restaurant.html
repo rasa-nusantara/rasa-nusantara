@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Rasa Nusantara</title>
+{% endblock meta %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<!-- Konten Utama dengan Padding-Top untuk Menghindari Terhalang Navbar -->
+<section class="mb-12 relative">
+  <div class="pb-8 min-h-screen flex flex-col bg-[#453229] w-full pt-20">
+    <div class="flex flex-row items-center justify-center">
+      <h1 class="text-2xl text-white mb-6 text-center">Daftar Restoran</h1>
+    </div>
+  
+    <!-- Section Restoran Populer -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6">
+      {% for restaurant in restaurants %}
+          {% include 'card_product.html' %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("priceSortSelect").addEventListener("change", function() {
+    const selectedSort = this.value;
+    let url = new URL(window.location.href);
+    url.searchParams.set("sort", selectedSort);
+    window.location.href = url.toString();
+  });
+</script>
+
+{% endblock content %}
