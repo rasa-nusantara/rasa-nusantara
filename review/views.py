@@ -14,27 +14,6 @@ import json
 
 
 @login_required
-# def add_review(request, restaurant_name):
-#     # Mendapatkan restoran berdasarkan nama
-#     restaurant = get_object_or_404(Restaurant, name=restaurant_name)
-
-#     if request.method == 'POST':
-#         form = ReviewForm(request.POST)
-#         if form.is_valid():
-#             review = form.save(commit=False)  # Menyimpan form tanpa langsung ke database
-#             review.user = request.user  # Mengaitkan review dengan pengguna yang login
-#             review.restaurant_name = restaurant.name  # Menggunakan nama restoran dari objek
-#             review.save()  # Simpan review ke database
-#             return redirect('restaurant_review', name=restaurant.name)  # Redirect setelah submit
-#     else:
-#         form = ReviewForm()
-
-#     context = {
-#         'restaurant_name': restaurant.name,
-#         'form': form
-#     }
-
-#     return render(request, 'add_review.html', context)
 def add_review_ajax(request, restaurant_name):
     restaurant = get_object_or_404(Restaurant, name=restaurant_name)
 
@@ -50,7 +29,7 @@ def add_review_ajax(request, restaurant_name):
             response_data = {
                 'reviewer': review.user.username,
                 'comment': review.comment,
-                'rating': review.rating
+                'rating': review.rating,
             }
             return JsonResponse(response_data)
 
@@ -84,7 +63,7 @@ def delete_review(request, id):
     review.delete()
 
     # Redirect ke halaman review restoran setelah review dihapus
-    return HttpResponseRedirect(reverse('restaurant_review', kwargs={'name': review.restaurant_name}))
+    return HttpResponseRedirect(reverse('review:restaurant_review', kwargs={'name': review.restaurant_name}))
 
 
 

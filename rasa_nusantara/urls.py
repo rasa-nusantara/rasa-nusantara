@@ -27,7 +27,11 @@ urlpatterns = [
 =======
     path('favorite/', include('favorite.urls')),
     path('reviews/', include('review.urls')),
+    path('favorite/', include('favorite.urls')),
+    path('review/', include(('review.urls', 'review'), namespace='review')),
     path('reservasi/', include('reservasi.urls')),
+    path('adminview/', include('adminview.urls')),
+    path('ubahmenu/', include('menu_management.urls')), 
 >>>>>>> Stashed changes
     path('favorite/', include('favorite.urls')),
     path('reviews/', include('review.urls')),

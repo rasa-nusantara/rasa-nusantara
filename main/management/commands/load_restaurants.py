@@ -1,7 +1,7 @@
 import json
 import os
 from django.core.management.base import BaseCommand
-from main.models import Restaurant, MenuItem
+from main.models import Restaurant, MenuItem, Category
 from django.db import transaction
 from decimal import Decimal
 
@@ -43,8 +43,9 @@ class Command(BaseCommand):
                     location = entry.get("Lokasi Restoran", "").strip()
                     average_price = Decimal(entry.get("Harga Rata-Rata Makanan di Toko (Rp)", 0))
                     rating = float(entry.get("Rating Toko", 0.0))
-                    image_url = entry.get("Foto", "").strip()  # New image field
+                    image_url = entry.get("Foto", "").strip()
                     variasi_makanan = entry.get("Variasi Makanan", "").strip()
+                    kategori_str = entry.get("Kategori", "").strip()
 
                     if not name or not location:
                         self.stderr.write(self.style.WARNING(f"Skipping entry with missing name or location: {entry}"))
@@ -56,11 +57,10 @@ class Command(BaseCommand):
                         defaults={
                             'average_price': average_price,
                             'rating': rating,
-                            'image': image_url  # Set the image field during creation
+                            'image': image_url
                         }
                     )
 
-                    # Update fields if the restaurant already exists
                     if not created:
                         updated = False
                         if restaurant.average_price != average_price:
@@ -76,8 +76,14 @@ class Command(BaseCommand):
                             restaurant.save()
                             self.stdout.write(self.style.SUCCESS(f"Updated Restaurant: {name}"))
 
-                    # Process Menu Items
-                    if isinstance(variasi_makanan, str):
+                    categories = []
+                    if kategori_str:
+                        kategori_list = [k.strip() for k in kategori_str.split(',') if k.strip()]
+                        for kategori_name in kategori_list:
+                            category, _ = Category.objects.get_or_create(name=kategori_name)
+                            categories.append(category)
+
+                    if variasi_makanan:
                         menu_items = [item.strip() for item in variasi_makanan.split(',') if item.strip()]
                         for menu_name in menu_items:
                             menu_item, menu_created = MenuItem.objects.get_or_create(
@@ -86,8 +92,10 @@ class Command(BaseCommand):
                             )
                             if menu_created:
                                 self.stdout.write(self.style.SUCCESS(f"  - Added MenuItem: {menu_name}"))
-                            else:
-                                self.stdout.write(self.style.WARNING(f"  - MenuItem already exists: {menu_name}"))
+                            
+                            if categories:
+                                menu_item.categories.set(categories)
+                                menu_item.save()
 
                     self.stdout.write(self.style.SUCCESS(f"Successfully processed Restaurant: {name}"))
 

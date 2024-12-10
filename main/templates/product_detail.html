@@ -41,9 +41,9 @@
                 </div>
                 <div class="w-full">
                     {% if request.user.is_authenticated %}
-                        <a href="{% url 'restaurant_review' restaurant.name %}" class="block w-full">
-                            <button class="w-full bg-[#FF7F50] hover:bg-[#E67348] text-white py-2 rounded-lg mb-3">Tambah Review</button>
-                        </a>
+                    <a href="{% url 'review:restaurant_review' restaurant.name %}" class="block w-full">
+                        <button class="w-full bg-[#FF7F50] hover:bg-[#E67348] text-white py-2 rounded-lg mb-3">Tambah Review</button>
+                    </a>
                     {% else %}
                         <button 
                             class="w-full bg-[#FF7F50] hover:bg-[#E67348] text-white py-2 rounded-lg mb-3"
@@ -52,11 +52,30 @@
                         </button>
                     {% endif %}
                 </div>
-                <button onclick="" class="w-full bg-[#5C4033] hover:bg-[#4F3629] text-white py-2 rounded-lg">Reservasi</button>
-                <!-- Tombol Kembali ke Homepage -->
-                <a href="{% url 'main:homepage' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg mt-3 text-center">Kembali ke Halaman Utama</a>
+                <div class="w-full">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'reservasi:create_reservation' restaurant.id %}" class="block w-full">
+                        <button class="w-full bg-[#5C4033] hover:bg-[#4F3629] text-white py-2 rounded-lg mb-3">Reservasi</button>
+                    </a>
+                    {% else %}
+                        <button 
+                            class="w-full bg-[#5C4033] hover:bg-[#4F3629] text-white py-2 rounded-lg mb-3"
+                            onclick="alert('Silakan login terlebih dahulu untuk membuat reservasi.');">
+                            Reservasi
+                        </button>
+                    {% endif %}
+                </div>
+                <!-- Tombol Kembali -->
+                {% if 'homepage' in referer %}
+                    <a href="{% url 'main:homepage' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg text-center">Kembali ke Halaman Utama</a>
+                {% elif 'restaurant' in referer %}
+                    <a href="{% url 'main:restaurant' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg text-center">Kembali ke Halaman Restoran</a>
+                {% elif 'favorite' in referer %}
+                    <a href="{% url 'favorite:favorite_list' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg text-center">Kembali ke Halaman Favorit</a>
+                {% else %}
+                    <a href="{% url 'main:homepage' %}" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg text-center">Kembali ke Halaman Utama</a>
+                {% endif %}
             </div>
-
             <div class="flex flex-col justify-center">
                 <h1 class="text-4xl font-bold text-[#5C4033] mb-4">{{ restaurant.name }}</h1>
                 <p class="text-lg text-gray-700 mb-2"><strong>Lokasi:</strong> {{ restaurant.location }}</p>

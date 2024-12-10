@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from favorite.models import Favorite
-from main.models import Restaurant
+from main.models import Restaurant, Category
 
 def homepage(request):
     restaurants = Restaurant.objects.order_by('-rating')[:8]
@@ -84,21 +84,23 @@ def register(request):
     return render(request, 'register.html', context)
 
 def login_user(request):
-   if request.method == 'POST':
-      form = AuthenticationForm(data=request.POST)
-      if form.is_valid():
-        user = form.get_user()
-        login(request, user)
-        response = HttpResponseRedirect(reverse("main:homepage"))
-        response.set_cookie('last_login', str(datetime.datetime.now()))
-        return response
-      else:
-        messages.error(request, 'Username atau password salah. Coba lagi.')
-
-   else:
-      form = AuthenticationForm(request)
-   context = {'form': form}
-   return render(request, 'login.html', context)
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            if user.is_staff:
+                response = HttpResponseRedirect(reverse("adminview:admin_restaurant"))
+            else:
+                response = HttpResponseRedirect(reverse("main:homepage"))
+            response.set_cookie('last_login', str(datetime.datetime.now()))
+            return response
+        else:
+            messages.error(request, 'Username atau password salah. Coba lagi.')
+    else:
+        form = AuthenticationForm(request)
+    context = {'form': form}
+    return render(request, 'login.html', context)
 
 def logout_user(request):
     logout(request)
@@ -112,28 +114,40 @@ def product_detail(request, restaurant_id):
     if request.user.is_authenticated:
         user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
 
+    referer = request.META.get('HTTP_REFERER', '')
+    
     context = {
         'restaurant': restaurant,
         'user_favorites': user_favorites,
+        'referer': referer
     }
     return render(request, 'product_detail.html', context)
 
 def restaurant_list(request):
     restaurants = Restaurant.objects.all()
 
-    sort_option = request.GET.get('sort')
-    if sort_option == 'highest':
-        restaurants = restaurants.order_by('-average_price')
-    elif sort_option == 'lowest':
+    user_favorites = []
+    if request.user.is_authenticated:
+        user_favorites = Favorite.objects.filter(user=request.user).values_list('restaurant__id', flat=True)
+
+    categories = Category.objects.all()
+
+    category_id = request.GET.get('category')
+    sort_option = request.GET.get('sorting')
+
+    if category_id:
+        restaurants = restaurants.filter(menu_items__categories__id=category_id).distinct()
+
+    if sort_option == 'low_to_high':
         restaurants = restaurants.order_by('average_price')
+    elif sort_option == 'high_to_low':
+        restaurants = restaurants.order_by('-average_price')
 
     context = {
         'restaurants': restaurants,
-        'sort_price': sort_option  
+        'categories': categories,
+        'selected_category': int(category_id) if category_id else None,
+        'selected_sort': sort_option,
+        'user_favorites': user_favorites,
     }
     return render(request, 'page_restaurant.html', context)
-
-
-
-
-

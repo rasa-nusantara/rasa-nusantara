@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+    <title>Add Menu Item - Admin View</title>
+{% endblock meta %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="min-h-screen flex flex-col bg-[#453229] w-full pt-20 pb-8">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Add New Menu Item</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+
+            {% if form.errors %}
+                <div class="errorlist text-red-500 mb-4">
+                    <ul>
+                        {% for field, errors in form.errors.items %}
+                            <li>{{ field }}: {{ errors|join:", " }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                <input type="text" name="name" class="border rounded-lg w-full py-2 px-3 text-gray-700" required />
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Categories:</label>
+                <select name="categories" class="border rounded-lg w-full py-2 px-3 text-gray-700">
+                    <option value="gudeg">Gudeg</option>
+                    <option value="oseng mercon">Oseng</option>
+                    <option value="bakpia">Bakpia</option>
+                    <option value="sate">Sate</option>
+                    <option value="sego gurih">Sego Gurih</option>
+                    <option value="wedang">Wedang</option>
+                    <option value="lontong">Lontong</option>
+                    <option value="rujak cingur">Rujak Cingur</option>
+                    <option value="mangut lele">Mangut Lele</option>
+                    <option value="ayam">Ayam</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </div>
+
+            <div class="flex gap-4">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Menu Item</button>
+                <a href="{% url 'menu_management:admin_menu' restaurant.id %}" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancel</a>
+            </div>
+        </form>         
+    </div>
+</div>
+{% endblock content %}

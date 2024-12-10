@@ -27,17 +27,26 @@
 Tujuan utama dari **Rasa Nusantara** adalah untuk meningkatkan visibilitas dan popularitas kuliner lokal, mendukung pelestarian warisan budaya gastronomi Indonesia, serta memberikan dampak positif terhadap perekonomian lokal dengan mendorong peningkatan kunjungan ke restoran tradisional.
 
 ## Modul Aplikasi
-- Pengguna menambahkan restoran ke daftar favorit.
-- Pengguna menambahkan masukan atau saran terhadap restoran dan dapat menilai restoran tersebut.
-- Pengguna dapat melakukan, memperbarui, dan menghapus reservasi sementara Admin dapat melihat reservasi dari berbagai pengguna.
-- Admin dapat mengelola daftar restoran yang terdaftar di aplikasi, termasuk menambahkan, melihat, memperbarui, dan menghapus informasi restoran.
-- Admin dapat mengelola menu makanan yang ditawarkan, termasuk menambahkan, melihat, memperbarui, dan menghapus item menu.
-- Daftar rekomendasi restoran berdasarkan rating tertinggi.
-- Search Bar yang memungkinkan pengguna untuk dengan mudah mencari restoran atau hidangan tertentu.
-- Daftar restoran yang menyediakan makanan tradisional.
-- Daftar makanan tradisional yang dapat dipilih oleh pengguna.
-- Filter harga untuk memudahkan pengguna mencari restoran berdasarkan budget.
-- Filter berdasarkan kategori rasa makanan (Pedas, Asin, Manis).
+1. Pengguna menambahkan restoran ke daftar favorit.
+    - Dikerjakan oleh Arisha Shaista Aurelya
+2. Filter daftar restoran berdasarkan harga tertinggi dan terendah serta filter daftar restoran berdasarkan beberapa kategori makanan.
+    - Dikerjakan oleh Arisha Shaista Aurelya
+3. Halaman utama, halaman details product, dan card product.
+    - Dikerjakan oleh Arisha Shaista Aurelya
+4. Pengguna menambahkan masukan atau saran terhadap restoran dan dapat menilai restoran tersebut.
+    - Dikerjakan oleh Fikar Hilmi Adhrevi
+6. Autentikasi dan halaman Login maupun Register
+    - Dikerjakan oleh Fikar Hilmi Adhrevi
+7. Halaman daftar restoran.
+    - Dikerjakan oleh Fikar Hilmi Adhrevi
+8. Pengguna dapat melakukan, memperbarui, dan menghapus reservasi ke restoran.
+    - Dikerjakan oleh Muhammad Dzikri Ilmansyah
+9. Admin dapat mengelola daftar restoran yang terdaftar di aplikasi, termasuk menambahkan, melihat, memperbarui, dan menghapus informasi restoran.
+    - Dikerjakan oleh Refalino Shahzada Ghassani
+10. Halaman admin.
+    - Dikerjakan oleh Refalino Shahzada Ghassani
+11. Admin dapat mengelola menu makanan yang ditawarkan, termasuk menambahkan, melihat, memperbarui, dan menghapus item menu.
+    - Dikerjakan oleh Muhammad Rayyan Wiradana
 
 ## Sumber Dataset
 Dataset yang kelompok kami gunakan diperoleh dari *Web Scraping* dari berbagai macam website. Terdapat dua dataset yang kami gunakan yaitu dataset restoran dan dataset untuk makanan.
@@ -83,16 +92,14 @@ Berikut adalah website yang kami gunakan untuk sumber dataset Makanan:
 
 ## Peran Pengguna
 - **Member**
-    Akses: Member memiliki akses ke semua fitur di website, seperti:
-    Melihat semua daftar restoran dan makanan.
-    Memberikan rating dan ulasan untuk restoran dan makanan.
-    Menambahkan restoran dan makanan ke daftar favorit mereka.
+    - Melihat semua daftar restoran dan makanan.
+    - Memberikan rating dan ulasan untuk restoran.
+    - Menambahkan restoran ke daftar favorit mereka.
+    - Membuat reservasi untuk restoran.
 - **Admin**
-    Akses: Admin memiliki semua akses yang dimiliki oleh member, ditambah dengan kemampuan untuk:
-    Menambahkan dan mengelola daftar restoran serta menu makanan.
-    Menghapus atau mengedit konten yang tidak sesuai.
+    - Menambahkan dan mengelola daftar restoran serta menu makanan.
 - **Guest**
-    Akses: Guest atau pengguna yang tidak terdaftar memiliki akses yang mirip dengan member, dengan beberapa keterbatasan:
-    Dapat melihat semua daftar restoran dan makanan.
-    Tidak bisa memberikan rating atau ulasan.
-    Tidak bisa menambahkan restoran atau makanan ke daftar favorit
+    - Dapat melihat semua daftar restoran.
+    - Tidak dapat memberikan rating atau ulasan.
+    - Tidak dapat menambahkan restoran atau makanan ke daftar favorit.
+    - Tidak dapat membuat reservasi.

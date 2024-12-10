@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'favorite',
-<<<<<<< Updated upstream
     'adminview',
     'review',
     'authentication',
@@ -50,6 +49,8 @@ INSTALLED_APPS = [
     'review',
     'reservasi'
 >>>>>>> Stashed changes
+    'reservasi',
+    'menu_management'
 ]
 
 MIDDLEWARE = [
@@ -144,9 +145,4 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = 'None'
-SESSION_COOKIE_SAMESITE = 'None'
+LOGIN_URL = 'main:login'

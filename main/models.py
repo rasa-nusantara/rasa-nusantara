@@ -2,6 +2,12 @@ from django.db import models
 import uuid
 from decimal import Decimal
 
+class Category(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.name
+
 class Restaurant(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
@@ -12,11 +18,12 @@ class Restaurant(models.Model):
 
     def __str__(self):
         return self.name
-
+    
 class MenuItem(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='menu_items')
     name = models.CharField(max_length=255)
+    categories = models.ManyToManyField(Category, related_name='menu_items', blank=True)  # Assign categories at the menu item level
 
     def __str__(self):
         return self.name
