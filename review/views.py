@@ -189,4 +189,72 @@ def get_restaurant_reviews(request, restaurant_name):
                 "message": str(e)
             }, status=500)
 
+@csrf_exempt
+def get_username(request):
+    if request.user.is_authenticated:
+        return JsonResponse({
+            "username": request.user.username,
+            "status": "success"
+        })
+    return JsonResponse({
+        "status": "error",
+        "message": "User not authenticated"
+    }, status=401)
+
+@csrf_exempt
+def edit_review_flutter(request, review_id):
+    if request.method == 'POST':
+        try:
+            review = Review.objects.get(pk=review_id)
+            if review.user == request.user:
+                rating = request.POST.get('rating')  # Gunakan request.POST alih-alih json.loads
+                comment = request.POST.get('comment')
+                
+                review.rating = int(rating)
+                review.comment = comment
+                review.save()
+                
+                return JsonResponse({
+                    "status": "success",
+                    "message": "Review berhasil diperbarui"
+                })
+            return JsonResponse({
+                "status": "error",
+                "message": "Anda tidak memiliki izin untuk mengedit review ini"
+            }, status=403)
+        except Review.DoesNotExist:
+            return JsonResponse({
+                "status": "error",
+                "message": "Review tidak ditemukan"
+            }, status=404)
+    return JsonResponse({
+        "status": "error",
+        "message": "Invalid request method"
+    }, status=400)
+
+@csrf_exempt
+def delete_review_flutter(request, review_id):
+    if request.method == 'POST':  # Ganti DELETE menjadi POST
+        try:
+            review = Review.objects.get(pk=review_id)
+            if review.user == request.user:
+                review.delete()
+                return JsonResponse({
+                    "status": "success",
+                    "message": "Review berhasil dihapus"
+                })
+            return JsonResponse({
+                "status": "error",
+                "message": "Anda tidak memiliki izin untuk menghapus review ini"
+            }, status=403)
+        except Review.DoesNotExist:
+            return JsonResponse({
+                "status": "error",
+                "message": "Review tidak ditemukan"
+            }, status=404)
+    return JsonResponse({
+        "status": "error",
+        "message": "Invalid request method"
+    }, status=400)
+
 
