@@ -28,4 +28,6 @@ urlpatterns = [
     path('reservasi/', include('reservasi.urls')),
     path('adminview/', include('adminview.urls')),
     path('ubahmenu/', include('menu_management.urls')), 
+    path('reviews/', include('review.urls')),
+    path('auth/', include('authentication.urls')),
 ]
