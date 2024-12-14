@@ -126,3 +126,7 @@ def restaurant_list(request):
         'user_favorites': user_favorites,
     }
     return render(request, 'page_restaurant.html', context)
+
+def show_json(request):
+    data = Restaurant.objects.all()
+    return HttpResponse(serializers.serialize("json",data),content_type='application/json')

@@ -11,4 +11,5 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
     path('restaurant/',restaurant_list,name='restaurant'),
     path('restaurantdetail/<uuid:restaurant_id>/', product_detail, name='product_detail'),
+    path('json', show_json, name='json')
 ]
