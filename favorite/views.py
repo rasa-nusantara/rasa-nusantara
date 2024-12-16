@@ -5,6 +5,9 @@ from .models import Favorite
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+from django.core.serializers import serialize
+import json
+
 
 @login_required
 def favorite_list(request):
@@ -30,7 +33,7 @@ def remove_favorite(request, restaurant_id):
 def toggle_favorite(request):
     if request.method == 'POST':
         try:
-            data = json.loads(request.body)
+            data = json.loads(request.body)  # Parsing JSON dari request body
             restaurant_id = data.get('restaurant_id')
 
             # Validasi jika restaurant_id tidak ditemukan atau tidak valid
@@ -56,9 +59,6 @@ def toggle_favorite(request):
     else:
         return JsonResponse({'success': False, 'message': 'Invalid request method'}, status=400)
 
-from django.http import JsonResponse
-from django.core.serializers import serialize
-
 @login_required
 def favorite_list_json(request):
     favorites = Favorite.objects.filter(user=request.user).select_related('restaurant')
@@ -67,7 +67,7 @@ def favorite_list_json(request):
             "id": favorite.restaurant.id,
             "name": favorite.restaurant.name,
             "location": favorite.restaurant.location,
-            "image": favorite.restaurant.image.url if favorite.restaurant.image else "",
+            "image": favorite.restaurant.image if favorite.restaurant.image else "",
             "rating": favorite.restaurant.rating,
         }
         for favorite in favorites
