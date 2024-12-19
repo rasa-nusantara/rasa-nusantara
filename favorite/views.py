@@ -8,12 +8,13 @@ from django.http import JsonResponse
 from django.core.serializers import serialize
 import json
 
-
+@csrf_exempt
 @login_required
 def favorite_list(request):
     favorites = Favorite.objects.filter(user=request.user)  
     return render(request, 'favorite_list.html', {'favorites': favorites})
 
+@csrf_exempt
 @login_required
 def remove_favorite(request, restaurant_id):
     if request.method == 'POST':
@@ -32,19 +33,19 @@ def remove_favorite(request, restaurant_id):
 @login_required
 def toggle_favorite(request):
     if request.method == 'POST':
+        print("Request Received!")  # Log untuk memastikan request masuk
+        print(f"Body: {request.body}")  # Log body request untuk debug
         try:
-            data = json.loads(request.body)  # Parsing JSON dari request body
+            data = json.loads(request.body)
             restaurant_id = data.get('restaurant_id')
+            print(f"Restaurant ID: {restaurant_id}")  # Log ID yang diterima
 
-            # Validasi jika restaurant_id tidak ditemukan atau tidak valid
             if not restaurant_id:
                 return JsonResponse({'success': False, 'message': 'Restaurant ID is missing'}, status=400)
 
-            # Ambil objek restoran berdasarkan UUID
             restaurant = get_object_or_404(Restaurant, id=restaurant_id)
-
-            # Cek apakah favorit sudah ada
             favorite = Favorite.objects.filter(user=request.user, restaurant=restaurant)
+
             if favorite.exists():
                 favorite.delete()
                 return JsonResponse({'success': True, 'message': 'Favorite removed', 'status': 'unfavorited'})
@@ -54,11 +55,10 @@ def toggle_favorite(request):
 
         except json.JSONDecodeError:
             return JsonResponse({'success': False, 'message': 'Invalid JSON'}, status=400)
-        except Exception as e:
-            return JsonResponse({'success': False, 'message': str(e)}, status=500)
     else:
         return JsonResponse({'success': False, 'message': 'Invalid request method'}, status=400)
 
+@csrf_exempt
 @login_required
 def favorite_list_json(request):
     favorites = Favorite.objects.filter(user=request.user).select_related('restaurant')

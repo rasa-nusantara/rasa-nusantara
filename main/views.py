@@ -15,7 +15,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from favorite.models import Favorite
 from main.models import Restaurant, Category
+from django.views.decorators.csrf import csrf_exempt
 
+
+@csrf_exempt
 def homepage(request):
     restaurants = Restaurant.objects.order_by('-rating')[:8]
     user_favorites = []
@@ -24,10 +27,11 @@ def homepage(request):
 
     context = {
         'restaurants': restaurants,
-        'user_favorites': user_favorites,
+        'user_favorites': list(user_favorites),  # Convert to list
     }
     return render(request, 'main.html', context)
 
+@csrf_exempt
 def show_json(request):
     restaurants = Restaurant.objects.all()
     restaurant_list = []
@@ -45,7 +49,8 @@ def show_json(request):
             'menu_items': [
                 {
                     'id': str(item.id),
-                    'name': item.name
+                    'name': item.name,
+                    'categories': [category.name for category in item.categories.all()]  # Ambil nama kategori
                 } for item in menu_items
             ]
         }
@@ -53,6 +58,7 @@ def show_json(request):
     
     return JsonResponse(restaurant_list, safe=False)
 
+@csrf_exempt
 @login_required
 def toggle_favorite(request, restaurant_id):
     restaurant = get_object_or_404(Restaurant, id=restaurant_id)
@@ -64,6 +70,7 @@ def toggle_favorite(request, restaurant_id):
         is_favorite = True
     return JsonResponse({'is_favorite': is_favorite})
 
+@csrf_exempt
 def restaurant(request):
     restaurants = Restaurant.objects.all()
     context = {
@@ -71,6 +78,7 @@ def restaurant(request):
     }
     return render(request, 'page_restaurant.html', context)
 
+@csrf_exempt
 def register(request):
     form = UserCreationForm()
 
@@ -83,6 +91,7 @@ def register(request):
     context = {'form':form}
     return render(request, 'register.html', context)
 
+@csrf_exempt
 def login_user(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -102,12 +111,14 @@ def login_user(request):
     context = {'form': form}
     return render(request, 'login.html', context)
 
+@csrf_exempt
 def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('main:homepage'))
     response.delete_cookie('last_login')
     return (response)
 
+@csrf_exempt
 def product_detail(request, restaurant_id):
     restaurant = get_object_or_404(Restaurant, id=restaurant_id)
     user_favorites = []
@@ -123,6 +134,7 @@ def product_detail(request, restaurant_id):
     }
     return render(request, 'product_detail.html', context)
 
+@csrf_exempt
 def restaurant_list(request):
     restaurants = Restaurant.objects.all()
 
