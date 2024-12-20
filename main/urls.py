@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 from main.views import *
 
 app_name = 'main'
@@ -12,4 +12,7 @@ urlpatterns = [
     path('restaurant/',restaurant_list,name='restaurant'),
     path('restaurant/<uuid:restaurant_id>/', product_detail, name='product_detail'),
     path('json/', show_json, name='show_json'),
+    path('restaurantdetail/<uuid:restaurant_id>/', product_detail, name='product_detail'),
+    path('json/', show_json, name='show_json'),
+    path('auth/', include('authentication.urls')),
 ]
