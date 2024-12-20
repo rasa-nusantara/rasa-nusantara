@@ -108,8 +108,9 @@ def delete_restaurant(request, uuid):
     return redirect('adminview:admin_restaurant')
 
 @csrf_exempt
-@staff_member_required(login_url='main:login')
 def add_restaurant_json(request):
+    print("Request method:", request.method)  # Log metode HTTP
+    print("Request body:", request.body) 
     if request.method == "POST":
         try:
             data = json.loads(request.body)
@@ -137,4 +138,8 @@ def add_restaurant_json(request):
         except Exception as e:
             return JsonResponse({"status": "error", "message": str(e)}, status=500)
     return JsonResponse({"status": "error", "message": "Invalid method"}, status=405)
-    
+
+@csrf_exempt
+def restaurant_count(request):
+    count = Restaurant.objects.count()
+    return JsonResponse({'count': count})
