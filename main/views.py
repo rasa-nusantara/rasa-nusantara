@@ -71,14 +71,6 @@ def toggle_favorite(request, restaurant_id):
     return JsonResponse({'is_favorite': is_favorite})
 
 @csrf_exempt
-def restaurant(request):
-    restaurants = Restaurant.objects.all()
-    context = {
-        'restaurants': restaurants
-    }
-    return render(request, 'page_restaurant.html', context)
-
-@csrf_exempt
 def register(request):
     form = UserCreationForm()
 
