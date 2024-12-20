@@ -14,4 +14,4 @@ class Reservation(models.Model):
     special_request = models.TextField(blank=True, null=True)  # Optional special requests
 
     def __str__(self):
-        return f'{self.user.username} - {self.restaurant.nama_restoran} on {self.reservation_date} at {self.reservation_time}'
+        return f'{self.user.username} - {self.restaurant} on {self.reservation_date} at {self.reservation_time}'

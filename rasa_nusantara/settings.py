@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-j^bz(nrco9c^2sar&=ng722u-x-^lt-f7m%p@)#c62pa(u$k(q
 PRODUCTION = os.getenv("PRODUCTION", False)
 DEBUG = not PRODUCTION
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "arisha-shaista-rasanusantara.pbp.cs.ui.ac.id", "10.0.2.2"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "arisha-shaista-rasanusantara.pbp.cs.ui.ac.id", "10.0.2.2", 'localhost:59451', 'localhost', 'localhost:8000',]
 
 # Application definition
 
@@ -40,15 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'favorite',
-    'adminview',
     'review',
     'authentication',
     'corsheaders',
-=======
     'adminview',
-    'review',
-    'reservasi'
->>>>>>> Stashed changes
     'reservasi',
     'menu_management'
 ]
@@ -146,3 +141,15 @@ else:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'main:login'
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:59451',  # Flutter development server origin
+    'http://127.0.0.1:59451',  # In case you're accessing via 127.0.0.1
+]

@@ -8,8 +8,9 @@ urlpatterns = [
     path('restaurant-review/delete/<int:id>/', views.delete_review, name='delete_review'),
     path('restaurant/<str:restaurant_name>/add_review_ajax/', views.add_review_ajax, name='add_review_ajax'),
     path('edit_review_ajax/', views.edit_review_ajax, name='edit_review_ajax'),
-     path('create-review-flutter/', views.create_review_flutter, name='create_review_flutter'),
+    path('create-review-flutter/', views.create_review_flutter, name='create_review_flutter'),
     path('get-restaurant-reviews/<str:restaurant_name>/', views.get_restaurant_reviews, name='get_restaurant_reviews'),
     path('json/', show_json, name='show_json'),
+    
     
 ]
