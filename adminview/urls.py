@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import admin_restaurant_view, edit_restaurant, delete_restaurant, add_restaurant, admin_menu_view, add_menu, edit_menu, delete_menu
+from .views import admin_restaurant_view, edit_restaurant, delete_restaurant, add_restaurant, admin_menu_view, add_menu, edit_menu, delete_menu, add_restaurant_json
 
 app_name = 'adminview'
 
@@ -12,4 +12,5 @@ urlpatterns = [
     path('admin_menu/add/<uuid:restaurant_id>/', add_menu, name='add_menu'),
     path('admin_menu/edit/<uuid:restaurant_id>/<uuid:id>/', edit_menu, name='edit_menu'),
     path('admin_menu/delete/<uuid:restaurant_id>/<uuid:id>/', delete_menu, name='delete_menu'),
+    path('json/', add_restaurant_json, name='add_restaurant'),
 ]
