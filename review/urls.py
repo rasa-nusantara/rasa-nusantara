@@ -15,4 +15,5 @@ urlpatterns = [
     path('delete-review-flutter/<int:review_id>/', delete_review_flutter, name='delete_review_flutter'),
     path('edit-review-flutter/<int:review_id>/', edit_review_flutter, name='edit_review_flutter'),
     
+    
 ]

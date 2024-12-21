@@ -38,7 +38,7 @@ SESSION_COOKIE_SAMESITE = 'None'
 PRODUCTION = os.getenv("PRODUCTION", False)
 DEBUG = not PRODUCTION
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "arisha-shaista-rasanusantara.pbp.cs.ui.ac.id", "10.0.2.2"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "arisha-shaista-rasanusantara.pbp.cs.ui.ac.id", "10.0.2.2", 'localhost:59451', 'localhost', 'localhost:8000',]
 
 # Application definition
 
@@ -51,12 +51,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'favorite',
-    'adminview',
     'review',
-    'reservasi',
-    'menu_management',
     'authentication',
     'corsheaders',
+    'adminview',
+    'reservasi',
+    'menu_management'
 ]
 
 MIDDLEWARE = [
@@ -149,11 +149,12 @@ else:
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://arisha-shaista-mentalhealthtracker.pbp.cs.ui.ac.id", "https://arisha-shaista-mentalhealthtracker.pbp.cs.ui.ac.id"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1", "http://127.0.0.1:8000","http://arisha-shaista-mentalhealthtracker.pbp.cs.ui.ac.id", "https://arisha-shaista-mentalhealthtracker.pbp.cs.ui.ac.id"]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'main:login'
+
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CSRF_COOKIE_SECURE = True

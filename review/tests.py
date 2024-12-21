@@ -52,8 +52,6 @@ class RestaurantReviewTests(TestCase):
         self.assertContains(response, 'Makanan enak')
         self.assertContains(response, '4/5')
         self.assertContains(response, self.user.username)
-from main.models import Restaurant
-from review.models import Review  
 
 class ReviewTests(TestCase):
     def setUp(self):

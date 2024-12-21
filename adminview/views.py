@@ -10,6 +10,8 @@ from menu_management.models import MenuItem, Restaurant
 from django.shortcuts import render
 from menu_management.views import admin_menu_view, add_menu, edit_menu, delete_menu
 from main.models import *
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 
 class RestaurantForm(ModelForm):
@@ -104,3 +106,40 @@ def delete_restaurant(request, uuid):
     restaurant = get_object_or_404(Restaurant, id=uuid)
     restaurant.delete()
     return redirect('adminview:admin_restaurant')
+
+@csrf_exempt
+def add_restaurant_json(request):
+    print("Request method:", request.method)  # Log metode HTTP
+    print("Request body:", request.body) 
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            name = data.get("name")
+            location = data.get("location")
+            average_price = data.get("average_price", 0)
+            rating = data.get("rating", 0)
+
+            if not name or not location or average_price <= 0 or not (0 <= rating <= 5):
+                return JsonResponse(
+                    {"status": "error", "message": "Invalid input fields"},
+                    status=400,
+                )
+
+            # Create the restaurant
+            restaurant = Restaurant.objects.create(
+                name=name,
+                location=location,
+                average_price=average_price,
+                rating=rating,
+            )
+            return JsonResponse(
+                {"status": "success", "message": "Restaurant added successfully"}
+            )
+        except Exception as e:
+            return JsonResponse({"status": "error", "message": str(e)}, status=500)
+    return JsonResponse({"status": "error", "message": "Invalid method"}, status=405)
+
+@csrf_exempt
+def restaurant_count(request):
+    count = Restaurant.objects.count()
+    return JsonResponse({'count': count})

@@ -100,3 +100,9 @@ def get_user_data(request):
     return JsonResponse({
         'username': request.user.username,
     })
+
+@login_required
+def is_superuser(request):
+    return JsonResponse({
+        'is_superuser': request.user.is_superuser
+    })

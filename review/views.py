@@ -65,6 +65,10 @@ def delete_review(request, id):
     # Redirect ke halaman review restoran setelah review dihapus
     return HttpResponseRedirect(reverse('review:restaurant_review', kwargs={'name': review.restaurant_name}))
 
+
+
+
+
 def restaurant_review(request, name):
     # Mendapatkan restoran berdasarkan nama
     restaurant = get_object_or_404(Restaurant, name=name)
